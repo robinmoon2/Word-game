@@ -1,4 +1,5 @@
-﻿namespace Projet_A2_S1
+﻿using ConsoleAppVisuals;
+namespace Projet_A2_S1
 {
     internal class Program
     {

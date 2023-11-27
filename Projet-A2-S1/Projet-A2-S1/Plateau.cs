@@ -1,5 +1,5 @@
 ﻿namespace Projet_A2_S1;
-
+/*
 public class Plateau
 {
 public string toString()
@@ -28,3 +28,4 @@ public void Maj_Plateau(object objet)
 }
 
 }
+*/
