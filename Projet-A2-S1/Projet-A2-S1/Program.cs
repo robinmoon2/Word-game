@@ -9,8 +9,9 @@ namespace Projet_A2_S1
 
             Core.ClearWindow();
             Core.WriteBanner();
-            Core.ScrollingMenuSelector(question : "C'est beau hein ?", defaultIndex : default, line : default,"Option 1", "Option 2", "Option 3");
-            
+            (int a , int b)= Core.ScrollingMenuSelector(" Menu Principal :", default, default, "Jouer", "Paramètre", "Quitter le jeu");
+            Console.WriteLine(a);
+            Console.WriteLine(b);
         }
     }
 }
