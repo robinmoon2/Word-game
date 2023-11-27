@@ -1,5 +1,5 @@
 ﻿namespace Projet_A2_S1;
-
+/*
 internal class Joueur
 {
 public void Add_Mot (string mot) 
@@ -19,3 +19,4 @@ public bool Contient (string mot)
 }
 
 }
+*/
