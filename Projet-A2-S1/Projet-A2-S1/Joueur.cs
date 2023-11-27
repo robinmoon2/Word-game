@@ -19,8 +19,4 @@ public bool Contient (string mot)
 }
 
 }
-<<<<<<< Updated upstream
 */
-=======
-*§
->>>>>>> Stashed changes
