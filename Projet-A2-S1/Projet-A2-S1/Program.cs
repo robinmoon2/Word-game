@@ -40,16 +40,13 @@ namespace Projet_A2_S1
                                         players.playerlist.Add(new Player { Name = mot, Timer = timer, Score = 0 });
                                         Console.WriteLine($"Vous avez entré : {mot}");
                                     }
+                                    //players.WriteYAML("data/config.yml");
+                                    players.ReadYAML("data/config.yml");
 
-                                    var serializer = new SerializerBuilder()
-                                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
-                                        .Build();
+                                    players.toString();                                    
 
-                                    var yamlString = serializer.Serialize(players);
 
-                                    File.WriteAllText("data/config.yml", yamlString);
 
-                                    players.toString();
                                 }
                                 EndMenu = false;
                             break;
