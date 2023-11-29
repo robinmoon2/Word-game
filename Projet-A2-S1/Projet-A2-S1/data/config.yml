@@ -1,6 +1,6 @@
-- name: amandine
-  timer: 100
+- name: a
+  timer: 60
   score: 1
-- name: robin
-  timer: 100
+- name: b
+  timer: 60
   score: 1

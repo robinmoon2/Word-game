@@ -12,14 +12,20 @@ namespace Projet_A2_S1
     {
         public List<Player> playerlist { get; set; }
 
+
+
         public PlayerList(List<Player> playerlist){
             this.playerlist=playerlist;
         }
-        public void toString(){
+        public string toString(){
+            string s="";
             foreach(Player player in playerlist){
-                Console.WriteLine(player.Name);
+                s=s+"\n"+player.toString();
             }
+            return s;
         }
+
+
 
 
         public void WriteYAML(string YAML_PATH){
@@ -34,18 +40,11 @@ namespace Projet_A2_S1
         public void ReadYAML(string YAML_PATH)
         {
             var deserializer = new DeserializerBuilder()
-                .WithNamingConvention(CamelCaseNamingConvention.Instance)
-                .Build();
+            .WithNamingConvention(CamelCaseNamingConvention.Instance)
+            .Build();
+
             var yamlString = File.ReadAllText(YAML_PATH);
-            var yamlDictionary = deserializer.Deserialize<Dictionary<string, List<Player>>>(yamlString);
-            if (yamlDictionary.ContainsKey("playerlist"))
-            {
-                playerlist = yamlDictionary["playerlist"];
-            }
-            else
-            {
-                throw new KeyNotFoundException("'playerlist' not found in the YAML file.");
-            }
+            playerlist = deserializer.Deserialize<List<Player>>(yamlString);
         }
     }
 

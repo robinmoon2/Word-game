@@ -118,9 +118,11 @@ namespace Projet_A2_S1
             }
         }
 
-        static public void CreatePlayer(bool saisie = true)
+        static public void CreatePlayer()
         {
-            var index = Core.ScrollingNumberSelector("Choisir le nombre de joueur :",1,4,1,1);
+            var index = Core.ScrollingNumberSelector("Choisir le timer par joueur :",60,120,60,30);
+            int timer = Convert.ToInt32(index.Item2);
+            index = Core.ScrollingNumberSelector("Choisir le nombre de joueur :",1,4,1,1);
             int number=0;
             if(index.Item1 == 0){
                 number = Convert.ToInt32(index.Item2);
@@ -131,15 +133,18 @@ namespace Projet_A2_S1
             }
             List<Player> playerlist = new List<Player>();
             PlayerList players = new PlayerList(playerlist);
+
             for(int i = 0; i < number; i++){
                 Core.WritePositionedString($"Entrez le nom du joueur {i+1} : ",Placement.Center,default,10,default);
                 string name = Console.ReadLine();
-                Console.WriteLine("Nom trouvé");
-                Player p = new Player (name,100,1);
+                Console.WriteLine("Nom assigné");
+                var p = new Player (name,timer,1);
                 players.playerlist.Add(p);
             }
-            players.WriteYAML("data/config.yml");            
-
+            players.WriteYAML("data/config.yml");   
+            Console.WriteLine("Liste des joueurs : ");
+            Console.WriteLine(players.toString());   
+            players.ReadYAML("data/config.yml");
 
         }
         

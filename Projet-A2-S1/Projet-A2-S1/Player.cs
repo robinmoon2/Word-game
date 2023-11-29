@@ -13,8 +13,13 @@ public class Player
     }
 
     public string Name{get{return name;}}
-    public int Timer{get{return timer;}}
+    public int Timer{get{return timer;} set{timer = value;}}
     public int Score{get{return score;}}
+
+
+    public string toString(){
+        return $"Name : {name}\n Timer : {timer}\n Score : {score}";
+    }
 
 }
 /*
