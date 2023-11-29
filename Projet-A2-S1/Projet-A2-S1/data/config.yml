@@ -1,6 +1,7 @@
----
-
-Joueur 1 : 
-  nom : joueur 1
-  timer : 120
-    
+playerlist:
+- name: robin
+  timer: 100
+  score: 0
+- name: emma
+  timer: 100
+  score: 0

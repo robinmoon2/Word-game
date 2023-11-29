@@ -2,13 +2,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.IO;
+using ConsoleAppVisuals;
+using YamlDotNet.Serialization;
+using YamlDotNet.Serialization.NamingConventions;
 
-namespace Projet_A2_S1.obj
+namespace Projet_A2_S1
 {
-    internal class Method
+    public class Method
     {
-        
-         /// <summary>
+
+        /// <summary>
         /// Fonction permettant de laisser un temps donné à l'utilisateur pour faire une action
         /// </summary>
         /// <param name="timeLimit"> variable qui permet de stocker la limite de temps donnée</param>
@@ -55,5 +59,31 @@ namespace Projet_A2_S1.obj
 
 
 
+        public static object ReadNestedYamlValue(string filePath, string parentKey, string childKey)
+        {
+            var deserializer = new DeserializerBuilder()
+                .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                .Build();
+
+            var yamlString = File.ReadAllText(filePath);
+            var yamlDictionary = deserializer.Deserialize<Dictionary<string, Dictionary<string, object>>>(yamlString);
+
+            if (yamlDictionary.ContainsKey(parentKey))
+            {
+                var parentValue = yamlDictionary[parentKey];
+                if (parentValue.ContainsKey(childKey))
+                {
+                    return parentValue[childKey];
+                }
+                else    
+                {
+                    throw new KeyNotFoundException($"Child key '{childKey}' not found in the YAML file.");
+                }
+            }
+            else
+            {
+                throw new KeyNotFoundException($"Parent key '{parentKey}' not found in the YAML file.");
+            }
+        }
     }
 }

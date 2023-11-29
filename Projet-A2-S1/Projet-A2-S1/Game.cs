@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projet_A2_S1
 {
-    internal class Jeu
+    internal class Game
     {
     }
 }

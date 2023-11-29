@@ -1,7 +1,9 @@
 ﻿using System.Globalization;
 using System.Threading;
+using System.IO;
 using ConsoleAppVisuals;
-
+using YamlDotNet.Serialization;
+using YamlDotNet.Serialization.NamingConventions;
 
 namespace Projet_A2_S1
 {
@@ -18,7 +20,6 @@ namespace Projet_A2_S1
                 var index= Core.ScrollingMenuSelector(" Menu Principal :", default, default, "Jouer", "Paramètre", "Quitter le jeu");
                 switch(index.Item1){
                     case 0:
- 
                             switch(index.Item2){
                             case 0:
                                 int number = Method.TimedNumberInput(5);  // 5 seconds time limit
@@ -28,7 +29,27 @@ namespace Projet_A2_S1
                                 }
                                 else
                                 {
-                                    Console.WriteLine($"You entered: {number}");
+                                    
+                                    Console.WriteLine($"You entered {number}.");
+                                    var players = new PlayerList{playerlist = new System.Collections.Generic.List<Player>()};
+                                    Console.WriteLine("Entrez un timer :");
+                                    int timer = Convert.ToInt32(Console.ReadLine());
+                                    for(int i=0;i<number;i++){
+                                        Console.WriteLine("Entrez un nom :");
+                                        string mot = Console.ReadLine();
+                                        players.playerlist.Add(new Player { Name = mot, Timer = timer, Score = 0 });
+                                        Console.WriteLine($"Vous avez entré : {mot}");
+                                    }
+
+                                    var serializer = new SerializerBuilder()
+                                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                                        .Build();
+
+                                    var yamlString = serializer.Serialize(players);
+
+                                    File.WriteAllText("data/config.yml", yamlString);
+
+                                    players.toString();
                                 }
                                 EndMenu = false;
                             break;
@@ -62,13 +83,8 @@ namespace Projet_A2_S1
                             Console.ReadKey();
                             Core.ExitProgram();
                     break;
-                }
-                
-                
-            }
-            
+                }   
+            }   
         }
-
-        
     }
 }
