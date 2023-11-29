@@ -2,9 +2,19 @@
 
 public class Player
 {
-    public string Name { get; set; }
-    public int Timer { get; set; }
-    public int Score { get; set; }
+     string name;
+     int timer;
+     int score;
+
+    public Player(string name, int timer, int score ){
+        this.name = name;
+        this.timer=timer;
+        this.score = score;
+    }
+
+    public string Name{get{return name;}}
+    public int Timer{get{return timer;}}
+    public int Score{get{return score;}}
 
 }
 /*

@@ -10,14 +10,76 @@ using YamlDotNet.Serialization.NamingConventions;
 namespace Projet_A2_S1
 {
     public class Method
-    {
+    {   
+        /// <summary>
+        /// This function create the main menu of the game
+        /// </summary>
+        static public void main_menu(){
+            Core.ClearWindow();
+            Core.SetTitle("Jeu des mots");
+            Core.WriteTitle();
+            Core.WriteBanner();
+            bool EndMenu = true;
+            while(EndMenu){
+                var index= Core.ScrollingMenuSelector(" Menu Principal :", default, default, "Jouer", "Paramètre", "Quitter le jeu");
+                switch(index.Item1){
+
+                    case 0:
+                        switch(index.Item2){
+
+                            case 0:
+                                EndMenu=false;
+                                
+                            break;
+                            
+                            case 1:
+                                var index2 =Core.ScrollingMenuSelector("Liste des paramètres :",default , default, "Changer couleur","Changer langue ","Revenir au menu principal");
+                                switch(index2.Item2){
+                                    case 0 : 
+                                        var color = Core.ScrollingMenuSelector("Choisir une couleur :",default,default,"Rouge","Bleu","Vert","Jaune","Blanc","Noir");
+                                        ConsoleColor[] colors = { ConsoleColor.Red, ConsoleColor.Blue, ConsoleColor.Green, ConsoleColor.Yellow, ConsoleColor.White, ConsoleColor.Black, ConsoleColor.Gray };
+                                        ConsoleColor couleur = colors[color.Item2];
+                                        Core.ChangeForeground(couleur);
+                                        Core.WritePositionedString("Couleur choisie : ",Placement.Center,default,10,default);
+                                    break;
+                                }
+                            break;         
+
+                            case 2 : 
+                                EndMenu = false;
+                                Core.ExitProgram();
+                            break;                   
+                        }  
+                    break;
+                    case -1: 
+                            Console.WriteLine("Vous avez pressé la touche echap, vous allez sortir du jeu, pressez entrée pour confirmer");
+                            Console.ReadKey();
+                            Core.ExitProgram();
+                    break;
+                    case -2: 
+                            Console.WriteLine("Vous avez pressé la touche backspace, vous allez sortir du jeu, pressez entrée pour confirmer");
+                            Console.ReadKey();
+                            Core.ExitProgram();
+                    break;
+                }
+
+            }
+        }
+
+
+
+
+
+
+
+
 
         /// <summary>
         /// Fonction permettant de laisser un temps donné à l'utilisateur pour faire une action
         /// </summary>
         /// <param name="timeLimit"> variable qui permet de stocker la limite de temps donnée</param>
         /// <returns></returns>
-        public static int TimedNumberInput(int timeLimit)
+        public static int TimedNumberInput(int timeLimit,string message="Enter a number: ")
         {
             Timer timer = null;
             Timer printTimer = null;
@@ -40,7 +102,7 @@ namespace Projet_A2_S1
 
             while (true)
             {
-                Core.WritePositionedString("Enter a number: ",Placement.Center,default,10,default);
+                Core.WritePositionedString(message,Placement.Center,default,10,default);
                 string input = Console.ReadLine();
 
                 if (timeUp)
@@ -56,34 +118,30 @@ namespace Projet_A2_S1
             }
         }
 
-
-
-
-        public static object ReadNestedYamlValue(string filePath, string parentKey, string childKey)
+        static public void CreatePlayer(bool saisie = true)
         {
-            var deserializer = new DeserializerBuilder()
-                .WithNamingConvention(CamelCaseNamingConvention.Instance)
-                .Build();
-
-            var yamlString = File.ReadAllText(filePath);
-            var yamlDictionary = deserializer.Deserialize<Dictionary<string, Dictionary<string, object>>>(yamlString);
-
-            if (yamlDictionary.ContainsKey(parentKey))
-            {
-                var parentValue = yamlDictionary[parentKey];
-                if (parentValue.ContainsKey(childKey))
-                {
-                    return parentValue[childKey];
-                }
-                else    
-                {
-                    throw new KeyNotFoundException($"Child key '{childKey}' not found in the YAML file.");
-                }
+            var index = Core.ScrollingNumberSelector("Choisir le nombre de joueur :",1,4,1,1);
+            int number=0;
+            if(index.Item1 == 0){
+                number = Convert.ToInt32(index.Item2);
             }
-            else
-            {
-                throw new KeyNotFoundException($"Parent key '{parentKey}' not found in the YAML file.");
+            else{
+                Core.WritePositionedString("Vous avez pressé la touche echap, vous allez sortir du jeu, pressez entrée pour confirmer",Placement.Center,default,10,default);
+                Core.ExitProgram();
             }
+            List<Player> playerlist = new List<Player>();
+            PlayerList players = new PlayerList(playerlist);
+            for(int i = 0; i < number; i++){
+                Core.WritePositionedString($"Entrez le nom du joueur {i+1} : ",Placement.Center,default,10,default);
+                string name = Console.ReadLine();
+                Console.WriteLine("Nom trouvé");
+                Player p = new Player (name,100,1);
+                players.playerlist.Add(p);
+            }
+            players.WriteYAML("data/config.yml");            
+
+
         }
+        
     }
 }

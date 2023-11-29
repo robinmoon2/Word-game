@@ -12,7 +12,9 @@ namespace Projet_A2_S1
     {
         public List<Player> playerlist { get; set; }
 
-
+        public PlayerList(List<Player> playerlist){
+            this.playerlist=playerlist;
+        }
         public void toString(){
             foreach(Player player in playerlist){
                 Console.WriteLine(player.Name);

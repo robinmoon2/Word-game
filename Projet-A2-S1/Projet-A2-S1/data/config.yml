@@ -1,7 +1,6 @@
-playerlist:
+- name: amandine
+  timer: 100
+  score: 1
 - name: robin
   timer: 100
-  score: 0
-- name: emma
-  timer: 100
-  score: 0
+  score: 1
