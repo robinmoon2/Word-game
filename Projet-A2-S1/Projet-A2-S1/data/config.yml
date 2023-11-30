@@ -1,6 +1,9 @@
-- name: a
-  timer: 60
-  score: 1
-- name: b
-  timer: 60
-  score: 1
+- name: test réussi
+  timer: 90
+  score: 0
+- name: yann
+  timer: 133
+  score: 0
+- name: emma
+  timer: 90
+  score: 0

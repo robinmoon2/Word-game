@@ -17,17 +17,6 @@ namespace Projet_A2_S1
         public PlayerList(List<Player> playerlist){
             this.playerlist=playerlist;
         }
-        public string toString(){
-            string s="";
-            foreach(Player player in playerlist){
-                s=s+"\n"+player.toString();
-            }
-            return s;
-        }
-
-
-
-
         public void WriteYAML(string YAML_PATH){
             var serializer = new SerializerBuilder()
                 .WithNamingConvention(CamelCaseNamingConvention.Instance)
@@ -45,6 +34,15 @@ namespace Projet_A2_S1
 
             var yamlString = File.ReadAllText(YAML_PATH);
             playerlist = deserializer.Deserialize<List<Player>>(yamlString);
+        }
+
+
+        public string toString(){
+            string s="";
+            foreach(Player player in playerlist){
+                s=s+"\n"+player.toString();
+            }
+            return s;
         }
     }
 

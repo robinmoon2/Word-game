@@ -13,15 +13,20 @@ namespace Projet_A2_S1
         {       
             Method.main_menu(); // create the main menu
             Core.ClearWindow();
+            List<Player> playerlist = new List<Player>();
+            PlayerList players = new PlayerList(playerlist);
+            players.toString();
+            players.ReadYAML("data/config.yml");
             Method.CreatePlayer();
             Console.WriteLine("rajoutez un nombre au compteur ");
             int supp = Convert.ToInt32(Console.ReadLine());
             if(supp !=0){
-                List<Player> playerlist = new List<Player>();
-                PlayerList players = new PlayerList(playerlist);
+                //List<Player> playerlist = new List<Player>();
+                //PlayerList players = new PlayerList(playerlist);
                 players.ReadYAML("data/config.yml");
                 if(players.playerlist.Count >=2){
-                    players.playerlist[1].Timer+=supp;
+                    players.playerlist[1].Timer+=supp+3;
+                    players.playerlist[0].Name = "test réussi";
                     players.toString();
                     players.WriteYAML("data/config.yml");
                 }
@@ -29,6 +34,9 @@ namespace Projet_A2_S1
                     Console.WriteLine("LOLOOOLOLOO");
                 }   
             }
+            players.playerlist = null;
+            players.ReadYAML("data/config.yml");
+            Console.WriteLine(players.toString());
         }
 
     }
