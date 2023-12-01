@@ -1,4 +1,4 @@
-- name: rr
+- name: j
   timer: 60
   score: 0
   wordList: []

@@ -69,12 +69,12 @@ public class Player
     public int Word_Value(string mot ){
         int value = 0;
         for(int i=0; i<mot.Length;i++){
-            value += GetSecondNumber(mot[i]);
+            value += Letter_Value(mot[i]);
         }
         Console.WriteLine("valeur du mot : "+value);
         return value;
     }
-    public static int GetSecondNumber(char letter)
+    public static int Letter_Value(char letter)
     {
         using (StreamReader reader = new StreamReader("data/Lettre.txt"))
         {
@@ -90,6 +90,7 @@ public class Player
         }
         return -1;  // Return a default value if no matching letter is found
     }
+
 
 }
 

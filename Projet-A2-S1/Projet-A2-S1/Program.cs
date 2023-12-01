@@ -34,10 +34,7 @@ namespace Projet_A2_S1
                     Console.WriteLine("Mot déjà dans votre liste ! ");
                 }
             }
-
-
         }
-
     }
 }
 
