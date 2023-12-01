@@ -118,6 +118,10 @@ namespace Projet_A2_S1
             }
         }
 
+
+        /// <summary>
+        /// Thei function create the number of player and the timer for each player
+        /// </summary>
         static public void CreatePlayer()
         {
             var index = Core.ScrollingNumberSelector("Choisir le timer par joueur :",60,120,60,30);
@@ -137,18 +141,13 @@ namespace Projet_A2_S1
             for(int i = 0; i < number; i++){
                 Core.WritePositionedString($"Entrez le nom du joueur {i+1} : ",Placement.Center,default,10,default);
                 string name = Console.ReadLine();
-                Console.WriteLine("Nom assigné");
-                List<string> wordlist = new List<string>();
-                wordlist.Add("test");
-                if(i==1){
-                    wordlist.Add("test2");
-                }
-                players.playerlist.Add(new Player {Name = name, Timer = timer, Score = 0, WordList = wordlist});
+                players.playerlist.Add(new Player {Name = name, Timer = timer, Score = 0, WordList = new List<string>()});
+                Core.ClearLine(10);
             }
             players.WriteYAML("data/config.yml");   
             Console.WriteLine("Liste des joueurs : ");
+            Console.WriteLine("");
             Console.WriteLine(players.toString());   
-            players.ReadYAML("data/config.yml");
 
         }
         

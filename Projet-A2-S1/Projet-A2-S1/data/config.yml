@@ -1,11 +1,16 @@
-- name: ''
-  timer: 60
+- name: maman
+  timer: 120
   score: 0
-  wordList:
-  - test
+  wordList: []
+- name: papa
+  timer: 120
+  score: 0
+  wordList: []
+- name: clemence
+  timer: 120
+  score: 0
+  wordList: []
 - name: robin
-  timer: 60
+  timer: 120
   score: 0
-  wordList:
-  - test
-  - test2
+  wordList: []

@@ -7,7 +7,6 @@ public class Player
      int score;
 
      List<string> wordList;
-    //string name="", int timer=0, int score=0
     public Player(){
         this.name = name;
         this.timer=timer;
@@ -23,7 +22,7 @@ public class Player
 
 
     public string toString(){
-        string playerString= $"Name : {name}\n Timer : {timer}\n Score : {score}+ \n WordList :";
+        string playerString= $"Name : {name}\n Timer : {timer}\n Score : {score} \n WordList :";
         foreach(string word in wordList){
             playerString += $"\n {word}";
         }

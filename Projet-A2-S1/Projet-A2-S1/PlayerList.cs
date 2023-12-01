@@ -13,10 +13,15 @@ namespace Projet_A2_S1
         public List<Player> playerlist { get; set; }
 
 
-
+        ///
         public PlayerList(List<Player> playerlist){
             this.playerlist=playerlist;
         }
+
+        /// <summary>
+        /// Write the informations of the players in a YAML file
+        /// </summary>
+        /// <param name="YAML_PATH"> location of the yaml file </param>
         public void WriteYAML(string YAML_PATH){
             var serializer = new SerializerBuilder()
                 .WithNamingConvention(CamelCaseNamingConvention.Instance)
@@ -26,6 +31,11 @@ namespace Projet_A2_S1
 
             File.WriteAllText(YAML_PATH, yamlString);
         }
+
+        /// <summary>
+        /// Read the YAML file and create a list of player
+        /// </summary>
+        /// <param name="YAML_PATH">Location of the yaml file </param>
         public void ReadYAML(string YAML_PATH)
         {
             var deserializer = new DeserializerBuilder()

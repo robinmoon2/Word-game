@@ -13,8 +13,9 @@ namespace Projet_A2_S1
         {       
             Method.main_menu(); // create the main menu
             Core.ClearWindow();
-            // Initialise the game 
             Method.CreatePlayer();
+            
+            //Method.CreatePlayer();
         }
 
     }
