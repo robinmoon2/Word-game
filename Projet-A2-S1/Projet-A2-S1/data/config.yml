@@ -1,4 +1,4 @@
-- name: roin
+- name: rr
   timer: 60
   score: 0
   wordList: []

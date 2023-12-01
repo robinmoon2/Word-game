@@ -61,7 +61,8 @@ public class Player
 
     public void Add_Score(int val) 
     {
-        
+        Console.WriteLine("Score ajouté, bravo ! "+val);
+        this.score += val;
     }
 
 
@@ -70,6 +71,7 @@ public class Player
         for(int i=0; i<mot.Length;i++){
             value += GetSecondNumber(mot[i]);
         }
+        Console.WriteLine("valeur du mot : "+value);
         return value;
     }
     public static int GetSecondNumber(char letter)
@@ -80,13 +82,12 @@ public class Player
             while ((line = reader.ReadLine()) != null)
             {
                 string[] parts = line.Split(',');
-                if (parts[0] == letter.ToString())
+                if (parts[0] == letter.ToString().ToUpper())
                 {
                     return int.Parse(parts[2]);
                 }
             }
         }
-
         return -1;  // Return a default value if no matching letter is found
     }
 
