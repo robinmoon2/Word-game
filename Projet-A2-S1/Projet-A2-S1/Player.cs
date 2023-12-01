@@ -29,7 +29,7 @@ public class Player
 
     public void Add_Mot (string mot) 
     {
-        if(!Contient(mot) ){ // ! il faut mettre si le mot existe dans le dictionnaire ou alors on fait le check avant 
+        if(!Contient(mot) ){ // ! il faut mettre si le mot existe dans le dictionnaire ou alors on fait le check avant dans le program.cs
             wordList.Add(mot);
             Console.WriteLine("Mot ajoué, bravo ! ");
         }
