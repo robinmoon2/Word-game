@@ -25,23 +25,39 @@ public class Player
         return playerString;
     }
 
-}
-/*
-public void Add_Mot (string mot) 
-{
-}
-public string toString()
-{
-
-}
-public void Add_Score(int val) 
-{
-
-}
-public bool Contient (string mot) 
-{
-    
-}
 
 
-*/
+    public void Add_Mot (string mot) 
+    {
+        if(!Contient(mot) ){ // ! il faut mettre si le mot existe dans le dictionnaire ou alors on fait le check avant 
+            wordList.Add(mot);
+            Console.WriteLine("Mot ajoué, bravo ! ");
+        }
+        else{
+            Console.WriteLine("Mot déjà dans votre liste ! ");
+        }
+
+    }
+
+
+    public bool Contient (string mot) 
+    {
+        bool verif = false;
+        for(int i=0; i<wordList.Count; i++)
+        {
+            if(wordList[i] == mot)
+            {
+                verif = true;
+            }
+        }
+        return verif;
+    }
+
+    public void Add_Score(int val) 
+    {
+
+    }
+
+}
+
+
