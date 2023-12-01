@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="ConsoleAppVisuals" Version="2.4.3" />
+    <PackageReference Include="YamlDotNet" Version="13.7.1" />
   </ItemGroup>
 
 </Project>
