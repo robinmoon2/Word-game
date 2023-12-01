@@ -7,11 +7,7 @@ public class Player
      int score;
 
      List<string> wordList;
-    public Player(){
-        this.name = name;
-        this.timer=timer;
-        this.score = score;
-    }
+    
 
     public string Name{get{return name;} set{name = value;}}
     public int Timer{get{return timer;} set{timer = value;}}

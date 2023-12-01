@@ -13,6 +13,9 @@ namespace Projet_A2_S1
         {       
             Method.main_menu(); // create the main menu
             Core.ClearWindow();
+            List<Player> player = new List<Player>();
+            PlayerList players = new PlayerList(player);
+            players.ReadYAML("data/config.yml");
             Method.CreatePlayer();
             
             //Method.CreatePlayer();
