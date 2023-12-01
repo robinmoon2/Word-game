@@ -5,6 +5,8 @@ public class Player
      string name;
      int timer;
      int score;
+
+     List<string> wordList;
     //string name="", int timer=0, int score=0
     public Player(){
         this.name = name;
@@ -15,10 +17,17 @@ public class Player
     public string Name{get{return name;} set{name = value;}}
     public int Timer{get{return timer;} set{timer = value;}}
     public int Score{get{return score;} set{score = value;}}
+    public List<string> WordList{get{return wordList;} set{wordList = value;}}
+
+
 
 
     public string toString(){
-        return $"Name : {name}\n Timer : {timer}\n Score : {score}";
+        string playerString= $"Name : {name}\n Timer : {timer}\n Score : {score}+ \n WordList :";
+        foreach(string word in wordList){
+            playerString += $"\n {word}";
+        }
+        return playerString;
     }
 
 }

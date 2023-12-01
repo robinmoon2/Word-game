@@ -138,7 +138,12 @@ namespace Projet_A2_S1
                 Core.WritePositionedString($"Entrez le nom du joueur {i+1} : ",Placement.Center,default,10,default);
                 string name = Console.ReadLine();
                 Console.WriteLine("Nom assigné");
-                players.playerlist.Add(new Player {Name = name, Timer = timer, Score = 0});
+                List<string> wordlist = new List<string>();
+                wordlist.Add("test");
+                if(i==1){
+                    wordlist.Add("test2");
+                }
+                players.playerlist.Add(new Player {Name = name, Timer = timer, Score = 0, WordList = wordlist});
             }
             players.WriteYAML("data/config.yml");   
             Console.WriteLine("Liste des joueurs : ");
