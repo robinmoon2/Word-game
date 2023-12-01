@@ -1,4 +1,10 @@
-﻿namespace Projet_A2_S1;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.Security;
+using System.Text.Json.Serialization;
+using System.IO;
+using System.Collections.Generic;
+
+namespace Projet_A2_S1;
 
 public class Player
 {
@@ -55,7 +61,33 @@ public class Player
 
     public void Add_Score(int val) 
     {
+        
+    }
 
+
+    public int Word_Value(string mot ){
+        int value = 0;
+        for(int i=0; i<mot.Length;i++){
+            value += GetSecondNumber(mot[i]);
+        }
+        return value;
+    }
+    public static int GetSecondNumber(char letter)
+    {
+        using (StreamReader reader = new StreamReader("data/Lettre.txt"))
+        {
+            string line;
+            while ((line = reader.ReadLine()) != null)
+            {
+                string[] parts = line.Split(',');
+                if (parts[0] == letter.ToString())
+                {
+                    return int.Parse(parts[2]);
+                }
+            }
+        }
+
+        return -1;  // Return a default value if no matching letter is found
     }
 
 }

@@ -17,8 +17,11 @@ namespace Projet_A2_S1
             PlayerList players = new PlayerList(player);
             players.ReadYAML("data/config.yml");
             Method.CreatePlayer();
-            
-            //Method.CreatePlayer();
+            Console.WriteLine("program");
+            Player p = new Player{Name = "test", Timer = 0, Score = 0, WordList = new List<string>()};
+            Console.WriteLine(p.Word_Value("TEST"));
+            Console.WriteLine(p.Word_Value("ABCD"));
+
         }
 
     }
