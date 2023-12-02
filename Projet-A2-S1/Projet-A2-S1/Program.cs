@@ -16,8 +16,7 @@ namespace Projet_A2_S1
             Dictionnaire dico = new Dictionnaire();
             Console.WriteLine("coucou");
             Console.WriteLine(dico.toString());
-
-
+            Console.WriteLine(dico.FindWord("BUCHEUR"));
         }
     }
 }
