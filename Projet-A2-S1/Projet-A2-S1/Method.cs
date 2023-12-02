@@ -141,6 +141,9 @@ namespace Projet_A2_S1
             for(int i = 0; i < number; i++){
                 Core.WritePositionedString($"Entrez le nom du joueur {i+1} : ",Placement.Center,default,10,default);
                 string name = Console.ReadLine();
+                if(name == ""){
+                    name = "Joueur " + (i+1);
+                }
                 players.playerlist.Add(new Player {Name = name, Timer = timer, Score = 0, WordList = new List<string>()});
                 Core.ClearLine(10);
             }

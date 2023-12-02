@@ -1,8 +1,4 @@
-- name: ''
-  timer: 90
-  score: 0
-  wordList: []
-- name: ''
-  timer: 90
+- name: j
+  timer: 60
   score: 0
   wordList: []
