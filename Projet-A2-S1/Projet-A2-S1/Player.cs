@@ -90,8 +90,6 @@ public class Player
         }
         return -1;  // Return a default value if no matching letter is found
     }
-
-
 }
 
 
