@@ -40,18 +40,18 @@ namespace Projet_A2_S1
                     Core.WritePositionedString("Entrée pour commencer",Placement.Right,default,11,default);
                     bool end_turn = false;
                     while(!end_turn){
-                        var turn = Method.TimedNumberInput(player.Timer, "Entrez un mot : ");
+                        var turn = Method.TimedNumberInput(player.Timer, "Pressez entrée pour ensuite ajouter votre mot");
                         player.Timer = turn.Item1;
                         if(player.Timer == 0){
                             Core.WritePositionedString("Temps écoulé",Placement.Right,default,12,default);
                             end_turn = true;
                         }
                         else{
-                                string? input = turn.Item2;
-                            Console.WriteLine(input);
-                            Console.WriteLine(dico.ToString());
+                            Core.WritePositionedString("Entrez votre mot : ",Placement.Center,default,12,default);
+                            string input = Console.ReadLine() ?? "x";
                             if(dico.FindWord(input))
                             {
+                                Console.WriteLine(player.Contient(input));
                                 if(!player.Contient(input)){
                                     player.Add_Mot(input);
                                     Console.WriteLine(player.Word_Value(input));
@@ -62,16 +62,16 @@ namespace Projet_A2_S1
                             }
                             else
                             {
-                                Core.WritePositionedString("Le mot n'existe pas",Placement.Right,default,12,default);
+                                Core.WritePositionedString("Le mot n'existe pas",Placement.Center,default,12,default);
                             }
+                            players.WriteYAML("data/config.yml");
+                            players.ReadYAML("data/config.yml");
                         }
-                        players.WriteYAML("data/config.yml");
-                        players.ReadYAML("data/config.yml");
+                        
                     }
                     Core.ClearWindow();
                     Console.WriteLine(players.toString());
                     
-
                 }
             }
         }

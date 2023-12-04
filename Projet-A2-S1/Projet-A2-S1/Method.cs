@@ -1,3 +1,5 @@
+using YamlDotNet.Core;
+
 namespace Projet_A2_S1
 {
     public class Method
@@ -66,10 +68,10 @@ namespace Projet_A2_S1
         /// </summary>
         /// <param name="timeLimit"> variable qui permet de stocker la limite de temps donnée</param>
         /// <returns></returns>
-        public static (int, string) TimedNumberInput(int timeLimit, string message = "Enter a number: ")
+        public static (int, string?) TimedNumberInput(int timeLimit, string message = "Enter a number: ")
         {
-            Timer timer = null;
-            Timer printTimer = null;
+            Timer? timer = null;
+            Timer? printTimer = null;
             bool timeUp = false;
             int remainingTime = timeLimit;
 
@@ -77,31 +79,32 @@ namespace Projet_A2_S1
             {
                 timeUp = true;
                 timer?.Dispose();
-                printTimer.Dispose();
+                printTimer?.Dispose();
                 Console.WriteLine("\nTime is up!");
             }, null, timeLimit * 1000, Timeout.Infinite);
 
             printTimer = new Timer((state) =>
             {
                 remainingTime--;
-                Core.ClearLine(20);
                 Core.WritePositionedString($"Remaining time: {remainingTime}", Placement.Center, default, 20, default);
+
             }, null, 1000, 1000);
 
             while (true)
             {
                 Core.WritePositionedString(message, Placement.Center, default, 10, default);
-                string input = Console.ReadLine();
+
+                if (Console.KeyAvailable)
+                {
+                    var input = Console.ReadKey(true);
+                    timer.Dispose();
+                    printTimer.Dispose();
+                    return (remainingTime, input.KeyChar.ToString());
+                }
 
                 if (timeUp)
                 {
                     return (remainingTime, null);
-                }
-                else
-                {
-                    timer.Dispose();
-                    printTimer.Dispose();
-                    return (remainingTime, input);
                 }
             }
         }
@@ -128,7 +131,7 @@ namespace Projet_A2_S1
 
             for(int i = 0; i < number; i++){
                 Core.WritePositionedString($"Entrez le nom du joueur {i+1} : ",Placement.Center,default,10,default);
-                string name = Console.ReadLine();
+                string? name = Console.ReadLine();
                 name ??= "";
                 if(name == "" || name == null){
                     name = "Joueur " + (i+1);

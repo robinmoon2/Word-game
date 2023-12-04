@@ -13,8 +13,8 @@ internal class Dictionnaire
         using (StreamReader reader = new StreamReader("data/Mots_français.txt"))
         {
             this.dictionary = new Dictionary<char, List<string>>(); 
-            string line;
-            while ((line = reader.ReadLine()) != null)
+            string line= reader.ReadLine() ?? "";
+            while (line != null)
             {
                 string[] words = line.Split(' ');
                 char key = ' ';
@@ -28,7 +28,7 @@ internal class Dictionnaire
                     }
                     dictionary[key].Add(word);
                 }
-                dictionary[key] = Tri_XXX(dictionary[key]);
+                dictionary[key] =Tri_XXX(dictionary[key]);
             }
         }
         SerializeDictionary();
@@ -64,6 +64,9 @@ internal class Dictionnaire
 
 
     public bool FindWord(string mot){
+        if(mot is null || mot == ""){
+            return false;
+        }
         string jsonString = File.ReadAllText("data/Dictionary.Json");
         var dictionary = JsonSerializer.Deserialize<Dictionary<char,List<string>>>(jsonString);
         mot = mot.ToUpper();
@@ -99,10 +102,10 @@ internal class Dictionnaire
         }
     }
     
-    public List<string> Tri_XXX(List<string> wordlist) 
+    public List<string>? Tri_XXX(List<string> wordlist) 
     {
         if(wordlist == null || wordlist.Count()<=1){
-            return wordlist;
+            return null;
         }
         else{
             var pivot = wordlist[0];

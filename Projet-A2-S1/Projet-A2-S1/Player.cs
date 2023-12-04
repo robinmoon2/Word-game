@@ -78,7 +78,6 @@ public class Player
             while (line != null)
             {
                 string[] parts = line.Split(',');
-                Console.WriteLine(parts[0]);
                 if (parts[0] == letter.ToString().ToUpper())
                 {
                     return int.Parse(parts[2]);
