@@ -1,10 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.Security;
-using System.Text.Json.Serialization;
-using System.IO;
-using System.Collections.Generic;
-
-namespace Projet_A2_S1;
+﻿namespace Projet_A2_S1;
 
 public class Player
 {

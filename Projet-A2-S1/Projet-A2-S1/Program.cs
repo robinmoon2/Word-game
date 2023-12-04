@@ -1,11 +1,4 @@
-﻿using System.Globalization;
-using System.Threading;
-using System.IO;
-using ConsoleAppVisuals;
-using YamlDotNet.Serialization;
-using YamlDotNet.Serialization.NamingConventions;
-
-namespace Projet_A2_S1
+﻿namespace Projet_A2_S1
 {
     internal class Program
     {

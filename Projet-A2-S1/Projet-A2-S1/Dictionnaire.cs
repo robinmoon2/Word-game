@@ -1,10 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.Json;
-using System.Reflection.PortableExecutable;
-using System.Security.Cryptography.X509Certificates;
-namespace Projet_A2_S1;
+﻿namespace Projet_A2_S1;
 
 internal class Dictionnaire
 {
@@ -48,7 +42,7 @@ internal class Dictionnaire
     {
         string dico="";
         foreach(KeyValuePair<char,List<string>> parts in dictionary){
-            dico += $"{parts.Key} : il y a : {parts.Value.Count} \n mots ";
+            dico += $"{parts.Key} : il y a : {parts.Value.Count} mots \n";
         }
         return dico; 
 
