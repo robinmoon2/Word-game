@@ -1,4 +1,6 @@
-﻿namespace Projet_A2_S1;
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace Projet_A2_S1;
 
 internal class Dictionnaire
 {
@@ -42,10 +44,9 @@ internal class Dictionnaire
     {
         string dico="";
         foreach(KeyValuePair<char,List<string>> parts in dictionary){
-            dico += $"{parts.Key} : il y a : {parts.Value.Count} mots \n";
+            dico += $"{parts.Key} : il y a {parts.Value.Count} mots \n";
         }
         return dico; 
-
     }
 
 
@@ -57,7 +58,6 @@ internal class Dictionnaire
         };
 
         string JsonString = JsonSerializer.Serialize(dictionary, stream);
-
         File.WriteAllText("data/Dictionary.Json", JsonString);
     }
     
@@ -67,6 +67,9 @@ internal class Dictionnaire
         string jsonString = File.ReadAllText("data/Dictionary.Json");
         var dictionary = JsonSerializer.Deserialize<Dictionary<char,List<string>>>(jsonString);
         mot = mot.ToUpper();
+        if( mot == null){
+            return false;
+        }
         if(dictionary.ContainsKey(mot[0])){
             return RechDichoRecursif(mot.ToUpper(),dictionary[mot[0]]);
         }

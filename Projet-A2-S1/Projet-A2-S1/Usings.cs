@@ -5,3 +5,4 @@ global using System.IO;
 global using YamlDotNet.Serialization;
 global using YamlDotNet.Serialization.NamingConventions;
 global using System.Collections.Generic;
+global using System.Linq;

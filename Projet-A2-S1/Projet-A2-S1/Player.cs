@@ -5,7 +5,6 @@ public class Player
      string name;
      int timer;
      int score;
-
      List<string> wordList;
     
 
@@ -24,6 +23,7 @@ public class Player
         }
         return playerString;
     }
+    
 
 
 
@@ -64,26 +64,30 @@ public class Player
         int value = 0;
         for(int i=0; i<mot.Length;i++){
             value += Letter_Value(mot[i]);
+            Console.WriteLine(mot[i]);
         }
         Console.WriteLine("valeur du mot : "+value);
         return value;
     }
+
     public static int Letter_Value(char letter)
     {
         using (StreamReader reader = new StreamReader("data/Lettre.txt"))
         {
-            string line;
-            while ((line = reader.ReadLine()) != null)
+            string line = reader.ReadLine() ?? "" ;
+            while (line != null)
             {
                 string[] parts = line.Split(',');
+                Console.WriteLine(parts[0]);
                 if (parts[0] == letter.ToString().ToUpper())
                 {
                     return int.Parse(parts[2]);
                 }
+                line = reader.ReadLine() ?? "";
             }
         }
-        return -1;  // Return a default value if no matching letter is found
-    }
+        return -1;
+    }   
 }
 
 

@@ -1,4 +1,5 @@
-- name: j
-  timer: 60
-  score: 0
-  wordList: []
+- name: Joueur 1
+  timer: 0
+  score: 18
+  wordList:
+  - bonjour

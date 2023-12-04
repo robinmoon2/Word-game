@@ -1,11 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.IO;
-using YamlDotNet.Serialization;
-using YamlDotNet.Serialization.NamingConventions;
-
 namespace Projet_A2_S1
 {
     public class PlayerList
@@ -54,6 +46,15 @@ namespace Projet_A2_S1
             }
             return s;
         }
+
+        public List<string> toStringArray(){
+            List<string> s = new ();
+            foreach (var player in playerlist){
+                s.Add(player.toString());
+            }
+            return s;
+        }
+
     }
 
 
