@@ -43,6 +43,7 @@ public class Plateau
 
                 }
             break;
+
             case -1:
             case -2:
                 Console.WriteLine("Vous avez pressé la touche echap, vous allez sortir du jeu, pressez entrée pour confirmer");
@@ -50,6 +51,7 @@ public class Plateau
                 Core.ExitProgram();
             break;
         }
+        path = PATH;
     }
 
     public string PATH {get {return path;} set {path = value;}}
@@ -89,13 +91,30 @@ public class Plateau
 
         
     }
+    
+    public string toString()
+    {
+        string plate="";
+        using(var reader = new StreamReader("data/AcutalPlate.csv"))
+        {
+            string line = reader.ReadLine() ?? "";
+            while(line != null){
+                string[] parts = line.Split(',');
+                for(int i=0; i<8; i++){
+                    plate+=parts[i]+" |";
+                }
+                plate+="\n"; 
+                line = reader.ReadLine();
+            }
+        }
+        return plate;
+        
+    }
 }
 
+
+
 /*
-public string toString()
-{
-    
-}
 public void ToFile(string nomfile) 
 {
     
