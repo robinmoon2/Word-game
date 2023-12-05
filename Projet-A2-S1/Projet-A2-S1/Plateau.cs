@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Runtime.ExceptionServices;
+using System.Runtime.InteropServices;
 using YamlDotNet.Serialization.BufferedDeserialization.TypeDiscriminators;
 
 namespace Projet_A2_S1;
@@ -7,6 +8,8 @@ namespace Projet_A2_S1;
 public class Plateau
 {
     string path;
+
+    char[,] plate;
 
 
 
@@ -25,7 +28,7 @@ public class Plateau
                     break;
                     case 1:
                         PATH = "data/Lettre.txt";
-                        char[,] plate = GeneratePlate(PATH);
+                        this.plate = GeneratePlate(PATH);
                         using(var writer = new StreamWriter("data/AcutalPlate.csv"))
                         {
                             for(int i=0; i<8; i++){
@@ -51,11 +54,11 @@ public class Plateau
                 Core.ExitProgram();
             break;
         }
-        path = PATH;
+        path = "data/AcutalPlate.csv";
     }
 
     public string PATH {get {return path;} set {path = value;}}
-    
+    public char[,] Plate{get {return plate;} set {plate = value;}}
 
     public char[,] GeneratePlate(string PATH){
         Random r = new Random();
@@ -110,6 +113,24 @@ public class Plateau
         return plate;
         
     }
+
+    public char[,] ToRead(string path)
+    {
+        using(StreamReader reader = new StreamReader(path)){
+            string line = reader.ReadLine() ?? "";
+            int k=0;
+            while(line != null){
+                string[] parts = line.Split(',');
+                for(int i=0; i<parts.Length; i++){
+                    plate[k,i] = char.Parse(parts[i]);
+                }
+                k++;
+                line = reader.ReadLine();
+            }
+        }
+        Console.WriteLine("test ToRead");
+        return plate;
+    }
 }
 
 
@@ -120,11 +141,7 @@ public void ToFile(string nomfile)
     
 }
 
-public void ToRead(string nomfile)
 
-{
-    
-}
 public object Recherche_Mot(string mot)
 {
 

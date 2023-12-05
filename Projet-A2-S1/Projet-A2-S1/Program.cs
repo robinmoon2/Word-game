@@ -11,9 +11,8 @@ namespace Projet_A2_S1
 
             // create the player
             Plateau plat= new Plateau();
-
-
-
+            plat.ToRead(plat.PATH);
+            Console.WriteLine(plat.toString());
 
 
 
