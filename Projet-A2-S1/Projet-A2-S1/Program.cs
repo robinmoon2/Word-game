@@ -8,6 +8,15 @@ namespace Projet_A2_S1
         {       
             Method.main_menu(); // create the main menu
             Core.ClearWindow();
+
+            // create the player
+            Plateau plat= new Plateau();
+
+
+
+
+
+
             Method.CreatePlayer();
 
             var playerList = new List<Player>();
@@ -32,48 +41,6 @@ namespace Projet_A2_S1
                 Core.ClearWindow();
             }
             Core.WritePositionedString(players.toString(),Placement.Right,default,10,default);
-            
-            while(players.playerlist.Any(player => player.Timer != 0)){
-                foreach (var player in players.playerlist)
-                {
-                    Core.WritePositionedString("Joueur : "+player.Name+", à vous de jouer. Press",Placement.Right,default,10,default);
-                    Core.WritePositionedString("Entrée pour commencer",Placement.Right,default,11,default);
-                    bool end_turn = false;
-                    while(!end_turn){
-                        var turn = Method.TimedNumberInput(player.Timer, "Pressez entrée pour ensuite ajouter votre mot");
-                        player.Timer = turn.Item1;
-                        if(player.Timer == 0){
-                            Core.WritePositionedString("Temps écoulé",Placement.Right,default,12,default);
-                            end_turn = true;
-                        }
-                        else{
-                            Core.WritePositionedString("Entrez votre mot : ",Placement.Center,default,12,default);
-                            string input = Console.ReadLine() ?? "x";
-                            if(dico.FindWord(input))
-                            {
-                                Console.WriteLine(player.Contient(input));
-                                if(!player.Contient(input)){
-                                    player.Add_Mot(input);
-                                    Console.WriteLine(player.Word_Value(input));
-                                    player.Add_Score(player.Word_Value(input));
-                                    end_turn = true;
-                                }
-                                
-                            }
-                            else
-                            {
-                                Core.WritePositionedString("Le mot n'existe pas",Placement.Center,default,12,default);
-                            }
-                            players.WriteYAML("data/config.yml");
-                            players.ReadYAML("data/config.yml");
-                        }
-                        
-                    }
-                    Core.ClearWindow();
-                    Console.WriteLine(players.toString());
-                    
-                }
-            }
         }
     }
 }

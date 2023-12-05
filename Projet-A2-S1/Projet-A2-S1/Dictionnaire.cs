@@ -8,7 +8,7 @@ internal class Dictionnaire
 
      public Dictionnaire()
     {
-        using (StreamReader reader = new StreamReader("data/Mots_français.txt"))
+        using (StreamReader reader = new StreamReader("data/Mots_Français.txt"))
         {
             this.dictionary = new Dictionary<char, List<string>>(); 
             string line= reader.ReadLine() ?? "";
@@ -26,7 +26,14 @@ internal class Dictionnaire
                     }
                     dictionary[key].Add(word);
                 }
-                dictionary[key] =Tri_XXX(dictionary[key]);
+                if (dictionary[key] != null)
+                {
+                    dictionary[key] = Tri_XXX(dictionary[key]);
+                }
+                else{
+                    Console.WriteLine("Erreur");
+                }
+                line = reader.ReadLine();
             }
         }
         SerializeDictionary();
@@ -96,14 +103,15 @@ internal class Dictionnaire
             else{
                 return RechDichoRecursif(mot,wordlist.GetRange(0,middle));
             }
+            
                 
         }
     }
     
-    public List<string>? Tri_XXX(List<string> wordlist) 
+    public List<string> Tri_XXX(List<string> wordlist) 
     {
-        if(wordlist == null || wordlist.Count()<=1){
-            return null;
+        if(wordlist == null || wordlist.Count()<=1 || wordlist[0] == null){
+            return wordlist;
         }
         else{
             var pivot = wordlist[0];
