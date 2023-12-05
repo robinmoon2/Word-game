@@ -1,11 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.IO;
-using ConsoleAppVisuals;
-using YamlDotNet.Serialization;
-using YamlDotNet.Serialization.NamingConventions;
+using YamlDotNet.Core;
 
 namespace Projet_A2_S1
 {
@@ -70,50 +63,48 @@ namespace Projet_A2_S1
 
 
 
-
-
-
-
         /// <summary>
         /// Fonction permettant de laisser un temps donné à l'utilisateur pour faire une action
         /// </summary>
         /// <param name="timeLimit"> variable qui permet de stocker la limite de temps donnée</param>
         /// <returns></returns>
-        public static int TimedNumberInput(int timeLimit,string message="Enter a number: ")
+        public static (int, string?) TimedNumberInput(int timeLimit, string message = "Enter a number: ")
         {
-            Timer timer = null;
-            Timer printTimer = null;
+            Timer? timer = null;
+            Timer? printTimer = null;
             bool timeUp = false;
             int remainingTime = timeLimit;
 
             timer = new Timer((state) =>
             {
                 timeUp = true;
-                timer.Dispose();
-                printTimer.Dispose();
+                timer?.Dispose();
+                printTimer?.Dispose();
                 Console.WriteLine("\nTime is up!");
             }, null, timeLimit * 1000, Timeout.Infinite);
 
             printTimer = new Timer((state) =>
             {
                 remainingTime--;
-                Core.WritePositionedString($"Remaining time: {remainingTime} seconds",Placement.Left,default,10,default);
+                Core.WritePositionedString($"Remaining time: {remainingTime}", Placement.Center, default, 20, default);
+
             }, null, 1000, 1000);
 
             while (true)
             {
-                Core.WritePositionedString(message,Placement.Center,default,10,default);
-                string input = Console.ReadLine();
+                Core.WritePositionedString(message, Placement.Center, default, 10, default);
+
+                if (Console.KeyAvailable)
+                {
+                    var input = Console.ReadKey(true);
+                    timer.Dispose();
+                    printTimer.Dispose();
+                    return (remainingTime, input.KeyChar.ToString());
+                }
 
                 if (timeUp)
                 {
-                    return -1;
-                }
-                if (int.TryParse(input, out int number))
-                {
-                    timer.Dispose();
-                    printTimer.Dispose();
-                    return number;
+                    return (remainingTime, null);
                 }
             }
         }
@@ -124,7 +115,7 @@ namespace Projet_A2_S1
         /// </summary>
         static public void CreatePlayer()
         {
-            var index = Core.ScrollingNumberSelector("Choisir le timer par joueur :",60,120,60,30);
+            var index = Core.ScrollingNumberSelector("Choisir le timer par joueur :",60,180,60,30);
             int timer = Convert.ToInt32(index.Item2);
             index = Core.ScrollingNumberSelector("Choisir le nombre de joueur :",1,4,1,1);
             int number=0;
@@ -140,8 +131,9 @@ namespace Projet_A2_S1
 
             for(int i = 0; i < number; i++){
                 Core.WritePositionedString($"Entrez le nom du joueur {i+1} : ",Placement.Center,default,10,default);
-                string name = Console.ReadLine();
-                if(name == ""){
+                string? name = Console.ReadLine();
+                name ??= "";
+                if(name == "" || name == null){
                     name = "Joueur " + (i+1);
                 }
                 players.playerlist.Add(new Player {Name = name, Timer = timer, Score = 0, WordList = new List<string>()});
