@@ -6,8 +6,6 @@ internal class Dictionnaire
 {
     Dictionary<char, List<string>> dictionary;
 
-
-
      public Dictionnaire()
     {
         using (StreamReader reader = new StreamReader("data/Mots_français.txt"))
