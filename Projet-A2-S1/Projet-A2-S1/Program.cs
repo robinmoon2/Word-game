@@ -24,7 +24,7 @@ namespace Projet_A2_S1
             {
                 if(plat.Board[plat.Board.GetLength(0) - 1, y] == mot[0]) // si la lettre est la même que la première lettre du mot (on commence par la dernière ligne du plateau car on cherche le mot à l'envers)
                 {
-                    dicotest = plat.Recherche_Mot(plat.Board.GetLength(0) - 1, y, mot); // on lance la recherche du mot
+                    dicotest = plat.GetWord(plat.Board.GetLength(0) - 1, y, mot); // on lance la recherche du mot
                 }
             }
             plat.SaveAndWrite();
