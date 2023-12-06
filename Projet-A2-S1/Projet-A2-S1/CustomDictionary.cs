@@ -1,41 +1,13 @@
 ﻿namespace Projet_A2_S1;
 class CustomDictionary
 {
-    private const string DICTIONARY_FILE = "data/Mots_Français.txt";
-    public Dictionary<char, List<string>> dictionary;
-
-     public CustomDictionary()
+    private const string TXT_DICTIONARY_PATH = "data/Mots_Français.txt";
+    private const string JSON_DICTIONARY_PATH = "data/Dictionary.Json";
+    public Dictionary<char, List<string>> dictionary = new();
+    public CustomDictionary()
     {
-        using (var reader = new StreamReader("data/Mots_Français.txt"))
-        {
-            dictionary = new Dictionary<char, List<string>>(); 
-            string line= reader.ReadLine() ?? "";
-            while (line != null)
-            {
-                string[] words = line.Split(' ');
-                char key = ' ';
-                foreach (var word in words)
-                {
-                    key = word[0];
-
-                    if (!dictionary.ContainsKey(key))
-                    {
-                        dictionary[key] = new List<string>();
-                    }
-                    dictionary[key].Add(word);
-                }
-                if (dictionary[key] != null)
-                {
-                    dictionary[key] = Tri_XXX(dictionary[key]);
-                }
-                else{
-                    Console.WriteLine("Erreur");
-                }
-                line = reader.ReadLine();
-            }
-        }
-        string[] data = File.ReadAllLines(DICTIONARY_FILE);
-        foreach(var line in data)
+        string[] lines = File.ReadAllLines(TXT_DICTIONARY_PATH);
+        foreach(var line in lines)
         {
             string[] words = line.Split(' ');
             char key = ' ';
@@ -48,47 +20,24 @@ class CustomDictionary
                 }
                 dictionary[key].Add(word);
             }
-            if (dictionary[key] != null)
-            {
-                dictionary[key] = Tri_XXX(dictionary[key]);
-            }
-            else{
-                Console.WriteLine("Erreur");
-            }
+            if (dictionary[key] is not null)
+                dictionary[key] = Sort(dictionary[key]);
+            else
+                throw new NullReferenceException("Le dictionnaire est null.");
         }
-
         SerializeDictionary();
     }
-
-
-
-
-    public Dictionary<char, List<string>> Dictionary {get { return dictionary;} set {dictionary = value;}}
-
-
-    public string toString()
-    {
-        string dico="";
-        foreach(KeyValuePair<char,List<string>> parts in dictionary){
-            dico += $"{parts.Key} : il y a {parts.Value.Count} mots \n";
-        }
-        return dico; 
-    }
-
-
-    public void SerializeDictionary()
+    private void SerializeDictionary()
     {
         var stream = new JsonSerializerOptions
         {
             WriteIndented = true,
         };
-
         string JsonString = JsonSerializer.Serialize(dictionary, stream);
-        File.WriteAllText("data/Dictionary.Json", JsonString);
+        File.WriteAllText(JSON_DICTIONARY_PATH, JsonString);
     }
+    public Dictionary<char, List<string>> Dictionary {get { return dictionary;} set {dictionary = value;}}
     
-
-
     public bool FindWord(string mot){
         if(mot is null || mot == ""){
             return false;
@@ -129,7 +78,7 @@ class CustomDictionary
         }
     }
     
-    public List<string> Tri_XXX(List<string> wordlist) 
+    public List<string> Sort(List<string> wordlist) 
     {
         if(wordlist == null || wordlist.Count()<=1 || wordlist[0] == null){
             return wordlist;
@@ -147,13 +96,18 @@ class CustomDictionary
                     greater.Add(wordlist[i]);
                 }
             }
-            lower = Tri_XXX(lower);
-            greater= Tri_XXX(greater);
+            lower = Sort(lower);
+            greater= Sort(greater);
             lower.Add(pivot);
             return lower.Concat(greater).ToList();
         }
 
     }
-    
-
+    public override string ToString()
+    {
+        string str = string.Empty;
+        foreach(KeyValuePair<char, List<string>> parts in dictionary)
+            str += $"{parts.Key} : il y a {parts.Value.Count} mots \n";
+        return str; 
+    }
 }

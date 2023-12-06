@@ -143,24 +143,26 @@ public class Plateau
     {
         if(dico is null){
             dico = new Dictionary<(int,int), char>();
-            Recherche_Mot(x,y,word,index,dico);
         }
         if(word.Length == index){
             return dico;
         }
-        else if(x>=0 || x<=7 || y>=0 || y<=7){
+        else if(x>=0 && x<8 && y>=0 && y<8){
             if(Plate[x,y] == word[index]){
                 if(!dico.ContainsKey((x,y))){
-                    Recherche_Mot(x-1,y,word,index+1,dico);
-                    Recherche_Mot(x,y+1,word,index+1,dico);
+                    dico.Add((x,y), Plate[x,y]);
+                    if (Recherche_Mot(x-1,y,word,index+1,dico) != null
+                        || Recherche_Mot(x,y+1,word,index+1,dico) != null
+                        || Recherche_Mot(x+1,y,word,index+1,dico) != null
+                        || Recherche_Mot(x,y-1,word,index+1,dico) != null)
+                    {
+                        return dico;
+                    }
+                    dico.Remove((x,y));
                 }
-                return dico;
-            }
-            if(Plate[x,y] != word[index]){
-                return dico;
             }
         }
-        return dico;
+        return null;
     }
 }
 

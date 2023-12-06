@@ -26,22 +26,13 @@ namespace Projet_A2_S1
                     dicotest = plat.Recherche_Mot(plat.Plate.GetLength(0) - 1, y, mot); // on lance la recherche du mot
                 }
             }
-            foreach(var item in dicotest) // on affiche le dictionnaire (les coordonnées et les lettres)
+            plat.SaveAndWrite();
+            foreach(var item in dicotest) // on affiche le dictionnaire les coordonnées et les lettres)
             {
                 plat.Plate[item.Key.Item1, item.Key.Item2] = ' ';
             }
-
-            for(int i=0; i<plat.Plate.GetLength(0); i++)
-            {
-                for(int j=0; j<plat.Plate.GetLength(1); j++)
-                {
-                    Console.Write(plat.Plate[i,j] + " ");
-                }
-                Console.WriteLine();
-            }
-            
             plat.SaveAndWrite();
-
+            Console.WriteLine(plat);
 
             
         }
