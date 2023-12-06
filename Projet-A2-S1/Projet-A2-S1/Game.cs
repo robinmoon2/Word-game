@@ -62,19 +62,17 @@ namespace Projet_A2_S1
                             Player.Add_Score(Player.Word_Value(input.ToUpper()));
                             Player.Timer = timer.Item1;
                         }
-                        Console.WriteLine("Mot validé");
-                        Console.WriteLine("Timer : "+Player.Timer);
-                        Console.WriteLine("Score : "+Player.Score);
                         players.WriteYAML("data/config.yml");
                     }
                     else{
                         Console.WriteLine("Vous n'avez rien rentré");
                     }
-
                 }
                 else{
                     Console.WriteLine("Vous n'avez trouvé dans les temps, dommage ! ");
                 }
+                Console.WriteLine("Appuyez sur entrée pour continuer");
+                Console.ReadLine();
                 Core.ClearWindow();
             }
         }
@@ -124,6 +122,5 @@ namespace Projet_A2_S1
                  return false;
              }
         }
-
     }
 }

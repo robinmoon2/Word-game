@@ -148,7 +148,6 @@ public class GameBoard
                     dico.Add((x,y), Board[x,y]);
                     if (GetWord(x-1, y, word, index+1, dico) != null
                         ||GetWord(x, y+1, word, index+1, dico) != null
-                        //|| Recherche_Mot(x+1, y, word, index+1, dico) != null
                         || GetWord(x, y-1, word, index+1, dico) != null
                         || GetWord(x-1, y-1, word, index+1, dico) != null
                         || GetWord(x+1, y+1, word, index+1, dico) != null
@@ -164,8 +163,6 @@ public class GameBoard
         return null;
     }
 
-
-    
 
     public void Maj_Plateau()
     {

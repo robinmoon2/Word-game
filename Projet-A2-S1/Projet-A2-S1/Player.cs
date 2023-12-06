@@ -25,11 +25,9 @@ public class Player
     }
     
 
-
-
     public void Add_Mot (string mot) 
     {
-        if(!Contient(mot) ){ // ! il faut mettre si le mot existe dans le dictionnaire ou alors on fait le check avant dans le program.cs
+        if(!Contient(mot) ){
             wordList.Add(mot);
             Console.WriteLine("Mot ajoué, bravo ! ");
         }
@@ -38,7 +36,6 @@ public class Player
         }
 
     }
-
 
     public bool Contient (string mot) 
     {
@@ -55,7 +52,7 @@ public class Player
 
     public void Add_Score(int val) 
     {
-        Console.WriteLine("Score ajouté, bravo ! "+val);
+        Core.WritePositionedString("Score ajouté, bravo ! "+val, Placement.Center, default, 14, default);
         this.score += val;
     }
 
@@ -66,7 +63,7 @@ public class Player
             value += Letter_Value(mot[i]);
             Console.WriteLine(mot[i]);
         }
-        Console.WriteLine("valeur du mot : "+value);
+        Core.WritePositionedString("valeur du mot : "+value, Placement.Center, default, 15, default);
         return value;
     }
 
