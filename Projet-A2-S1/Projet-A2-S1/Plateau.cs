@@ -1,6 +1,8 @@
 ﻿using System.Collections;
+using System.Linq.Expressions;
 using System.Runtime.ExceptionServices;
 using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
 using YamlDotNet.Serialization.BufferedDeserialization.TypeDiscriminators;
 
 namespace Projet_A2_S1;
@@ -21,14 +23,23 @@ public class Plateau
                 switch(difficulty_idex.Item2){
                     case 0:
                         PATH = "data/Plate1.csv";
-                        using(var reader = new StreamReader(PATH))
+                        this.plate = GenerateExample(PATH);
+                        using(var writer = new StreamWriter("data/AcutalPlate.csv"))
                         {
-                            File.Copy("data/Plate1.csv", "data/AcutalPlate.csv", true);
+                            for(int i=0; i<8; i++){
+                                for(int j=0; j<8; j++){
+                                    writer.Write(plate[i,j]);
+                                    if(j!=7){
+                                        writer.Write(",");
+                                    }
+                                }
+                                writer.WriteLine();
+                            }
                         }
                     break;
                     case 1:
                         PATH = "data/Lettre.txt";
-                        this.plate = GeneratePlate(PATH);
+                        this.plate = GenerateRandomPlate(PATH);
                         using(var writer = new StreamWriter("data/AcutalPlate.csv"))
                         {
                             for(int i=0; i<8; i++){
@@ -57,10 +68,31 @@ public class Plateau
         path = "data/AcutalPlate.csv";
     }
 
+
+
     public string PATH {get {return path;} set {path = value;}}
     public char[,] Plate{get {return plate;} set {plate = value;}}
 
-    public char[,] GeneratePlate(string PATH){
+
+
+    public char[,] GenerateExample(string PATH){
+        char[,] plate = new char[8,8];
+        string[] lines = File.ReadAllLines(PATH);
+        if(lines is not null){
+            for(int i=0; i<8; i++){
+                string[] parts = lines[i].Split(',');
+                for(int j=0; j<8; j++){
+                    plate[i,j] = char.Parse(parts[j]);
+                }
+            }
+        }
+        else{
+            Console.WriteLine("Le fichier n'existe pas");
+        }
+        return plate;
+    }
+
+    public char[,] GenerateRandomPlate(string PATH){
         Random r = new Random();
         Dictionary<char,int> dico = new Dictionary<char,int>();
 
@@ -97,55 +129,79 @@ public class Plateau
     
     public string toString()
     {
-        string plate="";
+        string plate_string="";
         using(var reader = new StreamReader("data/AcutalPlate.csv"))
         {
-            string line = reader.ReadLine() ?? "";
-            while(line != null){
+            string line;
+            while((line = reader.ReadLine()) != null){
                 string[] parts = line.Split(',');
                 for(int i=0; i<8; i++){
-                    plate+=parts[i]+" |";
+                    if(parts[i]!=null){
+                        plate_string+="| "+parts[i]+" |";
+                    }
                 }
-                plate+="\n"; 
-                line = reader.ReadLine();
+                plate_string+="\n"; 
             }
         }
-        return plate;
-        
+        return plate_string;
     }
 
-    public char[,] ToRead(string path)
-    {
-        using(StreamReader reader = new StreamReader(path)){
-            string line = reader.ReadLine() ?? "";
-            int k=0;
-            while(line != null){
-                string[] parts = line.Split(',');
-                for(int i=0; i<parts.Length; i++){
-                    plate[k,i] = char.Parse(parts[i]);
-                }
-                k++;
-                line = reader.ReadLine();
+    public void Read(string path)
+{
+    string[] lines = File.ReadAllLines(path); 
+    if(lines is not null){
+        for(int i=0; i<8; i++){
+            string[] parts = lines[i].Split(',');
+            for(int j=0; j<8; j++){
+                plate[i,j] = char.Parse(parts[j]);
             }
         }
-        Console.WriteLine("test ToRead");
-        return plate;
+    }
+    else{
+        Console.WriteLine("Le fichier n'existe pas");
+    }
+}
+
+    public void ToFile(string nomfile) 
+    {
+        using(StreamWriter reader = new StreamWriter(nomfile)){
+            for(int i=0; i<8; i++){
+                for(int j=0; j<8; j++){
+                    reader.Write(plate[i,j]);
+                    if(j!=7){
+                        reader.Write(",");
+                    }
+                    Console.WriteLine(plate[i,j]);
+                }
+                reader.WriteLine();
+            }
+        }
+    }
+
+    public bool Recherche_Mot(int x, int y, string word, int compteur = 0 )
+    {
+        if(compteur == 0){
+            return true;
+        }
+        if(x == 0 || y==0 || x==8 || y==8){
+            return false;
+        }
+        char character = plate[x,y];
+        bool way = Recherche_Mot(x+1,y,word,compteur++) || Recherche_Mot(x-1,y,word,compteur++) || Recherche_Mot(x,y+1,word,compteur++);
+        plate[x,y] = ' ';
+        if(!way){
+            plate[x,y] = character;
+        }
+        return way; 
     }
 }
 
 
 
 /*
-public void ToFile(string nomfile) 
-{
-    
-}
 
 
-public object Recherche_Mot(string mot)
-{
 
-}
 
 
 public void Maj_Plateau(object objet)

@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.Serialization;
 
 namespace Projet_A2_S1
 {
@@ -11,9 +12,20 @@ namespace Projet_A2_S1
 
             // create the player
             Plateau plat= new Plateau();
-            plat.ToRead(plat.PATH);
+            plat.Read(plat.PATH);
             Console.WriteLine(plat.toString());
+            Console.WriteLine("Rentrez un mot : ");
+            string mot = Console.ReadLine() ?? "";
+            for(int i=0; i<plat.Plate.GetLength(0);i++){
+                int hauteur = plat.Plate.GetLength(1)-1;
+                if(plat.Plate[i,hauteur] == mot[0]){
+                    if(plat.Recherche_Mot(i,hauteur,mot)){
+                        Console.WriteLine("Le mot est présent");
+                    }
+                }
+            }
 
+            Console.WriteLine(plat.toString());
 
 
             Method.CreatePlayer();
