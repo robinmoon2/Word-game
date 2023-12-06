@@ -3,29 +3,35 @@ class CustomDictionary
 {
     private const string TXT_DICTIONARY_PATH = "data/Mots_Français.txt";
     private const string JSON_DICTIONARY_PATH = "data/Dictionary.Json";
-    public Dictionary<char, List<string>> dictionary = new();
+    public Dictionary<char, List<string>> Dict = new();
     public CustomDictionary()
     {
-        string[] lines = File.ReadAllLines(TXT_DICTIONARY_PATH);
-        foreach(var line in lines)
+        string[] lines;
+        if (File.Exists(JSON_DICTIONARY_PATH))
+            Dict = JsonSerializer.Deserialize<Dictionary<char,List<string>>>(JSON_DICTIONARY_PATH) ?? throw new Exception("Error in deserialization.");
+        else if (!File.Exists(TXT_DICTIONARY_PATH))
+            throw new FileNotFoundException($"Aucun fichier à l'adresse :{TXT_DICTIONARY_PATH}");
+        else 
         {
-            string[] words = line.Split(' ');
-            char key = ' ';
-            foreach (var word in words)
+            lines = File.ReadAllLines(TXT_DICTIONARY_PATH);
+            foreach(var line in lines)
             {
-                key = word[0];
-                if (!dictionary.ContainsKey(key))
+                string[] words = line.Split(' ');
+                char key = ' ';
+                foreach (var word in words)
                 {
-                    dictionary[key] = new List<string>();
+                    key = word[0];
+                    if (!Dict.ContainsKey(key))
+                        Dict[key] = new List<string>();
+                    Dict[key].Add(word);
                 }
-                dictionary[key].Add(word);
+                if (Dict[key] is not null)
+                    Dict[key] = Sort(Dict[key]);
+                else
+                    throw new NullReferenceException("Le dictionnaire est null.");
             }
-            if (dictionary[key] is not null)
-                dictionary[key] = Sort(dictionary[key]);
-            else
-                throw new NullReferenceException("Le dictionnaire est null.");
+            SerializeDictionary();
         }
-        SerializeDictionary();
     }
     private void SerializeDictionary()
     {
@@ -33,12 +39,11 @@ class CustomDictionary
         {
             WriteIndented = true,
         };
-        string JsonString = JsonSerializer.Serialize(dictionary, stream);
+        string JsonString = JsonSerializer.Serialize(Dict, stream);
         File.WriteAllText(JSON_DICTIONARY_PATH, JsonString);
     }
-    public Dictionary<char, List<string>> Dictionary {get { return dictionary;} set {dictionary = value;}}
-    
-    public bool FindWord(string mot){
+    public bool FindWord(string mot)
+    {
         if(mot is null || mot == ""){
             return false;
         }
@@ -48,7 +53,8 @@ class CustomDictionary
         if( mot == null){
             return false;
         }
-        if(dictionary.ContainsKey(mot[0])){
+        if(dictionary.ContainsKey(mot[0]))
+        {
             return RechDichoRecursif(mot.ToUpper(),dictionary[mot[0]]);
         }
         else{
@@ -106,7 +112,7 @@ class CustomDictionary
     public override string ToString()
     {
         string str = string.Empty;
-        foreach(KeyValuePair<char, List<string>> parts in dictionary)
+        foreach(KeyValuePair<char, List<string>> parts in Dict)
             str += $"{parts.Key} : il y a {parts.Value.Count} mots \n";
         return str; 
     }
