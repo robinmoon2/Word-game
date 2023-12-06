@@ -117,7 +117,8 @@ public class GameBoard
         else 
             throw new FormatException($"Fichier vide à l'adresse :{WORKING_FILE}");
     }
-    public void SaveAndWrite() 
+    
+    public void SaveAndWrite()  
     {
         using var reader = new StreamWriter(WORKING_FILE);
         for (int i = 0; i < 8; i++)
@@ -183,9 +184,3 @@ public class GameBoard
 }
 
 
-
-/*
-
-
-}
-*/
