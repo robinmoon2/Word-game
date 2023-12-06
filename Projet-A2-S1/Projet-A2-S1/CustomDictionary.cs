@@ -1,67 +1,49 @@
-﻿using System.Security.Cryptography.X509Certificates;
-
-namespace Projet_A2_S1;
-
-internal class Dictionnaire
+﻿namespace Projet_A2_S1;
+class CustomDictionary
 {
-    Dictionary<char, List<string>> dictionary;
-
-     public Dictionnaire()
+    private const string TXT_DICTIONARY_PATH = "data/Mots_Français.txt";
+    private const string JSON_DICTIONARY_PATH = "data/Dictionary.Json";
+    public Dictionary<char, List<string>> Dict = new();
+    public CustomDictionary()
     {
-        using (StreamReader reader = new StreamReader("data/Mots_français.txt"))
+        string[] lines;
+        if (File.Exists(JSON_DICTIONARY_PATH))
+            Dict = JsonSerializer.Deserialize<Dictionary<char,List<string>>>(JSON_DICTIONARY_PATH) ?? throw new Exception("Error in deserialization.");
+        else if (!File.Exists(TXT_DICTIONARY_PATH))
+            throw new FileNotFoundException($"Aucun fichier à l'adresse :{TXT_DICTIONARY_PATH}");
+        else 
         {
-            this.dictionary = new Dictionary<char, List<string>>(); 
-            string line= reader.ReadLine() ?? "";
-            while (line != null)
+            lines = File.ReadAllLines(TXT_DICTIONARY_PATH);
+            foreach(var line in lines)
             {
                 string[] words = line.Split(' ');
                 char key = ' ';
                 foreach (var word in words)
                 {
                     key = word[0];
-
-                    if (!dictionary.ContainsKey(key))
-                    {
-                        dictionary[key] = new List<string>();
-                    }
-                    dictionary[key].Add(word);
+                    if (!Dict.ContainsKey(key))
+                        Dict[key] = new List<string>();
+                    Dict[key].Add(word);
                 }
-                dictionary[key] =Tri_XXX(dictionary[key]);
+                if (Dict[key] is not null)
+                    Dict[key] = Sort(Dict[key]);
+                else
+                    throw new NullReferenceException("Le dictionnaire est null.");
             }
+            SerializeDictionary();
         }
-        SerializeDictionary();
     }
-
-
-
-
-    public Dictionary<char, List<string>> Dictionary {get { return dictionary;} set {dictionary = value;}}
-
-
-    public string toString()
-    {
-        string dico="";
-        foreach(KeyValuePair<char,List<string>> parts in dictionary){
-            dico += $"{parts.Key} : il y a {parts.Value.Count} mots \n";
-        }
-        return dico; 
-    }
-
-
-    public void SerializeDictionary()
+    private void SerializeDictionary()
     {
         var stream = new JsonSerializerOptions
         {
             WriteIndented = true,
         };
-
-        string JsonString = JsonSerializer.Serialize(dictionary, stream);
-        File.WriteAllText("data/Dictionary.Json", JsonString);
+        string JsonString = JsonSerializer.Serialize(Dict, stream);
+        File.WriteAllText(JSON_DICTIONARY_PATH, JsonString);
     }
-    
-
-
-    public bool FindWord(string mot){
+    public bool FindWord(string mot)
+    {
         if(mot is null || mot == ""){
             return false;
         }
@@ -71,7 +53,8 @@ internal class Dictionnaire
         if( mot == null){
             return false;
         }
-        if(dictionary.ContainsKey(mot[0])){
+        if(dictionary.ContainsKey(mot[0]))
+        {
             return RechDichoRecursif(mot.ToUpper(),dictionary[mot[0]]);
         }
         else{
@@ -96,14 +79,15 @@ internal class Dictionnaire
             else{
                 return RechDichoRecursif(mot,wordlist.GetRange(0,middle));
             }
+            
                 
         }
     }
     
-    public List<string>? Tri_XXX(List<string> wordlist) 
+    public List<string> Sort(List<string> wordlist) 
     {
-        if(wordlist == null || wordlist.Count()<=1){
-            return null;
+        if(wordlist == null || wordlist.Count()<=1 || wordlist[0] == null){
+            return wordlist;
         }
         else{
             var pivot = wordlist[0];
@@ -118,13 +102,18 @@ internal class Dictionnaire
                     greater.Add(wordlist[i]);
                 }
             }
-            lower = Tri_XXX(lower);
-            greater= Tri_XXX(greater);
+            lower = Sort(lower);
+            greater= Sort(greater);
             lower.Add(pivot);
             return lower.Concat(greater).ToList();
         }
 
     }
-    
-
+    public override string ToString()
+    {
+        string str = string.Empty;
+        foreach(KeyValuePair<char, List<string>> parts in Dict)
+            str += $"{parts.Key} : il y a {parts.Value.Count} mots \n";
+        return str; 
+    }
 }

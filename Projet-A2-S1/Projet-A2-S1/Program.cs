@@ -1,79 +1,42 @@
-﻿using System.Runtime.Serialization;
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.Serialization;
+using System.Security;
+using System.Security.Cryptography.X509Certificates;
+using Microsoft.VisualBasic;
 
 namespace Projet_A2_S1
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {       
             Method.main_menu(); // create the main menu
             Core.ClearWindow();
-            Method.CreatePlayer();
 
-            var playerList = new List<Player>();
-            PlayerList players = new PlayerList(playerList);
-            
-            Dictionnaire dico = new Dictionnaire();
-
-            players.ReadYAML("data/config.yml");
-            var index = Core.ScrollingMenuSelector("Voulez vous modifiez un nom ? ",default , default, "Oui","Non");
-            if(index.Item2 == 0){
-                Core.WritePositionedString("Quel pseudo modifier ? ",Placement.Left,default,10,default);
-                string nameModif = Console.ReadLine() ?? "";
-                Player? Modif = players.playerlist.FirstOrDefault(player => player.Name == nameModif);
-                if (Modif != null)
+            // create the player
+            var plat = new GameBoard();
+            plat.Read();
+            Console.WriteLine(plat);
+            Console.WriteLine("Rentrez un mot : ");
+            string mot = Console.ReadLine() ?? "";
+            Dictionary<(int,int), char> dicotest = new Dictionary<(int,int), char>();
+            for (int y = 0; y < plat.Board.GetLength(1) ; y++)
+            {
+                if(plat.Board[plat.Board.GetLength(0) - 1, y] == mot[0]) // si la lettre est la même que la première lettre du mot (on commence par la dernière ligne du plateau car on cherche le mot à l'envers)
                 {
-                    Modif.Name = "test";
-                    players.WriteYAML("data/config.yml");
-                }
-                else{
-                    Console.WriteLine("Le pseudo n'existe pas");
-                }
-                Core.ClearWindow();
-            }
-            Core.WritePositionedString(players.toString(),Placement.Right,default,10,default);
-            
-            while(players.playerlist.Any(player => player.Timer != 0)){
-                foreach (var player in players.playerlist)
-                {
-                    Core.WritePositionedString("Joueur : "+player.Name+", à vous de jouer. Press",Placement.Right,default,10,default);
-                    Core.WritePositionedString("Entrée pour commencer",Placement.Right,default,11,default);
-                    bool end_turn = false;
-                    while(!end_turn){
-                        var turn = Method.TimedNumberInput(player.Timer, "Pressez entrée pour ensuite ajouter votre mot");
-                        player.Timer = turn.Item1;
-                        if(player.Timer == 0){
-                            Core.WritePositionedString("Temps écoulé",Placement.Right,default,12,default);
-                            end_turn = true;
-                        }
-                        else{
-                            Core.WritePositionedString("Entrez votre mot : ",Placement.Center,default,12,default);
-                            string input = Console.ReadLine() ?? "x";
-                            if(dico.FindWord(input))
-                            {
-                                Console.WriteLine(player.Contient(input));
-                                if(!player.Contient(input)){
-                                    player.Add_Mot(input);
-                                    Console.WriteLine(player.Word_Value(input));
-                                    player.Add_Score(player.Word_Value(input));
-                                    end_turn = true;
-                                }
-                                
-                            }
-                            else
-                            {
-                                Core.WritePositionedString("Le mot n'existe pas",Placement.Center,default,12,default);
-                            }
-                            players.WriteYAML("data/config.yml");
-                            players.ReadYAML("data/config.yml");
-                        }
-                        
-                    }
-                    Core.ClearWindow();
-                    Console.WriteLine(players.toString());
-                    
+                    dicotest = plat.Recherche_Mot(plat.Board.GetLength(0) - 1, y, mot); // on lance la recherche du mot
                 }
             }
+            plat.SaveAndWrite();
+            foreach(var item in dicotest) // on affiche le dictionnaire les coordonnées et les lettres)
+            {
+                plat.Board[item.Key.Item1, item.Key.Item2] = ' ';
+            }
+            plat.Maj_Plateau();
+            plat.SaveAndWrite();
+            Console.WriteLine(plat);
+
+            
         }
     }
 }
