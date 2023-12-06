@@ -1,16 +1,14 @@
-﻿using System.Security.Cryptography.X509Certificates;
-
-namespace Projet_A2_S1;
-
-internal class Dictionnaire
+﻿namespace Projet_A2_S1;
+class CustomDictionary
 {
-    Dictionary<char, List<string>> dictionary;
+    private const string DICTIONARY_FILE = "data/Mots_Français.txt";
+    public Dictionary<char, List<string>> dictionary;
 
-     public Dictionnaire()
+     public CustomDictionary()
     {
-        using (StreamReader reader = new StreamReader("data/Mots_Français.txt"))
+        using (var reader = new StreamReader("data/Mots_Français.txt"))
         {
-            this.dictionary = new Dictionary<char, List<string>>(); 
+            dictionary = new Dictionary<char, List<string>>(); 
             string line= reader.ReadLine() ?? "";
             while (line != null)
             {
@@ -36,6 +34,29 @@ internal class Dictionnaire
                 line = reader.ReadLine();
             }
         }
+        string[] data = File.ReadAllLines(DICTIONARY_FILE);
+        foreach(var line in data)
+        {
+            string[] words = line.Split(' ');
+            char key = ' ';
+            foreach (var word in words)
+            {
+                key = word[0];
+                if (!dictionary.ContainsKey(key))
+                {
+                    dictionary[key] = new List<string>();
+                }
+                dictionary[key].Add(word);
+            }
+            if (dictionary[key] != null)
+            {
+                dictionary[key] = Tri_XXX(dictionary[key]);
+            }
+            else{
+                Console.WriteLine("Erreur");
+            }
+        }
+
         SerializeDictionary();
     }
 

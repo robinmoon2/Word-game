@@ -1,57 +1,49 @@
 ﻿using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
+using System.Security;
+using Microsoft.VisualBasic;
 
 namespace Projet_A2_S1
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {       
             Method.main_menu(); // create the main menu
             Core.ClearWindow();
 
             // create the player
-            Plateau plat= new Plateau();
-            plat.Read(plat.PATH);
-            Console.WriteLine(plat.toString());
+            var plat= new Plateau();
+            plat.Read();
+            Console.WriteLine(plat);
             Console.WriteLine("Rentrez un mot : ");
             string mot = Console.ReadLine() ?? "";
-            for(int i=0; i<plat.Plate.GetLength(0);i++){
-                int hauteur = plat.Plate.GetLength(1)-1;
-                if(plat.Plate[i,hauteur] == mot[0]){
-                    if(plat.Recherche_Mot(i,hauteur,mot)){
-                        Console.WriteLine("Le mot est présent");
-                    }
-                }
-            }
-
-            Console.WriteLine(plat.toString());
-
-
-            Method.CreatePlayer();
-
-            var playerList = new List<Player>();
-            PlayerList players = new PlayerList(playerList);
-            
-            Dictionnaire dico = new Dictionnaire();
-
-            players.ReadYAML("data/config.yml");
-            var index = Core.ScrollingMenuSelector("Voulez vous modifiez un nom ? ",default , default, "Oui","Non");
-            if(index.Item2 == 0){
-                Core.WritePositionedString("Quel pseudo modifier ? ",Placement.Left,default,10,default);
-                string nameModif = Console.ReadLine() ?? "";
-                Player? Modif = players.playerlist.FirstOrDefault(player => player.Name == nameModif);
-                if (Modif != null)
+            Dictionary<(int,int), char> dicotest = new Dictionary<(int,int), char>();
+            for (int y = 0; y < plat.Plate.GetLength(1) ; y++)
+            {
+                if(plat.Plate[plat.Plate.GetLength(0) - 1, y] == mot[0]) // si la lettre est la même que la première lettre du mot (on commence par la dernière ligne du plateau car on cherche le mot à l'envers)
                 {
-                    Modif.Name = "test";
-                    players.WriteYAML("data/config.yml");
+                    dicotest = plat.Recherche_Mot(plat.Plate.GetLength(0) - 1, y, mot); // on lance la recherche du mot
                 }
-                else{
-                    Console.WriteLine("Le pseudo n'existe pas");
-                }
-                Core.ClearWindow();
             }
-            Core.WritePositionedString(players.toString(),Placement.Right,default,10,default);
+            foreach(var item in dicotest) // on affiche le dictionnaire (les coordonnées et les lettres)
+            {
+                plat.Plate[item.Key.Item1, item.Key.Item2] = ' ';
+            }
+
+            for(int i=0; i<plat.Plate.GetLength(0); i++)
+            {
+                for(int j=0; j<plat.Plate.GetLength(1); j++)
+                {
+                    Console.Write(plat.Plate[i,j] + " ");
+                }
+                Console.WriteLine();
+            }
+            
+            plat.SaveAndWrite();
+
+
+            
         }
     }
 }
