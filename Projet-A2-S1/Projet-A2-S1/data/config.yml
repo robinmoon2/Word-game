@@ -1,9 +1,13 @@
-- name: r
-  timer: 56
-  score: 18
+- name: robin
+  timer: 0
+  score: 11
   wordList:
-  - bonjour
-- name: test
-  timer: 60
-  score: 0
-  wordList: []
+  - PEU
+  - DU
+- name: emma
+  timer: 17
+  score: 19
+  wordList:
+  - AU
+  - ME
+  - FLUX

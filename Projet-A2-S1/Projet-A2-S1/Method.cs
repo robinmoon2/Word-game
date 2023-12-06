@@ -148,7 +148,6 @@ namespace Projet_A2_S1
             Console.WriteLine("Liste des joueurs : ");
             Console.WriteLine("");
             Console.WriteLine(players.toString());   
-
         }
         
     }

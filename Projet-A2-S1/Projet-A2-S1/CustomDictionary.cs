@@ -7,8 +7,10 @@ class CustomDictionary
     public CustomDictionary()
     {
         string[] lines;
-        if (File.Exists(JSON_DICTIONARY_PATH))
-            Dict = JsonSerializer.Deserialize<Dictionary<char,List<string>>>(JSON_DICTIONARY_PATH) ?? throw new Exception("Error in deserialization.");
+        if (File.Exists(JSON_DICTIONARY_PATH)){
+            Console.WriteLine("existe");
+            string jsonString = File.ReadAllText(JSON_DICTIONARY_PATH);
+            Dict = JsonSerializer.Deserialize<Dictionary<char,List<string>>>(jsonString) ?? throw new Exception("Error in deserialization.");}
         else if (!File.Exists(TXT_DICTIONARY_PATH))
             throw new FileNotFoundException($"Aucun fichier à l'adresse :{TXT_DICTIONARY_PATH}");
         else 

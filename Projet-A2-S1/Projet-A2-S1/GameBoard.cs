@@ -69,7 +69,6 @@ public class GameBoard
             {
                 string[] parts = lines[i].Split(',');
                 dico.Add(char.Parse(parts[0]), int.Parse(parts[1]));
-                Console.WriteLine("Lettre : " + parts[0] + " Nombre :w " + parts[1]);
             }
         }
         else 
@@ -146,7 +145,6 @@ public class GameBoard
             {
                 if (!dico.ContainsKey((x,y)))
                 {
-                    Console.WriteLine("x : " + x + " y : " + y + " lettre : " + Board[x,y]);
                     dico.Add((x,y), Board[x,y]);
                     if (GetWord(x-1, y, word, index+1, dico) != null
                         ||GetWord(x, y+1, word, index+1, dico) != null

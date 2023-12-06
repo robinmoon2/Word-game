@@ -19,6 +19,7 @@ namespace Projet_A2_S1
             board = new GameBoard();
             List<Player> ListOfPlayer = new List<Player>();
             players = new PlayerList(ListOfPlayer);
+            players.ReadYAML("data/config.yml");
         }
 
         public bool EndGame(){
@@ -44,18 +45,27 @@ namespace Projet_A2_S1
 
         public void Turn(){
             foreach(var Player in players.playerlist){
-                Core.WritePositionedString("C'est au tour de "+Player.Name, Placement.Left,default, 10, default);
-                Core.WritePositionedString("Il vous reste "+Player.Timer+" secondes", Placement.Left,default, 11, default);
-                Core.WritePositionedString(board.ToString(), Placement.Right,default, 10, default);
-                Method.TimedNumberInput(Player.Timer);
+                if(Player.Timer == 0){
+                    continue;
+                }
+                Core.WritePositionedString("C'est au tour de "+Player.Name, Placement.Right,default, 10, default);
+                Core.WritePositionedString(board.ToString(), Placement.Center, default, 10, default);
+                var timer = Method.TimedNumberInput(Player.Timer);
+                Player.Timer = timer.Item1;
                 if(Player.Timer !=0){
                     Console.WriteLine("Rentrez un mot : ");
                     var input = Console.ReadLine();
                     if(input is not null){
+                        Console.WriteLine("Mot non nul "+input);
                         if(WordValidate(input.ToUpper(),Player)){
                             Player.Add_Mot(input.ToUpper());
-                            Player.Add_Score(input.Length);
+                            Player.Add_Score(Player.Word_Value(input.ToUpper()));
+                            Player.Timer = timer.Item1;
                         }
+                        Console.WriteLine("Mot validé");
+                        Console.WriteLine("Timer : "+Player.Timer);
+                        Console.WriteLine("Score : "+Player.Score);
+                        players.WriteYAML("data/config.yml");
                     }
                     else{
                         Console.WriteLine("Vous n'avez rien rentré");
@@ -65,6 +75,7 @@ namespace Projet_A2_S1
                 else{
                     Console.WriteLine("Vous n'avez trouvé dans les temps, dommage ! ");
                 }
+                Core.ClearWindow();
             }
         }
 
@@ -77,28 +88,33 @@ namespace Projet_A2_S1
                     return false;
                 }
             }
+            Console.WriteLine("ce mot n'est pas dans votre liste");
              if(dictionary.FindWord(word)){
                  
-                    var dico = new Dictionary<(int,int), char>();
-                    for (int y = 0; y < board.Board.GetLength(1) ; y++)
+                var dico = new Dictionary<(int,int), char>();
+                for (int y = 0; y < board.Board.GetLength(1) ; y++)
                 {
-                    if(board.Board[board.Board.GetLength(0) - 1, y] == word[0]) // si la lettre est la même que la première lettre du mot (on commence par la dernière ligne du plateau car on cherche le mot à l'envers)
+
+                    if(char.ToLower(board.Board[board.Board.GetLength(0) - 1, y]) == char.ToLower(word[0])) // si la lettre est la même que la première lettre du mot (on commence par la dernière ligne du plateau car on cherche le mot à l'envers)
                     {
-                        dico = board.GetWord(board.Board.GetLength(0) - 1, y, word); // on lance la recherche du mot
+                        dico = board.GetWord(board.Board.GetLength(0) - 1, y, word.ToLower()); // on lance la recherche du mot
                     }
                 }
-                if(dico is null || dico.Count != word.Length){
+                board.SaveAndWrite();
+                if(dico is null){
                     Console.WriteLine("Le mot n'est pas présent sur le plateau");
                     return false;
                 }
                 else{
-                    board.SaveAndWrite();
+                    Console.WriteLine("Le mot est présent sur le plateau");
                     foreach(var item in dico) // on affiche le dictionnaire les coordonnées et les lettres)
                     {
+                        Console.WriteLine(board.Board[item.Key.Item1, item.Key.Item2]);
                         board.Board[item.Key.Item1, item.Key.Item2] = ' ';
                     }
-                    board.Maj_Plateau();
-                    board.SaveAndWrite();
+                    Console.WriteLine("test");
+                    board.Maj_Plateau(); // on met à jour le tableau 
+                    board.SaveAndWrite(); // on sauvegarde le tableau 
                     Console.WriteLine(board);
                     return true; 
                 }
