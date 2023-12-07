@@ -1,9 +1,8 @@
+- name: camille
+  timer: 60
+  score: 0
+  wordList: []
 - name: robin
-  timer: 45
-  score: 9
-  wordList:
-  - PAIR
-- name: emma
   timer: 60
   score: 0
   wordList: []
