@@ -49,7 +49,7 @@ public class CustomDictionary
             return false;
         }
         string jsonString = File.ReadAllText("data/Dictionary.Json");
-        var dictionary = JsonSerializer.Deserialize<Dictionary<char,List<string>>>(jsonString);
+        var dictionary = JsonSerializer.Deserialize<Dictionary<char,List<string>>>(jsonString) ?? throw new Exception("Error in deserialization.");
         mot = mot.ToUpper();
         if( mot == null){
             return false;
@@ -87,7 +87,7 @@ public class CustomDictionary
     
     public List<string> Sort(List<string> wordlist) 
     {
-        if(wordlist == null || wordlist.Count()<=1 || wordlist[0] == null){
+        if(wordlist is null || wordlist.Count()<=1 ){
             return wordlist;
         }
         else{

@@ -52,7 +52,7 @@ public class Player
 
     public void Add_Score(int val) 
     {
-        Core.WritePositionedString("Score ajouté, bravo ! "+val, Placement.Center, default, 14, default);
+        Core.WritePositionedString("Score ajouté, bravo ! "+val, Placement.Center, default, 20, default);
         this.score += val;
     }
 
@@ -61,7 +61,6 @@ public class Player
         int value = 0;
         for(int i=0; i<mot.Length;i++){
             value += Letter_Value(mot[i]);
-            Console.WriteLine(mot[i]);
         }
         Core.WritePositionedString("valeur du mot : "+value, Placement.Center, default, 15, default);
         return value;

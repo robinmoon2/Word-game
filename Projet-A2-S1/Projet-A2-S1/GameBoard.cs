@@ -12,6 +12,7 @@ public class GameBoard
     private const string RANDOM_FILE = "data/Lettre.txt";
     private static readonly Random s_rnd = new();
     public char[,] Board;
+
     public GameBoard()
     {
         //Board ??= new char[10,10];
@@ -151,7 +152,7 @@ public class GameBoard
                     dico.Add((x,y), Board[x,y]);
                     if (GetWord(x-1, y, word, index+1, dico) != null
                         ||GetWord(x, y+1, word, index+1, dico) != null
-                        || GetWord(x, y-1, word, index+1, dico) != null
+                        || GetWord(x+1, y, word, index+1, dico) != null
                         || GetWord(x-1, y-1, word, index+1, dico) != null
                         || GetWord(x+1, y+1, word, index+1, dico) != null
                         || GetWord(x-1, y+1, word, index+1, dico) != null

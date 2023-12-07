@@ -68,7 +68,7 @@ namespace Projet_A2_S1
         /// </summary>
         /// <param name="timeLimit"> variable qui permet de stocker la limite de temps donnée</param>
         /// <returns></returns>
-        public static (int, string?) TimedNumberInput(int timeLimit, string message = "Enter a number: ")
+        public static (int, string?) TimedInput(int timeLimit, string message = "Pressez la touche ENTREE pour ensuite rentrer un mot :  ")
         {
             Timer? timer = null;
             Timer? printTimer = null;
@@ -80,19 +80,22 @@ namespace Projet_A2_S1
                 timeUp = true;
                 timer?.Dispose();
                 printTimer?.Dispose();
-                Console.WriteLine("\nTime is up!");
+                Core.WritePositionedString("Time is up",Placement.Center,default,20,default);
             }, null, timeLimit * 1000, Timeout.Infinite);
 
             printTimer = new Timer((state) =>
             {
                 remainingTime--;
+                if(remainingTime < 10){
+                    Core.ClearLine(20);
+                }
                 Core.WritePositionedString($"Remaining time: {remainingTime}", Placement.Center, default, 20, default);
 
             }, null, 1000, 1000);
 
             while (true)
             {
-                Core.WritePositionedString(message, Placement.Center, default, 10, default);
+                Core.WritePositionedString(message, Placement.Center, default, 2, default);
 
                 if (Console.KeyAvailable)
                 {
@@ -103,7 +106,7 @@ namespace Projet_A2_S1
                         return (remainingTime, null);
                     }
                     else{
-                      Core.WritePositionedString("Vous avez pressé la mauaise touche",Placement.Center,default,1,default);
+                      Core.WritePositionedString("Vous avez pressé la mauvaise touche",Placement.Center,default,1,default);
                     }
                 }
 
@@ -111,6 +114,36 @@ namespace Projet_A2_S1
                 {
                     return (remainingTime, null);
                 }
+            }
+        }
+
+
+
+        public static (string, int) TimedEnterInput(int timeLimit, string prompt)
+        {
+            if(timeLimit==0){
+                Console.WriteLine($"Vous n'avez pas de temps limite pour rentrer un mot");
+                return (null, 0);
+            }
+            else if(timeLimit<0){
+                Console.WriteLine("Vous avez entré un temps négatif, vous allez sortir du jeu");
+                return(null,0);
+            }
+            Console.WriteLine(prompt);
+            string? input = null;
+            var task = Task.Run(() =>
+            {
+                input = Console.ReadLine();
+            });
+
+            if (task.Wait(TimeSpan.FromSeconds(timeLimit)))
+            {
+                return (input, timeLimit - (int)task.Status);
+            }
+            else
+            {
+                Core.WritePositionedString("Time is up",Placement.Center,default,20,default);
+                return (null, 0);
             }
         }
 

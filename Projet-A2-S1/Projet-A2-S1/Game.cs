@@ -56,13 +56,12 @@ namespace Projet_A2_S1
                 }
                 Core.WritePositionedString("C'est au tour de "+Player.Name, Placement.Right,default, 10, default);
                 Core.WritePositionedString(board.ToString(), Placement.Center, default, 10, default);
-                var timer = Method.TimedNumberInput(Player.Timer);
+                var timer = Method.TimedInput(Player.Timer);
                 Player.Timer = timer.Item1;
                 if(Player.Timer !=0){
-                    Console.WriteLine("Rentrez un mot : ");
-                    var input = Console.ReadLine();
+                    var LimitedInput = Method.TimedEnterInput(5, "Entrez un mot : ");
+                    var input = LimitedInput.Item1;
                     if(input is not null){
-                        Console.WriteLine("Mot non nul "+input);
                         if(WordValidate(input.ToUpper(),Player)){
                             Player.Add_Mot(input.ToUpper());
                             Player.Add_Score(Player.Word_Value(input.ToUpper()));
@@ -88,11 +87,10 @@ namespace Projet_A2_S1
         public bool WordValidate(string word,Player player){
             for(int i=0; i<player.WordList.Count;i++){
                 if(player.WordList[i]==word){
-                    Core.WritePositionedString("Ce mot est déjà dans votre liste", Placement.Right,default, 19, default);
+                    Core.WritePositionedString("Ce mot est déjà dans votre liste", Placement.Center,default, 22, default);
                     return false;
                 }
             }
-            Core.WritePositionedString("Ce mot n'est pas dans votre liste", Placement.Right,default, 20, default);
              if(dictionary.FindWord(word)){
                  
                 var dico = new Dictionary<(int,int), char>();
@@ -106,25 +104,21 @@ namespace Projet_A2_S1
                 }
                 board.SaveAndWrite();
                 if(dico is null || dico.Count() < word.Length){
-                    Core.WritePositionedString("Le mot n'est pas présent sur le plateau", Placement.Right,default, 21, default);
+                    Core.WritePositionedString("Le mot n'est pas présent sur le plateau", Placement.Center,default, 22, default);
                     return false;
                 }
                 else{
-                    Console.WriteLine("Le mot est présent sur le plateau");
                     foreach(var item in dico) // on affiche le dictionnaire les coordonnées et les lettres)
                     {
-                        Console.WriteLine(board.Board[item.Key.Item1, item.Key.Item2]);
                         board.Board[item.Key.Item1, item.Key.Item2] = ' ';
                     }
-                    Console.WriteLine("test");
                     board.Maj_Plateau(); // on met à jour le tableau 
                     board.SaveAndWrite(); // on sauvegarde le tableau 
-                    Console.WriteLine(board);
                     return true; 
                 }
              }
              else{
-                Console.WriteLine("Le mot n'est pas contenu dans le dictionnaire");
+                Core.WritePositionedString("Le mot n'est pas contenu dans le dictionnaire", Placement.Center,default, 22, default);
                  return false;
              }
         }

@@ -1,11 +1,13 @@
-- name: florian
-  timer: 4
-  score: 9
+- name: Joueur 1
+  timer: 148
+  score: 0
+  wordList: []
+- name: Joueur 2
+  timer: 168
+  score: 5
   wordList:
-  - LA
-  - SU
-- name: robin
-  timer: 0
-  score: 7
-  wordList:
-  - OIL
+  - OH
+- name: Joueur 3
+  timer: 166
+  score: 0
+  wordList: []
