@@ -69,7 +69,6 @@ public class GameBoard
             {
                 string[] parts = lines[i].Split(',');
                 dico.Add(char.Parse(parts[0]), int.Parse(parts[1]));
-                Console.WriteLine("Lettre : " + parts[0] + " Nombre :w " + parts[1]);
             }
         }
         else 
@@ -135,7 +134,7 @@ public class GameBoard
         }
     }
 
-    public Dictionary<(int,int), char>? Recherche_Mot(int x, int y, string word, int index = 0, Dictionary<(int, int), char>? dico = null)
+    public Dictionary<(int,int), char>? GetWord(int x, int y, string word, int index = 0, Dictionary<(int, int), char>? dico = null)
     {
         dico ??= new Dictionary<(int,int), char>();
         if (word.Length == index)
@@ -146,16 +145,14 @@ public class GameBoard
             {
                 if (!dico.ContainsKey((x,y)))
                 {
-                    Console.WriteLine("x : " + x + " y : " + y + " lettre : " + Board[x,y]);
                     dico.Add((x,y), Board[x,y]);
-                    if (Recherche_Mot(x-1, y, word, index+1, dico) != null
-                        ||Recherche_Mot(x, y+1, word, index+1, dico) != null
-                        //|| Recherche_Mot(x+1, y, word, index+1, dico) != null
-                        || Recherche_Mot(x, y-1, word, index+1, dico) != null
-                        || Recherche_Mot(x-1, y-1, word, index+1, dico) != null
-                        || Recherche_Mot(x+1, y+1, word, index+1, dico) != null
-                        || Recherche_Mot(x-1, y+1, word, index+1, dico) != null
-                        || Recherche_Mot(x+1, y-1, word, index+1, dico) != null)
+                    if (GetWord(x-1, y, word, index+1, dico) != null
+                        ||GetWord(x, y+1, word, index+1, dico) != null
+                        || GetWord(x, y-1, word, index+1, dico) != null
+                        || GetWord(x-1, y-1, word, index+1, dico) != null
+                        || GetWord(x+1, y+1, word, index+1, dico) != null
+                        || GetWord(x-1, y+1, word, index+1, dico) != null
+                        || GetWord(x+1, y-1, word, index+1, dico) != null)
                     {
                         return dico;
                     }
@@ -165,6 +162,8 @@ public class GameBoard
         }
         return null;
     }
+
+
     public void Maj_Plateau()
     {
         for (int i = 0; i < Board.GetLength(1); i++){

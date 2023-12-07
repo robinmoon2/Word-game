@@ -97,9 +97,14 @@ namespace Projet_A2_S1
                 if (Console.KeyAvailable)
                 {
                     var input = Console.ReadKey(true);
-                    timer.Dispose();
-                    printTimer.Dispose();
-                    return (remainingTime, input.KeyChar.ToString());
+                    if(input.Key == ConsoleKey.Enter){
+                        timer?.Dispose();
+                        printTimer?.Dispose();
+                        return (remainingTime, null);
+                    }
+                    else{
+                      Core.WritePositionedString("Vous avez pressé la mauaise touche",Placement.Center,default,1,default);
+                    }
                 }
 
                 if (timeUp)
@@ -143,7 +148,6 @@ namespace Projet_A2_S1
             Console.WriteLine("Liste des joueurs : ");
             Console.WriteLine("");
             Console.WriteLine(players.toString());   
-
         }
         
     }
