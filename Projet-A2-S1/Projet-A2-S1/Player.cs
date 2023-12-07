@@ -27,7 +27,7 @@ public class Player
 
     public void Add_Mot (string mot) 
     {
-        if(!Contient(mot) ){
+        if(!Contient(mot) && mot !=null){
             wordList.Add(mot);
             Console.WriteLine("Mot ajoué, bravo ! ");
         }
@@ -82,7 +82,7 @@ public class Player
                 line = reader.ReadLine() ?? "";
             }
         }
-        return -1;
+        return 0;
     }   
 }
 

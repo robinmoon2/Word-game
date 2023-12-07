@@ -1,5 +1,5 @@
 ﻿namespace Projet_A2_S1;
-class CustomDictionary
+public class CustomDictionary
 {
     private const string TXT_DICTIONARY_PATH = "data/Mots_Français.txt";
     private const string JSON_DICTIONARY_PATH = "data/Dictionary.Json";
@@ -8,7 +8,6 @@ class CustomDictionary
     {
         string[] lines;
         if (File.Exists(JSON_DICTIONARY_PATH)){
-            Console.WriteLine("existe");
             string jsonString = File.ReadAllText(JSON_DICTIONARY_PATH);
             Dict = JsonSerializer.Deserialize<Dictionary<char,List<string>>>(jsonString) ?? throw new Exception("Error in deserialization.");}
         else if (!File.Exists(TXT_DICTIONARY_PATH))

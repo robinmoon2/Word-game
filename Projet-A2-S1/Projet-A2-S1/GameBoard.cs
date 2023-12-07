@@ -79,7 +79,7 @@ public class GameBoard
         var aplhabet = "abcdefghijklmopqrstuvwxyz";
         for(int i = 0; i < Board.GetLength(0); i ++)
             for(int j = 0; j <Board.GetLength(1); j ++)
-                Console.Write(Board[i,j] = aplhabet[s_rnd.Next(0, aplhabet.Length)]);
+                Board[i,j] = aplhabet[s_rnd.Next(0, aplhabet.Length)];
 
     }
     public override string ToString()
@@ -148,7 +148,6 @@ public class GameBoard
             {
                 if (!dico.ContainsKey((x,y)))
                 {
-                    Console.WriteLine($"x:{x} y:{y} lettre:{Board[x,y]}");
                     dico.Add((x,y), Board[x,y]);
                     if (GetWord(x-1, y, word, index+1, dico) != null
                         ||GetWord(x, y+1, word, index+1, dico) != null

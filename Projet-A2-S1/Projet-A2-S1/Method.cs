@@ -9,7 +9,7 @@ namespace Projet_A2_S1
         /// </summary>
         static public void main_menu(){
             Core.ClearWindow();
-            Core.SetTitle("Jeu des mots");
+            Core.SetTitle("Mots Glissants");
             Core.WriteTitle();
             Core.WriteBanner();
             bool EndMenu = true;

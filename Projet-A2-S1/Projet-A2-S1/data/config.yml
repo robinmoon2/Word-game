@@ -1,10 +1,11 @@
-- name: emma
-  timer: 24
-  score: 3
+- name: florian
+  timer: 4
+  score: 9
   wordList:
-  - LE
+  - LA
+  - SU
 - name: robin
-  timer: 6
-  score: 3
+  timer: 0
+  score: 7
   wordList:
-  - FI
+  - OIL

@@ -22,6 +22,12 @@ namespace Projet_A2_S1
             players.ReadYAML("data/config.yml");
         }
 
+
+        public CustomDictionary Dictionary { get => dictionary; set => dictionary = value; }
+        public GameBoard Board { get => board; set => board = value; }
+        public PlayerList Players { get => players; set => players = value; }
+        
+
         public bool EndGame(){
             bool endtimer = true;
             bool endword = true;
@@ -82,11 +88,11 @@ namespace Projet_A2_S1
         public bool WordValidate(string word,Player player){
             for(int i=0; i<player.WordList.Count;i++){
                 if(player.WordList[i]==word){
-                    Console.WriteLine("ce mot est déjà dans votre liste");
+                    Core.WritePositionedString("Ce mot est déjà dans votre liste", Placement.Right,default, 19, default);
                     return false;
                 }
             }
-            Console.WriteLine("ce mot n'est pas dans votre liste");
+            Core.WritePositionedString("Ce mot n'est pas dans votre liste", Placement.Right,default, 20, default);
              if(dictionary.FindWord(word)){
                  
                 var dico = new Dictionary<(int,int), char>();
@@ -100,7 +106,7 @@ namespace Projet_A2_S1
                 }
                 board.SaveAndWrite();
                 if(dico is null || dico.Count() < word.Length){
-                    Console.WriteLine("Le mot n'est pas présent sur le plateau");
+                    Core.WritePositionedString("Le mot n'est pas présent sur le plateau", Placement.Right,default, 21, default);
                     return false;
                 }
                 else{
