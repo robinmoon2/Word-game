@@ -119,7 +119,7 @@ namespace Projet_A2_S1
 
 
 
-        public static (string, int) TimedEnterInput(int timeLimit, string prompt)
+        public static (string?, int) TimedEnterInput(int timeLimit, string prompt)
         {
             if(timeLimit==0){
                 Console.WriteLine($"Vous n'avez pas de temps limite pour rentrer un mot");
