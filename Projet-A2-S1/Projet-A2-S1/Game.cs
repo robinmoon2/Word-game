@@ -99,7 +99,7 @@ namespace Projet_A2_S1
                     }
                 }
                 board.SaveAndWrite();
-                if(dico is null){
+                if(dico is null || dico.Count() < word.Length){
                     Console.WriteLine("Le mot n'est pas présent sur le plateau");
                     return false;
                 }

@@ -14,7 +14,7 @@ public class GameBoard
     public char[,] Board;
     public GameBoard()
     {
-        Board ??= new char[8,8];
+        //Board ??= new char[10,10];
         var difficultyIndex = Core.ScrollingMenuSelector("Choisissez un plateau", default, default, "Plateau par défaut", "Plateau personnalisé" );
         switch(difficultyIndex.Item1)
         {
@@ -23,11 +23,14 @@ public class GameBoard
                 switch(difficultyIndex.Item2)
                 {
                     case 0:
+                        Board = new char[8,8];
                         sourceFile = EXAMPLE_FILE ;
                         GenerateExamplePlate(sourceFile);
                         SaveAndWrite();
                     break;
                     case 1:
+                        var lengthmatrix = Core.ScrollingNumberSelector("Choisissez la taille du plateau",8,12,8,2);
+                        Board = new char[Convert.ToInt32(lengthmatrix.Item2),Convert.ToInt32(lengthmatrix.Item2)];
                         sourceFile = RANDOM_FILE;
                         GenerateRandomPlate(sourceFile);
                         SaveAndWrite();
@@ -47,7 +50,7 @@ public class GameBoard
             throw new FileNotFoundException($"Aucun fichier à l'adresse :{path}");
         string[] lines = File.ReadAllLines(path);
         if(lines is not null){
-            for(int i = 0; i < 8; i ++){
+            for(int i = 0; i < lines.Length; i ++){
                 string[] parts = lines[i].Split(',');
                 for(int j = 0; j < 8; j ++){
                     Board[i, j] = char.Parse(parts[j]);
@@ -65,7 +68,7 @@ public class GameBoard
         string[] lines = File.ReadAllLines(path);
         if(lines is not null)
         {
-            for(int i = 0; i < 8; i ++)
+            for(int i = 0; i < lines.Length; i ++)
             {
                 string[] parts = lines[i].Split(',');
                 dico.Add(char.Parse(parts[0]), int.Parse(parts[1]));
@@ -74,9 +77,9 @@ public class GameBoard
         else 
             throw new FormatException($"Fichier vide à l'adresse :{path}");
         var aplhabet = "abcdefghijklmopqrstuvwxyz";
-        for(int i = 0; i < 8; i ++)
-            for(int j = 0; j < 8; j ++)
-                Board[i,j] = aplhabet[s_rnd.Next(0, aplhabet.Length)];
+        for(int i = 0; i < Board.GetLength(0); i ++)
+            for(int j = 0; j <Board.GetLength(1); j ++)
+                Console.Write(Board[i,j] = aplhabet[s_rnd.Next(0, aplhabet.Length)]);
 
     }
     public override string ToString()
@@ -88,7 +91,7 @@ public class GameBoard
         for (int i = 0 ;  i < file.Length ; i ++)
         {
             string[] parts = file[i].Split(',');
-            for(int j=0; j<8; j++)
+            for(int j=0; j<Board.GetLength(0); j++)
             {
                 if(parts[j] is not null)
                     plate_string += "| " + parts[j] + " |";
@@ -104,10 +107,10 @@ public class GameBoard
             throw new FileNotFoundException($"Aucun fichier à l'adresse :{WORKING_FILE}");
         string[] lines = File.ReadAllLines(WORKING_FILE); 
         if(lines is not null){
-            for(int i = 0; i < 8; i++)
+            for(int i = 0; i < Board.GetLength(0); i++)
             {
                 string[] parts = lines[i].Split(',');
-                for(int j = 0; j < 8; j++)
+                for(int j = 0; j < Board.GetLength(1); j++)
                 {
                     Board[i,j] = char.Parse(parts[j]);
                 }
@@ -120,12 +123,12 @@ public class GameBoard
     public void SaveAndWrite()  
     {
         using var reader = new StreamWriter(WORKING_FILE);
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < Board.GetLength(0); i++)
         {
-            for (int j = 0; j < 8; j++)
+            for (int j = 0; j < Board.GetLength(1); j++)
             {
                 reader.Write(Board[i,j]);
-                if (j != 7)
+                if (j != Board.GetLength(1) - 1)
                 {
                     reader.Write(",");
                 }
@@ -139,12 +142,13 @@ public class GameBoard
         dico ??= new Dictionary<(int,int), char>();
         if (word.Length == index)
             return dico;
-        else if (x >= 0 && x < 8 && y >= 0 && y < 8)
+        else if (x >= 0 && x < Board.GetLength(0) && y >= 0 && y < Board.GetLength(1))
         {
             if (Board[x,y] == word[index])
             {
                 if (!dico.ContainsKey((x,y)))
                 {
+                    Console.WriteLine($"x:{x} y:{y} lettre:{Board[x,y]}");
                     dico.Add((x,y), Board[x,y]);
                     if (GetWord(x-1, y, word, index+1, dico) != null
                         ||GetWord(x, y+1, word, index+1, dico) != null

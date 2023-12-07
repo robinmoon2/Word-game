@@ -1,8 +1,10 @@
-- name: camille
-  timer: 60
-  score: 0
-  wordList: []
+- name: emma
+  timer: 24
+  score: 3
+  wordList:
+  - LE
 - name: robin
-  timer: 60
-  score: 0
-  wordList: []
+  timer: 6
+  score: 3
+  wordList:
+  - FI
