@@ -24,6 +24,7 @@ namespace Projet_A2_S1
             File.WriteAllText(YAML_PATH, yamlString);
         }
 
+
         /// <summary>
         /// Read the YAML file and create a list of player
         /// </summary>
@@ -38,7 +39,10 @@ namespace Projet_A2_S1
             playerlist = deserializer.Deserialize<List<Player>>(yamlString);
         }
 
-
+        /// <summary>
+        /// Function that return the information of every player
+        /// </summary>
+        /// <returns></returns>
         public string toString(){
             string s="";
             foreach(Player player in playerlist){
@@ -46,7 +50,10 @@ namespace Projet_A2_S1
             }
             return s;
         }
-
+        /// <summary>
+        /// Function that return the information of evry player 
+        /// </summary>
+        /// <returns></returns>
         public List<string> toStringArray(){
             List<string> s = new ();
             foreach (var player in playerlist){

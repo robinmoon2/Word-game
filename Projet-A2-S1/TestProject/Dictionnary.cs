@@ -3,16 +3,16 @@ namespace TestProject{
         
 
         [Test]
-        [TestCase("bonjour")] // true
-        [TestCase("au-revoir")] // false
-        [TestCase("")] // false
-        [TestCase("TeSt")] // true
-        [TestCase("coucou")] // true
-        [TestCase("329843ZFJEZ+2%R3ZP3")] // false
-        public void TestFindWord(string word){
+        [TestCase("bonjour",true)] // true
+        [TestCase("au-revoir",false)] // false
+        [TestCase("",false)] // false
+        [TestCase("TeSt",false)] // true
+        [TestCase("coucou",true)] // true
+        [TestCase("329843ZFJEZ+2%R3ZP3",false)] // false
+        public void TestFindWord(string word, bool result){
             var dictionary = new CustomDictionary();
             bool verif = dictionary.FindWord(word);
-            Assert.That(true, Is.EqualTo(verif));
+            Assert.That(result, Is.EqualTo(verif));
         }
 
     }

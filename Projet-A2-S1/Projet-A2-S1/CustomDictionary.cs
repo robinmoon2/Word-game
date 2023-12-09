@@ -1,9 +1,12 @@
 ﻿namespace Projet_A2_S1;
 public class CustomDictionary
 {
-    private const string TXT_DICTIONARY_PATH = "data/Mots_Français.txt";
-    private const string JSON_DICTIONARY_PATH = "data/Dictionary.Json";
+    
+    private const string TXT_DICTIONARY_PATH = "Mots_Français.txt";
+    private const string JSON_DICTIONARY_PATH = "Dictionary.Json";
     public Dictionary<char, List<string>> Dict = new();
+
+
     public CustomDictionary()
     {
         string[] lines;
@@ -34,6 +37,10 @@ public class CustomDictionary
             SerializeDictionary();
         }
     }
+
+    /// <summary>
+    /// Function that write the dictionary in a JSON file
+    /// </summary>
     private void SerializeDictionary()
     {
         var stream = new JsonSerializerOptions
@@ -43,48 +50,68 @@ public class CustomDictionary
         string JsonString = JsonSerializer.Serialize(Dict, stream);
         File.WriteAllText(JSON_DICTIONARY_PATH, JsonString);
     }
-    public bool FindWord(string mot)
+
+
+    /// <summary>
+    /// function that try to find a wor din the dictionary. 
+    /// </summary>
+    /// <param name="word">the word taht we are looking for</param>
+    /// <returns></returns>
+    /// <exception cref="Exception"></exception>
+    public bool FindWord(string word)
     {
-        if(mot is null || mot == ""){
+        if(word is null || word == ""){
             return false;
         }
-        string jsonString = File.ReadAllText("data/Dictionary.Json");
+        string jsonString = File.ReadAllText("Dictionary.Json");
         var dictionary = JsonSerializer.Deserialize<Dictionary<char,List<string>>>(jsonString) ?? throw new Exception("Error in deserialization.");
-        mot = mot.ToUpper();
-        if( mot == null){
+        word = word.ToUpper();
+        if(word is  null){
             return false;
         }
-        if(dictionary.ContainsKey(mot[0]))
+        if(dictionary.ContainsKey(word[0]))
         {
-            return RechDichoRecursif(mot.ToUpper(),dictionary[mot[0]]);
+            return RechDichoRecursif(word.ToUpper(),dictionary[word[0]]);
         }
         else{
             Console.WriteLine("Mot invalide ");
             return false;
         }
     }
-
-    public bool RechDichoRecursif(string mot, List<string> wordlist)
+    /// <summary>
+    /// This function search a word in a list of string
+    /// </summary>
+    /// <param name="word"> word that we are looking for </param>
+    /// <param name="wordlist">the list of string where we are searching </param>
+    /// <returns></returns>
+    public bool RechDichoRecursif(string word, List<string> wordlist)
     {
         if(wordlist.Count<1){
             return false;
         }
         else{
             int middle = wordlist.Count/2;
-            if(wordlist[middle].ToUpper() == mot){
+            if(wordlist[middle].ToUpper() == word)
+            {
                 return true;
             }
-            else if ( (string.Compare(wordlist[middle].ToUpper(),mot)) < 0){
-                return RechDichoRecursif(mot,wordlist.GetRange(middle+1,wordlist.Count-middle-1)); // on commence à middle+1 car on a déjà testé le mot à la position middle voir def GEtRange  
+            else if ( (string.Compare(wordlist[middle].ToUpper(), word)) < 0){
+                return RechDichoRecursif(word, wordlist.GetRange(middle+1,wordlist.Count-middle-1)); // We start at middle+1 because we have already try it
             }
             else{
-                return RechDichoRecursif(mot,wordlist.GetRange(0,middle));
+                return RechDichoRecursif(word, wordlist.GetRange(0,middle));
             }
             
                 
         }
     }
     
+
+    /// <summary>
+    /// This function sort a list of string with the quick_sort method 
+    /// </summary>
+    /// <param name="wordlist">the list that we want to sort</param>
+    /// <returns></returns>
     public List<string> Sort(List<string> wordlist) 
     {
         if(wordlist is null || wordlist.Count()<=1 ){
@@ -108,8 +135,14 @@ public class CustomDictionary
             lower.Add(pivot);
             return lower.Concat(greater).ToList();
         }
-
     }
+
+
+
+    /// <summary>
+    /// Function that return the string that tell how many words per letter exist in the dictionary
+    /// </summary>
+    /// <returns></returns>
     public override string ToString()
     {
         string str = string.Empty;

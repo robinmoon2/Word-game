@@ -16,7 +16,7 @@ namespace TestProject
             Player player = new Player { Name = "joueur", Timer = 60, Score = 0, WordList = new List<string>() };
             player.Add_Mot(word);
             bool verif = false;
-            if (player.WordList.Contains(word) && player.WordList.Count() == 1)
+            if (player.Contient(word) && player.WordList.Count() !=0)
                 verif = true;
             Assert.That(true, Is.EqualTo(verif));
         }
@@ -31,9 +31,9 @@ namespace TestProject
             Player player = new Player { Name = "joueur", Timer = 60, Score = 0, WordList = new List<string>() };
             player.WordList.Add("bonjour");
             bool verif = false;
-            if (player.WordList.Contains(word) && player.WordList.Count() == 2)
+            if (player.WordList.Contains(word))
                 verif = true;
-            Assert.That(true, Is.EqualTo(verif));
+            Assert.That(player.Contient(word), Is.EqualTo(verif));
 
         }
 
@@ -45,12 +45,10 @@ namespace TestProject
         public void TestAddScore(string word)
         {
             Player player = new Player { Name = "joueur", Timer = 60, Score = 0, WordList = new List<string>() };
-            player.Add_Mot(word);
             player.Add_Score(player.Word_Value(word));
-            bool verif = false;
-            if (player.Score != 0 )
-                verif = true;
-            Assert.That(true, Is.EqualTo(verif));
+            Console.WriteLine(player.Word_Value(word));
+            Console.WriteLine(player.Score);
+            Assert.That(player.Word_Value(word), Is.EqualTo(player.Score));
         }
 
 

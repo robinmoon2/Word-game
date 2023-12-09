@@ -15,7 +15,10 @@ public class Player
 
 
 
-
+    /// <summary>
+    /// Function that return the information of a player
+    /// </summary>
+    /// <returns></returns>
     public string toString(){
         string playerString= $"Name : {name}\n Timer : {timer}\n Score : {score} \n WordList :";
         if(wordList is not null){
@@ -28,12 +31,15 @@ public class Player
         }
         return playerString;
     }
-    
 
-    public void Add_Mot (string mot) 
+    /// <summary>
+    /// Function that add a word to the wordlist of the player 
+    /// </summary>
+    /// <param name="word">the word that we are adding </param>
+    public void Add_Mot (string word) 
     {
-        if(!Contient(mot) && mot !=null && wordList is not null){
-            wordList.Add(mot);
+        if(!Contient(word) && word is not null && wordList is not null){
+            wordList.Add(word);
             Console.WriteLine("Mot ajoué, bravo ! ");
         }
         else{
@@ -41,8 +47,12 @@ public class Player
         }
 
     }
-
-    public bool Contient (string mot) 
+    /// <summary>
+    /// Function that look if the word is already in the player's wordlist
+    /// </summary>
+    /// <param name="word"> the word that we are looking for</param>
+    /// <returns></returns>
+    public bool Contient (string word) 
     {
         bool verif = false;
         if(wordList is null){
@@ -50,36 +60,46 @@ public class Player
         }
         for(int i=0; i<wordList.Count; i++)
         {
-            if(wordList[i] == mot)
+            if(wordList[i] == word)
             {
                 verif = true;
             }
         }
         return verif;
     }
-
-    public void Add_Score(int val) 
+    /// <summary>
+    /// Add the value of the world in the player score 
+    /// </summary>
+    /// <param name="value"></param>
+    public void Add_Score(int value) 
     {
-        Core.WritePositionedString("Score ajouté, bravo ! "+val, Placement.Center, default, 20, default);
-        this.score += val;
+        Core.WritePositionedString("Score ajouté, bravo ! "+ value, Placement.Right, default, 20, default);
+        this.score += value;
     }
 
-
-    public int Word_Value(string mot ){
+    /// <summary>
+    /// Function that calculate the value of the word 
+    /// </summary>
+    /// <param name="word">word that we are looking for</param>
+    /// <returns></returns>
+    public int Word_Value(string word ){
         int value = 0;
-        for(int i=0; i<mot.Length;i++){
-            value += Letter_Value(mot[i]);
-        }
-        Core.WritePositionedString("valeur du mot : "+value, Placement.Center, default, 15, default);
+        for(int i=0; i<word.Length;i++)
+            value += Letter_Value(word[i]);
+        Core.WritePositionedString("valeur de "+word+" : "+value, Placement.Right, default, 15, default);
         return value;
     }
-
+    /// <summary>
+    /// Function that return the value of the letter
+    /// </summary>
+    /// <param name="letter">the letter that we are looking for</param>
+    /// <returns></returns>
     public static int Letter_Value(char letter)
     {
-        using (StreamReader reader = new StreamReader("data/Lettre.txt"))
+        using (StreamReader reader = new StreamReader("Lettre.txt"))
         {
             string line = reader.ReadLine() ?? "" ;
-            while (line != null)
+            while (line is not null)
             {
                 string[] parts = line.Split(',');
                 if (parts[0] == letter.ToString().ToUpper())

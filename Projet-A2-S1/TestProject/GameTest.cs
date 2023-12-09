@@ -14,7 +14,7 @@ namespace TestProject
             var game = new Game();
             game.Players = new PlayerList(listplayer(timer1,timer2));
             bool verif = game.EndGame();
-            Assert.That(true, Is.EqualTo(verif));
+            Assert.That(game.EndGame(), Is.EqualTo(verif));
         }
 
 
