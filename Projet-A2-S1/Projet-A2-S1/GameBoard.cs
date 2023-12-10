@@ -148,7 +148,6 @@ public class GameBoard
     public Dictionary<(int, int), char>? GetWord(int x, int y, string word, int index = 0, Dictionary<(int, int), char>? dico = null)
     {
         dico ??= new Dictionary<(int, int), char>();
-        Console.WriteLine("coucou");
         if (word.Length == index)
             return dico;
         else if (x >= 0 && x < Board.GetLength(0) && y >= 0 && y < Board.GetLength(1))

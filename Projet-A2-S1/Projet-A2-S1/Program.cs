@@ -39,6 +39,7 @@ namespace Projet_A2_S1
             }
             game.Results();
             // create the game
+            Core.ExitProgram();
 
         }
     }

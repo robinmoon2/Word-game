@@ -45,7 +45,6 @@ public class Player
         else{
             Console.WriteLine("Mot déjà dans votre liste ! ");
         }
-
     }
     /// <summary>
     /// Function that look if the word is already in the player's wordlist
@@ -73,7 +72,6 @@ public class Player
     /// <param name="value"></param>
     public void Add_Score(int value) 
     {
-        Core.WritePositionedString("Score ajouté, bravo ! "+ value, Placement.Right, default, 20, default);
         this.score += value;
     }
 
@@ -82,11 +80,11 @@ public class Player
     /// </summary>
     /// <param name="word">word that we are looking for</param>
     /// <returns></returns>
+    /// 
     public int Word_Value(string word ){
         int value = 0;
         for(int i=0; i<word.Length;i++)
             value += Letter_Value(word[i]);
-        Core.WritePositionedString("valeur de "+word+" : "+value, Placement.Right, default, 15, default);
         return value;
     }
     /// <summary>

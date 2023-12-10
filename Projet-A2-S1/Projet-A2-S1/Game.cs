@@ -1,4 +1,6 @@
-﻿namespace Projet_A2_S1
+﻿using System.Diagnostics;
+
+namespace Projet_A2_S1
 {
     public class Game
     {
@@ -84,6 +86,7 @@
                     {
                         if (WordValidate(input.ToUpper(), Player))
                         {
+                            Core.WritePositionedString("Mot ajouté ! Bravo : " + Player.Word_Value(input), Placement.Right, default, 20, default);
                             Player.Add_Mot(input.ToUpper());
                             Player.Add_Score(Player.Word_Value(input.ToUpper()));
                             Player.Timer = timer.Item1;
@@ -116,7 +119,7 @@
             int cmp = 0;
             foreach (var player in players.playerlist)
             {
-                Core.WritePositionedString(player.Name + " : " + player.Score, Placement.Center, default, 11, default);
+                Core.WritePositionedString(player.Name + " : " + player.Score, Placement.Center, default, 11+cmp, default);
                 cmp++;
             }
             Core.WritePositionedString("Appuyez sur entrée pour continuer", Placement.Center, default, 23 + cmp, default);

@@ -46,8 +46,6 @@ namespace TestProject
         {
             Player player = new Player { Name = "joueur", Timer = 60, Score = 0, WordList = new List<string>() };
             player.Add_Score(player.Word_Value(word));
-            Console.WriteLine(player.Word_Value(word));
-            Console.WriteLine(player.Score);
             Assert.That(player.Word_Value(word), Is.EqualTo(player.Score));
         }
 
