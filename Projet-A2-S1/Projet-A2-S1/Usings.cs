@@ -1,4 +1,4 @@
-
+// The global using of the project
 global using System.Text.Json;
 global using ConsoleAppVisuals;
 global using System.IO;

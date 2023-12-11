@@ -2,77 +2,104 @@
 
 public class Player
 {
-     string name;
+     string? name;
      int timer;
      int score;
-     List<string> wordList;
+     List<string>? wordList;
     
 
-    public string Name{get{return name;} set{name = value;}}
+    public string? Name{get{return name;} set{name = value;}}
     public int Timer{get{return timer;} set{timer = value;}}
     public int Score{get{return score;} set{score = value;}}
-    public List<string> WordList{get{return wordList;} set{wordList = value;}}
+    public List<string>? WordList{get{return wordList;} set{wordList = value;}}
 
 
 
-
+    /// <summary>
+    /// Function that return the information of a player
+    /// </summary>
+    /// <returns></returns>
     public string toString(){
         string playerString= $"Name : {name}\n Timer : {timer}\n Score : {score} \n WordList :";
-        foreach(string word in wordList){
-            playerString += $"\n {word}";
+        if(wordList is not null){
+            foreach(string word in wordList){
+                playerString += $"\n {word}";
+            }
+        }
+        else{
+            playerString += "\n null";
         }
         return playerString;
     }
-    
 
-    public void Add_Mot (string mot) 
+    /// <summary>
+    /// Function that add a word to the wordlist of the player 
+    /// </summary>
+    /// <param name="word">the word that we are adding </param>
+    public void Add_Mot (string word) 
     {
-        if(!Contient(mot) ){
-            wordList.Add(mot);
+        if(!Contient(word) && word is not null && wordList is not null){
+            wordList.Add(word);
             Console.WriteLine("Mot ajoué, bravo ! ");
         }
         else{
             Console.WriteLine("Mot déjà dans votre liste ! ");
         }
-
     }
-
-    public bool Contient (string mot) 
+    /// <summary>
+    /// Function that look if the word is already in the player's wordlist
+    /// </summary>
+    /// <param name="word"> the word that we are looking for</param>
+    /// <returns></returns>
+    public bool Contient (string word) 
     {
         bool verif = false;
+        if(wordList is null){
+            return false;
+        }
         for(int i=0; i<wordList.Count; i++)
         {
-            if(wordList[i] == mot)
+            if(wordList[i] == word)
             {
                 verif = true;
             }
         }
         return verif;
     }
-
-    public void Add_Score(int val) 
+    /// <summary>
+    /// Add the value of the world in the player score 
+    /// </summary>
+    /// <param name="value"></param>
+    public void Add_Score(int value) 
     {
-        Core.WritePositionedString("Score ajouté, bravo ! "+val, Placement.Center, default, 14, default);
-        this.score += val;
+        this.score += value;
     }
 
-
-    public int Word_Value(string mot ){
+    /// <summary>
+    /// Function that calculate the value of the word 
+    /// </summary>
+    /// <param name="word">word that we are looking for</param>
+    /// <returns></returns>
+    /// 
+    public int Word_Value(string word ){
+        if( word is null) { return 0; }
+        else if(!word.All(char.IsLetter)) { return 0; }
         int value = 0;
-        for(int i=0; i<mot.Length;i++){
-            value += Letter_Value(mot[i]);
-            Console.WriteLine(mot[i]);
-        }
-        Core.WritePositionedString("valeur du mot : "+value, Placement.Center, default, 15, default);
+        for(int i=0; i<word.Length;i++)
+            value += Letter_Value(word[i]);
         return value;
     }
-
+    /// <summary>
+    /// Function that return the value of the letter
+    /// </summary>
+    /// <param name="letter">the letter that we are looking for</param>
+    /// <returns></returns>
     public static int Letter_Value(char letter)
     {
-        using (StreamReader reader = new StreamReader("data/Lettre.txt"))
+        using (StreamReader reader = new StreamReader("Lettre.txt"))
         {
             string line = reader.ReadLine() ?? "" ;
-            while (line != null)
+            while (line is not null)
             {
                 string[] parts = line.Split(',');
                 if (parts[0] == letter.ToString().ToUpper())
@@ -82,7 +109,7 @@ public class Player
                 line = reader.ReadLine() ?? "";
             }
         }
-        return -1;
+        return 0;
     }   
 }
 
