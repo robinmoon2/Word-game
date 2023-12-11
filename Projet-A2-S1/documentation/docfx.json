@@ -23,7 +23,7 @@
         "files": ["images/"]
       }
     ],
-    "output": "../docs",
+    "output": "../../docs",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": ["default", "modern"],
