@@ -11,9 +11,9 @@ namespace Projet_A2_S1
         }
 
         /// <summary>
-        /// Write the informations of the players in a YAML file
+        /// Write the information of the players in a YAML file
         /// </summary>
-        /// <param name="YAML_PATH"> location of the yaml file </param>
+        /// <param name="YAML_PATH"> location of the YAML file </param>
         public void WriteYAML(string YAML_PATH){
             var serializer = new SerializerBuilder()
                 .WithNamingConvention(CamelCaseNamingConvention.Instance)

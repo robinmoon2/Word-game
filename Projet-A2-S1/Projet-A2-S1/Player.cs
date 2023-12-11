@@ -82,6 +82,8 @@ public class Player
     /// <returns></returns>
     /// 
     public int Word_Value(string word ){
+        if( word is null) { return 0; }
+        else if(!word.All(char.IsLetter)) { return 0; }
         int value = 0;
         for(int i=0; i<word.Length;i++)
             value += Letter_Value(word[i]);

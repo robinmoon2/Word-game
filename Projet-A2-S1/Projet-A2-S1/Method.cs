@@ -132,7 +132,7 @@ namespace Projet_A2_S1
         {
             if (timeLimit == 0)
             {
-                Console.WriteLine($"Vous n'avez pas de temps limite pour rentrer un mot");
+                Console.WriteLine("Vous n'avez pas de temps limite pour rentrer un mot");
                 return (null, 0);
             }
             else if (timeLimit < 0)
@@ -140,7 +140,7 @@ namespace Projet_A2_S1
                 Console.WriteLine("Vous avez entré un temps négatif, vous allez sortir du jeu");
                 return (null, 0);
             }
-            Console.WriteLine(prompt);
+            Core.WritePositionedString(prompt, Placement.Center, default,3,default) ;
             string? input = null;
             var task = Task.Run(() =>
             {
@@ -165,7 +165,19 @@ namespace Projet_A2_S1
         static public void CreatePlayer()
         {
             var index = Core.ScrollingNumberSelector("Choisir le timer par joueur :", 60, 180, 60, 30);
-            int timer = Convert.ToInt32(index.Item2);
+            int timer;
+            if(index.Item1 == 0)
+            {
+                timer = Convert.ToInt32(index.Item2);
+            }
+            else
+            {
+                Core.WritePositionedString("Vous n'avez rien entré, jeu configuré pour 60 secondes par joueur", Placement.Center, default, 10, default);
+                Thread.Sleep(3000);
+                Core.ClearLine(10);
+                timer = 60;
+            }
+            
             index = Core.ScrollingNumberSelector("Choisir le nombre de joueur :", 1, 4, 1, 1);
             int number = 0;
             if (index.Item1 == 0)
@@ -174,8 +186,10 @@ namespace Projet_A2_S1
             }
             else
             {
-                Core.WritePositionedString("Vous avez pressé la touche echap, vous allez sortir du jeu, pressez entrée pour confirmer", Placement.Center, default, 10, default);
-                Core.ExitProgram();
+                Core.WritePositionedString("Vous n'avez rien entré, jeu configuré pour 2 joueurs", Placement.Center, default, 10, default);
+                Thread.Sleep(3000);
+                Core.ClearLine(10);
+                number = 2;
             }
             List<Player> playerlist = new List<Player>();
             PlayerList players = new PlayerList(playerlist);
@@ -185,18 +199,24 @@ namespace Projet_A2_S1
                 Core.WritePositionedString($"Entrez le nom du joueur {i + 1} : ", Placement.Center, default, 10, default);
                 string? name = Console.ReadLine();
                 name ??= "";
-                if (name == "" || name == null)
+                if (name is null || name == "" || playerlist.Any(p => p.Name == name) )
                 {
-                    name = "Joueur " + (i + 1);
+                    if (playerlist.Any(p => p.Name == name))
+                        name += i;
+                    else
+                        name = "Joueur " + (i + 1);
+    
                 }
+                //condition if a player has already the name of another playe
+
                 players.playerlist.Add(new Player { Name = name, Timer = timer, Score = 0, WordList = new List<string>() });
                 Core.ClearLine(10);
+                Core.ClearLine(11);
             }
             players.WriteYAML("config.yml");
             Console.WriteLine("Liste des joueurs : ");
             Console.WriteLine("");
             Console.WriteLine(players.toString());
         }
-
     }
 }

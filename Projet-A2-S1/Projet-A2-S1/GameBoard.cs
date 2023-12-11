@@ -18,7 +18,6 @@ public class GameBoard
     /// </summary>
     public GameBoard()
     {
-        //Board ??= new char[10,10];
         var difficultyIndex = Core.ScrollingMenuSelector("Choisissez un plateau", default, default, "Plateau par défaut", "Plateau aléatoire");
         switch (difficultyIndex.Item1)
         {
@@ -29,14 +28,14 @@ public class GameBoard
                     case 0:
                         sourceFile = EXAMPLE_FILE;
                         Board = new char[8, 8];
-                        GenerateExamplePlate(sourceFile);
+                        GenerateExampleBoard(sourceFile);
                         SaveAndWrite();
                         break;
                     case 1:
                         var lengthmatrix = Core.ScrollingNumberSelector("Choisissez la taille du plateau", 8, 12, 8, 2);
                         Board = new char[Convert.ToInt32(lengthmatrix.Item2), Convert.ToInt32(lengthmatrix.Item2)];
                         sourceFile = RANDOM_FILE;
-                        GenerateRandomPlate(sourceFile,Convert.ToInt32(lengthmatrix.Item2),Convert.ToInt32(lengthmatrix.Item2));
+                        GenerateRandomBoard(sourceFile,Convert.ToInt32(lengthmatrix.Item2),Convert.ToInt32(lengthmatrix.Item2));
                         SaveAndWrite();
                         break;
                 }
@@ -48,7 +47,27 @@ public class GameBoard
                 break;
         }
     }
-    void GenerateExamplePlate(string path)
+
+    /// <summary>
+    /// Second constructor for the Test Function
+    /// </summary>
+    /// <param name="test"></param>
+    public GameBoard(bool test)
+    {
+        Board = new char[8, 8];
+        GenerateExampleBoard(EXAMPLE_FILE);
+    }
+
+
+
+
+    /// <summary>
+    /// This function generate the Example Board
+    /// </summary>
+    /// <param name="path">the path to the file</param>
+    /// <exception cref="FileNotFoundException"></exception>
+    /// <exception cref="FormatException"></exception>
+    void GenerateExampleBoard(string path)
     {
         if (!File.Exists(path))
             throw new FileNotFoundException($"Aucun fichier à l'adresse :{path}");
@@ -76,7 +95,7 @@ public class GameBoard
     /// <param name="cols">number of columns of the matrix</param>
     /// <exception cref="FileNotFoundException"></exception>
     /// <exception cref="FormatException"></exception>
-    void GenerateRandomPlate(string path, int rows, int cols)
+    void GenerateRandomBoard(string path, int rows, int cols)
     {
         if (!File.Exists(path))
             throw new FileNotFoundException($"Aucun fichier à l'adresse :{path}");
@@ -154,7 +173,6 @@ public class GameBoard
         {
             if (char.ToLower(Board[x, y]) == (word[index]))
             {
-                Console.WriteLine("case: " + Board[x, y]);
                 if (!dico.ContainsKey((x, y)))
                 {
                     // if the position never had been explore, we add it to the list 

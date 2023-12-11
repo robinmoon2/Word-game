@@ -19,6 +19,20 @@ namespace Projet_A2_S1
             players = new PlayerList(ListOfPlayer);
             players.ReadYAML("config.yml");
         }
+        /// <summary>
+        /// Second constructor for the test function
+        /// </summary>
+        /// <param name="test"></param>
+        public Game(bool test)
+        {
+            dictionary = new CustomDictionary();
+            board = new GameBoard(test);
+            List<Player> ListOfPlayer = new List<Player>();
+            players = new PlayerList(ListOfPlayer);
+            players.ReadYAML("config.yml");
+        }
+
+
 
 
         public CustomDictionary Dictionary { get => dictionary; set => dictionary = value; }

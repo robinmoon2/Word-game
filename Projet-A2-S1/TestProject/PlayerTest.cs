@@ -34,21 +34,18 @@ namespace TestProject
             if (player.WordList.Contains(word))
                 verif = true;
             Assert.That(player.Contient(word), Is.EqualTo(verif));
-
         }
 
         [Test]
         [TestCase("coucou")]
         [TestCase("bonjour")]
+        [TestCase("1234566")]
         [TestCase("")]
-        [TestCase("12345")]
         public void TestAddScore(string word)
         {
             Player player = new Player { Name = "joueur", Timer = 60, Score = 0, WordList = new List<string>() };
             player.Add_Score(player.Word_Value(word));
             Assert.That(player.Word_Value(word), Is.EqualTo(player.Score));
         }
-
-
     }
 }

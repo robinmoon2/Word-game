@@ -11,7 +11,7 @@ namespace TestProject
         [TestCase(0,2344)] //false
         [TestCase(100,0)] // false
         public void TestEndGame(int timer1,int timer2){
-            var game = new Game();
+            var game = new Game(true);
             game.Players = new PlayerList(listplayer(timer1,timer2));
             bool verif = game.EndGame();
             Assert.That(game.EndGame(), Is.EqualTo(verif));
