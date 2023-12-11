@@ -1,0 +1,34 @@
+{
+  "metadata": [{
+    "src": [{
+      "files": ["**/bin/Debug/net7.0/Projet-A2-S1.dll"],
+      "src": "../Projet-A2-S1/"
+    }],
+    "dest": "api",
+    "properties": {
+      "TargetFramework": "net7.0"
+    }
+  }],
+  "build": {
+    "content": [
+      {
+        "files": ["api/*.yml", "api/index.md"]
+      },
+      {
+        "files": ["articles/*.md", "articles/toc.yml", "toc.yml", "*.md"]
+      }
+    ],
+    "resource": [
+      {
+        "files": ["images/"]
+      }
+    ],
+    "output": "../docs",
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "template": ["default", "modern"],
+    "postProcessors": [],
+    "keepFileLink": false,
+    "disableGitFeatures": false
+  }
+}
