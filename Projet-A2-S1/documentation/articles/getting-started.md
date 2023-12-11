@@ -1,1 +1,1 @@
-# Getting Started
+# Description of the game 
