@@ -91,6 +91,8 @@ namespace Projet_A2_S1
 
                 Core.WritePositionedString(board.ToString(), Placement.Left, default, 10, default);
                 var timer = Method.TimedInput(Player.Timer);
+                //temps global -= timer.Item1;
+                //On change EndGame avec le temps global = 0 
                 Player.Timer = timer.Item1;
                 if (Player.Timer != 0)
                 {

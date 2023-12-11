@@ -164,6 +164,11 @@ namespace Projet_A2_S1
         /// </summary>
         static public void CreatePlayer()
         {
+            //var index = Core.ScrollingMenuSelector("Choisir le timer par joueur :",  "10", "50", "10","10" );
+
+            // int timer = Convert.ToInt32(index.Item2);
+
+            //var tempsparti = Core.ScrollingMenuSelector("Choisir le temps de la partie générale","60","50","10","10" );
             var index = Core.ScrollingNumberSelector("Choisir le timer par joueur :", 60, 180, 60, 30);
             int timer;
             if(index.Item1 == 0)

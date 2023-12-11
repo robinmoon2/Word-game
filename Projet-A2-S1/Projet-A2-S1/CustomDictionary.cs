@@ -6,7 +6,12 @@ public class CustomDictionary
     private const string JSON_DICTIONARY_PATH = "Dictionary.Json";
     public Dictionary<char, List<string>> Dict = new();
 
-
+    /// <summary>
+    /// Constructor of the class CustomDictionary
+    /// </summary>
+    /// <exception cref="Exception"></exception>
+    /// <exception cref="FileNotFoundException">Exception if the file is not found</exception>
+    /// <exception cref="NullReferenceException"></exception>
     public CustomDictionary()
     {
         string[] lines;
@@ -39,7 +44,7 @@ public class CustomDictionary
     }
 
     /// <summary>
-    /// Function that write the dictionary in a JSON file
+    /// Function that write the dictionary in a JSON file to stock it 
     /// </summary>
     private void SerializeDictionary()
     {
@@ -53,11 +58,12 @@ public class CustomDictionary
 
 
     /// <summary>
-    /// function that try to find a wor din the dictionary. 
+    /// This function try to find a word in the dictionary
     /// </summary>
-    /// <param name="word">the word taht we are looking for</param>
+    /// <param name="word">The string that represent the word that we are searching in the dictionary ( wich is stock in dictionary.Json)</param>
     /// <returns></returns>
-    /// <exception cref="Exception"></exception>
+    /// <exception cref="Exception">If the file is not found or if we can't read it we throw an exception </exception>
+
     public bool FindWord(string word)
     {
         if(word is null || word == ""){
@@ -78,6 +84,7 @@ public class CustomDictionary
             return false;
         }
     }
+
     /// <summary>
     /// This function search a word in a list of string
     /// </summary>

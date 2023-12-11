@@ -16,7 +16,7 @@ public class Player
 
 
     /// <summary>
-    /// Function that return the information of a player
+    /// This function can create a string of the player's information with his name, timer, score and wordlist  
     /// </summary>
     /// <returns></returns>
     public string toString(){
@@ -33,9 +33,9 @@ public class Player
     }
 
     /// <summary>
-    /// Function that add a word to the wordlist of the player 
+    /// This function take a string in parameter and add it to the player's wordlist if it's not already in it and if the word is not null and call the function Contient
     /// </summary>
-    /// <param name="word">the word that we are adding </param>
+    /// <param name="word">tThe word that we are adding at the wordlist </param>
     public void Add_Mot (string word) 
     {
         if(!Contient(word) && word is not null && wordList is not null){
@@ -46,8 +46,9 @@ public class Player
             Console.WriteLine("Mot déjà dans votre liste ! ");
         }
     }
+
     /// <summary>
-    /// Function that look if the word is already in the player's wordlist
+    /// This function take a string in parameter and look if it's in the player's wordlist
     /// </summary>
     /// <param name="word"> the word that we are looking for</param>
     /// <returns></returns>
@@ -66,8 +67,9 @@ public class Player
         }
         return verif;
     }
+
     /// <summary>
-    /// Add the value of the world in the player score 
+    /// This function take an int as parameter and add it to the player's score
     /// </summary>
     /// <param name="value"></param>
     public void Add_Score(int value) 
@@ -90,7 +92,7 @@ public class Player
         return value;
     }
     /// <summary>
-    /// Function that return the value of the letter
+    /// This function can calculate the value of a letter according to the file Lettre.txt ( the value of the letter is in the third column of the file)
     /// </summary>
     /// <param name="letter">the letter that we are looking for</param>
     /// <returns></returns>
