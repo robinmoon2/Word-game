@@ -34,6 +34,8 @@ namespace Projet_A2_S1
                                 var couleur = colors[color.Item2];
                                 Core.ChangeForeground(couleur);
                                 Core.WritePositionedString("Couleur choisie : ", Placement.Center, default, 10, default);
+                                Core.WriteFullScreen("Mots Glissants", true, ("Jeu des mots", "", "(pas du tout comme candy crush)"), ("Hugo Peltier", "TDO", "Robin L'hyver"));
+
                                 break;
 
                             case 2:
@@ -42,6 +44,7 @@ namespace Projet_A2_S1
                                 Core.WriteContinuousString("Pressez entree pour sortir ", 35);
                                 Console.ReadKey();
                                 Core.ClearWindow();
+                                Core.WriteFullScreen("Mots Glissants", true, ("Jeu des mots", "", "(pas du tout comme candy crush)"), ("Hugo Peltier", "TDO", "Robin L'hyver"));
                                 break;
                             case 3:
                                 EndMenu = false;
@@ -91,7 +94,7 @@ namespace Projet_A2_S1
             printTimer = new Timer((state) =>
             {
                 remainingTime--;
-                Core.WritePositionedString($"Remaining time: {remainingTime}", Placement.Right, default, 20, default);
+                Core.WritePositionedString($"Temps restant : {remainingTime}", Placement.Right, default, 20, default);
 
             }, null, 1000, 1000);
 

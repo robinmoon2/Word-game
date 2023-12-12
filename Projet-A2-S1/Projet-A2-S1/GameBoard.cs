@@ -15,6 +15,7 @@ public class GameBoard
     public char[,] Board;
     /// <summary>
     /// Build a Object GameBoard. In it the user personalised his board 
+    /// It is also the **ToRead** function
     /// </summary>
     public GameBoard()
     {
@@ -135,7 +136,7 @@ public class GameBoard
     }
 
     /// <summary>
-    /// Funciton that save the board in a CSV file
+    /// Function that save the board in a CSV file it is the **ToFile** function
     /// </summary>
     public void SaveAndWrite()
     {
@@ -157,6 +158,7 @@ public class GameBoard
     /// <summary>
     /// This function can find the word in the board
     /// It returns a dictionnary with each position as key and the character of this position in value
+    /// Is is the **RecherMot** function
     /// </summary>
     /// <param name="x"> the line of the start of the word , the first character of the word </param>
     /// <param name="y">the column of the start of the word , the first character of the word </param>
@@ -175,7 +177,7 @@ public class GameBoard
             {
                 if (!dico.ContainsKey((x, y)))
                 {
-                    // if the position never had been explore, we add it to the list 
+                    // if the position never had been explored, we add it to the list 
                     dico.Add((x, y), Board[x, y]);
                     if (GetWord(x - 1, y, word, index + 1, dico) != null
                         || GetWord(x + 1, y, word, index + 1, dico) != null
