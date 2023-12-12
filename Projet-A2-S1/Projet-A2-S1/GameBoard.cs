@@ -8,6 +8,7 @@ using System.Security.Cryptography.X509Certificates;
 namespace Projet_A2_S1;
 public class GameBoard
 {
+
     private const string WORKING_FILE = "AcutalPlate.csv";
     private const string EXAMPLE_FILE = "Plate1.csv";
     private const string RANDOM_FILE = "Lettre.txt";
@@ -89,7 +90,8 @@ public class GameBoard
             throw new FormatException($"Fichier vide à l'adresse :{path}");
     }
     /// <summary>
-    /// Function that build a new Random Plate in a CSV file with the Lettre.txt file
+    /// Function that build a new Random Plate in a CSV file with the Lettre.txt file. 
+    /// This take the number of iteration allowed per letter in the _Lettre.txt_ and add a random character for each of the case in the matrix
     /// </summary>
     /// <param name="path">The path of where is the file </param>
     /// <param name="rows">number of rows of the matrix </param>
@@ -137,6 +139,7 @@ public class GameBoard
 
     /// <summary>
     /// Function that save the board in a CSV file it is the **ToFile** function
+    /// This can write the new board into the same CSV file
     /// </summary>
     public void SaveAndWrite()
     {
@@ -200,7 +203,8 @@ public class GameBoard
     }
 
     /// <summary>
-    /// Function that update the board according to the character and the spaces
+    /// Function that update the board according to the character and the spaces.
+    /// This function appear after each time the board has changed
     /// </summary>
     public void Maj_Plateau()
     {
@@ -222,10 +226,11 @@ public class GameBoard
     }
 
     /// <summary>
-    /// Return the string taht represent the board
+    /// Return the string that represent the board
+    /// the override allows us to do a **Console.WriteLine(board)**
     /// </summary>
     /// <returns></returns>
-    /// <exception cref="FileNotFoundException"></exception>
+    /// <exception cref="FileNotFoundException">The file is not found </exception>
     public override string ToString()
     {
         if (!File.Exists(WORKING_FILE))

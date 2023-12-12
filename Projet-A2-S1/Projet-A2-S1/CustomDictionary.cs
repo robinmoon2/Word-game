@@ -7,7 +7,9 @@ public class CustomDictionary
     public Dictionary<char, List<string>> Dict = new();
 
     /// <summary>
-    /// Constructor of the class CustomDictionary
+    /// Constructor of the class CustomDictionary. 
+    /// It build a new Dictionnary base on the words found in _Mots-Français.txt_ and write them in a Json  sort by character and every character has 
+    /// a string of every word beginning with this letter.
     /// </summary>
     /// <exception cref="Exception"></exception>
     /// <exception cref="FileNotFoundException">Exception if the file is not found</exception>
