@@ -120,7 +120,10 @@ items:
   assemblies:
   - Projet-A2-S1
   namespace: Projet_A2_S1
-  summary: Function that save the board in a CSV file it is the **ToFile** function
+  summary: >-
+    Function that save the board in a CSV file it is the **ToFile** function
+
+    This can write the new board into the same CSV file
   example: []
   syntax:
     content: public void SaveAndWrite()
@@ -187,7 +190,10 @@ items:
   assemblies:
   - Projet-A2-S1
   namespace: Projet_A2_S1
-  summary: Function that update the board according to the character and the spaces
+  summary: >-
+    Function that update the board according to the character and the spaces.
+
+    This function appear after each time the board has changed
   example: []
   syntax:
     content: public void Maj_Plateau()
@@ -207,7 +213,10 @@ items:
   assemblies:
   - Projet-A2-S1
   namespace: Projet_A2_S1
-  summary: Return the string taht represent the board
+  summary: >-
+    Return the string that represent the board
+
+    the override allows us to do a **Console.WriteLine(board)**
   example: []
   syntax:
     content: public override string ToString()
@@ -220,7 +229,7 @@ items:
   exceptions:
   - type: System.IO.FileNotFoundException
     commentId: T:System.IO.FileNotFoundException
-    description: ''
+    description: The file is not found
 references:
 - uid: Projet_A2_S1
   commentId: N:Projet_A2_S1

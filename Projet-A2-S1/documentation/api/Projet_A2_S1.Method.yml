@@ -47,7 +47,10 @@ items:
   assemblies:
   - Projet-A2-S1
   namespace: Projet_A2_S1
-  summary: This function create the main menu of the game
+  summary: >-
+    This function create the main menu of the game. 
+
+    It is the first function that is called in the programm.
   example: []
   syntax:
     content: public static void main_menu()
@@ -67,7 +70,12 @@ items:
   assemblies:
   - Projet-A2-S1
   namespace: Projet_A2_S1
-  summary: Function that time the turn of the player. Its stop when the player press enter of when the timer == 0
+  summary: >-
+    Function that time the turn of the player. Its stop when the player press enter of when the timer == 0. 
+
+    This function work with sub-function that are called **PrintTimer** and **Timer**.
+
+    The function wait for an Keyboard input, if it is the ENTER key it stops.
   example: []
   syntax:
     content: 'public static (int, string?) TimedInput(int timeLimit, string message = "Pressez la touche ENTREE pour ensuite rentrer un mot :  ")'
@@ -99,7 +107,12 @@ items:
   assemblies:
   - Projet-A2-S1
   namespace: Projet_A2_S1
-  summary: Function that is used to time for a player to write a word and stop when the key Enter is pressed with an input or the timer == 0
+  summary: >-
+    Function that is used to time for a player to write a word and stop when the key Enter is pressed with an input or the timer == 0.
+
+    This timer is used in second to allow the user to enter a word. The is confirm when the key Enter is pressed
+
+    This function use tasks to allow a clearer expression of the function to have a timer in background while the user is typing what he wants
   example: []
   syntax:
     content: public static (string?, int) TimedEnterInput(int timeLimit, string prompt)

@@ -73,15 +73,18 @@ items:
   assemblies:
   - Projet-A2-S1
   namespace: Projet_A2_S1
-  summary: Write the information of the players in a YAML file
+  summary: >-
+    Write the information of the players in a YAML file.
+
+    The
   example: []
   syntax:
-    content: public void WriteYAML(string YAML_PATH)
+    content: public void WriteYAML(string YAML_PATH = "config.yml")
     parameters:
     - id: YAML_PATH
       type: System.String
       description: location of the YAML file
-    content.vb: Public Sub WriteYAML(YAML_PATH As String)
+    content.vb: Public Sub WriteYAML(YAML_PATH As String = "config.yml")
   overload: Projet_A2_S1.PlayerList.WriteYAML*
   nameWithType.vb: PlayerList.WriteYAML(String)
   fullName.vb: Projet_A2_S1.PlayerList.WriteYAML(String)
@@ -103,12 +106,12 @@ items:
   summary: Read the YAML file and create a list of player
   example: []
   syntax:
-    content: public void ReadYAML(string YAML_PATH)
+    content: public void ReadYAML(string YAML_PATH = "config.yml")
     parameters:
     - id: YAML_PATH
       type: System.String
       description: Location of the yaml file
-    content.vb: Public Sub ReadYAML(YAML_PATH As String)
+    content.vb: Public Sub ReadYAML(YAML_PATH As String = "config.yml")
   overload: Projet_A2_S1.PlayerList.ReadYAML*
   nameWithType.vb: PlayerList.ReadYAML(String)
   fullName.vb: Projet_A2_S1.PlayerList.ReadYAML(String)
@@ -150,7 +153,7 @@ items:
   assemblies:
   - Projet-A2-S1
   namespace: Projet_A2_S1
-  summary: Function that return the information of evry player
+  summary: Function that return the information of every player
   example: []
   syntax:
     content: public List<string> toStringArray()

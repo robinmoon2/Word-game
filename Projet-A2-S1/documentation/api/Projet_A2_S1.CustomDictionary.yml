@@ -66,7 +66,12 @@ items:
   assemblies:
   - Projet-A2-S1
   namespace: Projet_A2_S1
-  summary: Constructor of the class CustomDictionary
+  summary: >-
+    Constructor of the class CustomDictionary. 
+
+    It build a new Dictionnary base on the words found in _Mots-Français.txt_ and write them in a Json  sort by character and every character has 
+
+    a string of every word beginning with this letter.
   example: []
   syntax:
     content: public CustomDictionary()
