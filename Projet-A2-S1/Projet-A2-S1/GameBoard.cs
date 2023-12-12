@@ -8,13 +8,15 @@ using System.Security.Cryptography.X509Certificates;
 namespace Projet_A2_S1;
 public class GameBoard
 {
+
     private const string WORKING_FILE = "AcutalPlate.csv";
     private const string EXAMPLE_FILE = "Plate1.csv";
     private const string RANDOM_FILE = "Lettre.txt";
     private static readonly Random s_rnd = new();
     public char[,] Board;
+
     /// <summary>
-    /// Build a Object GameBoard. In it the user personalised his board 
+    /// Build a Object GameBoard. In it the user personalized his board 
     /// It is also the **ToRead** function
     /// </summary>
     public GameBoard()
@@ -50,7 +52,8 @@ public class GameBoard
     }
 
     /// <summary>
-    /// Second constructor for the Test Function
+    /// Second constructor for the Test Function.
+    /// 
     /// </summary>
     /// <param name="test"></param>
     public GameBoard(bool test)
@@ -89,7 +92,8 @@ public class GameBoard
             throw new FormatException($"Fichier vide à l'adresse :{path}");
     }
     /// <summary>
-    /// Function that build a new Random Plate in a CSV file with the Lettre.txt file
+    /// Function that build a new Random Plate in a CSV file with the Lettre.txt file. 
+    /// This take the number of iteration allowed per letter in the _Lettre.txt_ and add a random character for each of the case in the matrix
     /// </summary>
     /// <param name="path">The path of where is the file </param>
     /// <param name="rows">number of rows of the matrix </param>
@@ -137,6 +141,7 @@ public class GameBoard
 
     /// <summary>
     /// Function that save the board in a CSV file it is the **ToFile** function
+    /// This can write the new board into the same CSV file
     /// </summary>
     public void SaveAndWrite()
     {
@@ -158,12 +163,12 @@ public class GameBoard
     /// <summary>
     /// This function can find the word in the board
     /// It returns a dictionnary with each position as key and the character of this position in value
-    /// Is is the **RecherMot** function
+    /// Is is the **RechercheMot** function
     /// </summary>
     /// <param name="x"> the line of the start of the word , the first character of the word </param>
     /// <param name="y">the column of the start of the word , the first character of the word </param>
     /// <param name="word">the word that we are looking for</param>
-    /// <param name="index">the number of position that are explored in the matrix that works like a compteur to indicate when we travel the distance of the word</param>
+    /// <param name="index">the number of position that are explored in the matrix that works like a int to indicate when we travel the distance of the word</param>
     /// <param name="dico">the dictionnary that is return by the function</param>
     /// <returns></returns>
     public Dictionary<(int, int), char>? GetWord(int x, int y, string word, int index = 0, Dictionary<(int, int), char>? dico = null)
@@ -200,7 +205,8 @@ public class GameBoard
     }
 
     /// <summary>
-    /// Function that update the board according to the character and the spaces
+    /// Function that update the board according to the character and the spaces.
+    /// This function appear after each time the board has changed
     /// </summary>
     public void Maj_Plateau()
     {
@@ -222,10 +228,11 @@ public class GameBoard
     }
 
     /// <summary>
-    /// Return the string taht represent the board
+    /// Return the string that represent the board
+    /// the override allows us to do a **Console.WriteLine(board)**
     /// </summary>
     /// <returns></returns>
-    /// <exception cref="FileNotFoundException"></exception>
+    /// <exception cref="FileNotFoundException">The file is not found </exception>
     public override string ToString()
     {
         if (!File.Exists(WORKING_FILE))
@@ -246,5 +253,3 @@ public class GameBoard
         return plate_string;
     }
 }
-
-

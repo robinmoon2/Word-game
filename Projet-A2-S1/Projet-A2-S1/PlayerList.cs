@@ -1,7 +1,11 @@
+using System.Reflection.Metadata;
+
 namespace Projet_A2_S1
 {
     public class PlayerList
     {
+        private const string YAML_PATH = "config.yml";
+
         public List<Player> playerlist { get; set; }
 
 
@@ -11,10 +15,11 @@ namespace Projet_A2_S1
         }
 
         /// <summary>
-        /// Write the information of the players in a YAML file
+        /// Write the information of the players in a YAML file.
+        /// The 
         /// </summary>
         /// <param name="YAML_PATH"> location of the YAML file </param>
-        public void WriteYAML(string YAML_PATH){
+        public void WriteYAML(string YAML_PATH=YAML_PATH){
             var serializer = new SerializerBuilder()
                 .WithNamingConvention(CamelCaseNamingConvention.Instance)
                 .Build();
@@ -29,7 +34,7 @@ namespace Projet_A2_S1
         /// Read the YAML file and create a list of player
         /// </summary>
         /// <param name="YAML_PATH">Location of the yaml file </param>
-        public void ReadYAML(string YAML_PATH)
+        public void ReadYAML(string YAML_PATH=YAML_PATH)
         {
             var deserializer = new DeserializerBuilder()
             .WithNamingConvention(CamelCaseNamingConvention.Instance)
@@ -50,8 +55,9 @@ namespace Projet_A2_S1
             }
             return s;
         }
+
         /// <summary>
-        /// Function that return the information of evry player 
+        /// Function that return the information of every player 
         /// </summary>
         /// <returns></returns>
         public List<string> toStringArray(){

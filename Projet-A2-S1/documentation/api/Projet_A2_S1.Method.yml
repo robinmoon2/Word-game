@@ -1,0 +1,572 @@
+### YamlMime:ManagedReference
+items:
+- uid: Projet_A2_S1.Method
+  commentId: T:Projet_A2_S1.Method
+  id: Method
+  parent: Projet_A2_S1
+  children:
+  - Projet_A2_S1.Method.#ctor
+  - Projet_A2_S1.Method.CreatePlayer
+  - Projet_A2_S1.Method.TimedEnterInput(System.Int32,System.String)
+  - Projet_A2_S1.Method.TimedInput(System.Int32,System.String)
+  - Projet_A2_S1.Method.main_menu
+  langs:
+  - csharp
+  - vb
+  name: Method
+  nameWithType: Method
+  fullName: Projet_A2_S1.Method
+  type: Class
+  assemblies:
+  - Projet-A2-S1
+  namespace: Projet_A2_S1
+  syntax:
+    content: public class Method
+    content.vb: Public Class Method
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Projet_A2_S1.Method.main_menu
+  commentId: M:Projet_A2_S1.Method.main_menu
+  id: main_menu
+  parent: Projet_A2_S1.Method
+  langs:
+  - csharp
+  - vb
+  name: main_menu()
+  nameWithType: Method.main_menu()
+  fullName: Projet_A2_S1.Method.main_menu()
+  type: Method
+  assemblies:
+  - Projet-A2-S1
+  namespace: Projet_A2_S1
+  summary: >-
+    This function create the main menu of the game. 
+
+    It is the first function that is called in the programm.
+  example: []
+  syntax:
+    content: public static void main_menu()
+    content.vb: Public Shared Sub main_menu()
+  overload: Projet_A2_S1.Method.main_menu*
+- uid: Projet_A2_S1.Method.TimedInput(System.Int32,System.String)
+  commentId: M:Projet_A2_S1.Method.TimedInput(System.Int32,System.String)
+  id: TimedInput(System.Int32,System.String)
+  parent: Projet_A2_S1.Method
+  langs:
+  - csharp
+  - vb
+  name: TimedInput(int, string)
+  nameWithType: Method.TimedInput(int, string)
+  fullName: Projet_A2_S1.Method.TimedInput(int, string)
+  type: Method
+  assemblies:
+  - Projet-A2-S1
+  namespace: Projet_A2_S1
+  summary: >-
+    Function that time the turn of the player. Its stop when the player press enter of when the timer == 0. 
+
+    This function work with sub-function that are called **PrintTimer** and **Timer**.
+
+    The function wait for an Keyboard input, if it is the ENTER key it stops.
+  example: []
+  syntax:
+    content: 'public static (int, string?) TimedInput(int timeLimit, string message = "Pressez la touche ENTREE pour ensuite rentrer un mot :  ")'
+    parameters:
+    - id: timeLimit
+      type: System.Int32
+      description: Time limit of the turn
+    - id: message
+      type: System.String
+    return:
+      type: System.ValueTuple{System.Int32,System.String}
+      description: ''
+    content.vb: 'Public Shared Function TimedInput(timeLimit As Integer, message As String = "Pressez la touche ENTREE pour ensuite rentrer un mot :  ") As (Integer, String)'
+  overload: Projet_A2_S1.Method.TimedInput*
+  nameWithType.vb: Method.TimedInput(Integer, String)
+  fullName.vb: Projet_A2_S1.Method.TimedInput(Integer, String)
+  name.vb: TimedInput(Integer, String)
+- uid: Projet_A2_S1.Method.TimedEnterInput(System.Int32,System.String)
+  commentId: M:Projet_A2_S1.Method.TimedEnterInput(System.Int32,System.String)
+  id: TimedEnterInput(System.Int32,System.String)
+  parent: Projet_A2_S1.Method
+  langs:
+  - csharp
+  - vb
+  name: TimedEnterInput(int, string)
+  nameWithType: Method.TimedEnterInput(int, string)
+  fullName: Projet_A2_S1.Method.TimedEnterInput(int, string)
+  type: Method
+  assemblies:
+  - Projet-A2-S1
+  namespace: Projet_A2_S1
+  summary: >-
+    Function that is used to time for a player to write a word and stop when the key Enter is pressed with an input or the timer == 0.
+
+    This timer is used in second to allow the user to enter a word. The is confirm when the key Enter is pressed
+
+    This function use tasks to allow a clearer expression of the function to have a timer in background while the user is typing what he wants
+  example: []
+  syntax:
+    content: public static (string?, int) TimedEnterInput(int timeLimit, string prompt)
+    parameters:
+    - id: timeLimit
+      type: System.Int32
+      description: the time limit to write the word
+    - id: prompt
+      type: System.String
+      description: The message that we write to the user
+    return:
+      type: System.ValueTuple{System.String,System.Int32}
+      description: ''
+    content.vb: Public Shared Function TimedEnterInput(timeLimit As Integer, prompt As String) As (String, Integer)
+  overload: Projet_A2_S1.Method.TimedEnterInput*
+  nameWithType.vb: Method.TimedEnterInput(Integer, String)
+  fullName.vb: Projet_A2_S1.Method.TimedEnterInput(Integer, String)
+  name.vb: TimedEnterInput(Integer, String)
+- uid: Projet_A2_S1.Method.CreatePlayer
+  commentId: M:Projet_A2_S1.Method.CreatePlayer
+  id: CreatePlayer
+  parent: Projet_A2_S1.Method
+  langs:
+  - csharp
+  - vb
+  name: CreatePlayer()
+  nameWithType: Method.CreatePlayer()
+  fullName: Projet_A2_S1.Method.CreatePlayer()
+  type: Method
+  assemblies:
+  - Projet-A2-S1
+  namespace: Projet_A2_S1
+  summary: This function create the number of player and the timer for each player
+  example: []
+  syntax:
+    content: public static void CreatePlayer()
+    content.vb: Public Shared Sub CreatePlayer()
+  overload: Projet_A2_S1.Method.CreatePlayer*
+- uid: Projet_A2_S1.Method.#ctor
+  commentId: M:Projet_A2_S1.Method.#ctor
+  id: '#ctor'
+  parent: Projet_A2_S1.Method
+  langs:
+  - csharp
+  - vb
+  name: Method()
+  nameWithType: Method.Method()
+  fullName: Projet_A2_S1.Method.Method()
+  type: Constructor
+  assemblies:
+  - Projet-A2-S1
+  namespace: Projet_A2_S1
+  syntax:
+    content: public Method()
+    content.vb: Public Sub New()
+  overload: Projet_A2_S1.Method.#ctor*
+  nameWithType.vb: Method.New()
+  fullName.vb: Projet_A2_S1.Method.New()
+  name.vb: New()
+references:
+- uid: Projet_A2_S1
+  commentId: N:Projet_A2_S1
+  isExternal: true
+  href: Projet_A2_S1.html
+  name: Projet_A2_S1
+  nameWithType: Projet_A2_S1
+  fullName: Projet_A2_S1
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Projet_A2_S1.Method.main_menu*
+  commentId: Overload:Projet_A2_S1.Method.main_menu
+  isExternal: true
+  href: Projet_A2_S1.Method.html#Projet_A2_S1_Method_main_menu
+  name: main_menu
+  nameWithType: Method.main_menu
+  fullName: Projet_A2_S1.Method.main_menu
+- uid: Projet_A2_S1.Method.TimedInput*
+  commentId: Overload:Projet_A2_S1.Method.TimedInput
+  isExternal: true
+  href: Projet_A2_S1.Method.html#Projet_A2_S1_Method_TimedInput_System_Int32_System_String_
+  name: TimedInput
+  nameWithType: Method.TimedInput
+  fullName: Projet_A2_S1.Method.TimedInput
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.ValueTuple{System.Int32,System.String}
+  commentId: T:System.ValueTuple{System.Int32,System.String}
+  parent: System
+  definition: System.ValueTuple`2
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: (int, string)
+  nameWithType: (int, string)
+  fullName: (int, string)
+  nameWithType.vb: (Integer, String)
+  fullName.vb: (Integer, String)
+  name.vb: (Integer, String)
+  spec.csharp:
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.ValueTuple`2
+  commentId: T:System.ValueTuple`2
+  name: (T1, T2)
+  nameWithType: (T1, T2)
+  fullName: (T1, T2)
+  spec.csharp:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+  spec.vb:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: Projet_A2_S1.Method.TimedEnterInput*
+  commentId: Overload:Projet_A2_S1.Method.TimedEnterInput
+  isExternal: true
+  href: Projet_A2_S1.Method.html#Projet_A2_S1_Method_TimedEnterInput_System_Int32_System_String_
+  name: TimedEnterInput
+  nameWithType: Method.TimedEnterInput
+  fullName: Projet_A2_S1.Method.TimedEnterInput
+- uid: System.ValueTuple{System.String,System.Int32}
+  commentId: T:System.ValueTuple{System.String,System.Int32}
+  parent: System
+  definition: System.ValueTuple`2
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: (string, int)
+  nameWithType: (string, int)
+  fullName: (string, int)
+  nameWithType.vb: (String, Integer)
+  fullName.vb: (String, Integer)
+  name.vb: (String, Integer)
+  spec.csharp:
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Projet_A2_S1.Method.CreatePlayer*
+  commentId: Overload:Projet_A2_S1.Method.CreatePlayer
+  isExternal: true
+  href: Projet_A2_S1.Method.html#Projet_A2_S1_Method_CreatePlayer
+  name: CreatePlayer
+  nameWithType: Method.CreatePlayer
+  fullName: Projet_A2_S1.Method.CreatePlayer
+- uid: Projet_A2_S1.Method.#ctor*
+  commentId: Overload:Projet_A2_S1.Method.#ctor
+  isExternal: true
+  href: Projet_A2_S1.Method.html#Projet_A2_S1_Method__ctor
+  name: Method
+  nameWithType: Method.Method
+  fullName: Projet_A2_S1.Method.Method
+  nameWithType.vb: Method.New
+  fullName.vb: Projet_A2_S1.Method.New
+  name.vb: New

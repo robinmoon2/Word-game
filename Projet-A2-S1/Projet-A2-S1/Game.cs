@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Text.Json.Serialization.Metadata;
 
 namespace Projet_A2_S1
 {
@@ -47,7 +48,6 @@ namespace Projet_A2_S1
         {
             bool endtimer = true;
             bool endword = true;
-            //on check les timers : 
             foreach (var player in players.playerlist)
             {
                 if (player.Timer != 0)
@@ -55,7 +55,6 @@ namespace Projet_A2_S1
                     endtimer = false;
                 }
             }
-            // on check les mots 
             for (int i = 0; i < board.Board.GetLength(0); i++)
             {
                 for (int j = 0; j < board.Board.GetLength(1); j++)
@@ -70,7 +69,8 @@ namespace Projet_A2_S1
         }
 
         /// <summary>
-        /// This function can pass the turn over each players if their timer !=0 
+        /// This function can pass the turn over each players if their timer !=0. 
+        /// It's also it that structure the organisation of the game
         /// </summary>
         public void Turn()
         {
@@ -98,7 +98,7 @@ namespace Projet_A2_S1
                 {
                     var LimitedInput = Method.TimedEnterInput(5, "Entrez un mot : ");
                     var input = LimitedInput.Item1;
-                    if (input is not null)
+                    if (input is not null && input.Length >=2)
                     {
                         if (WordValidate(input.ToUpper(), Player))
                         {
@@ -111,7 +111,10 @@ namespace Projet_A2_S1
                     }
                     else
                     {
-                        Core.WritePositionedString("Vous n'avez rien rentré", Placement.Right, default, 20, default);
+                        if (input.Length >= 2)
+                            Core.WritePositionedString("Mot trop court ",Placement.Right,default,20,default);
+                        else
+                            Core.WritePositionedString("Vous n'avez rien rentré", Placement.Right, default, 20, default);
                     }
                 }
                 else
@@ -126,7 +129,8 @@ namespace Projet_A2_S1
         }
 
         /// <summary>
-        /// Print the results of the game
+        /// Print the results of the game 
+        /// Every player is sort by score from the higher to lower
         /// </summary>
         public void Results()
         {
@@ -146,7 +150,8 @@ namespace Projet_A2_S1
 
 
         /// <summary>
-        /// This function look if the word is not in the list of the player, if it's in the dictionary and if the word is on the board
+        /// This function look if the word is not in the list of the player, if it's in the dictionary and if the word is on the board.
+        /// It also look if the word entered is in the player list or not and in the dictionnary
         /// </summary>
         /// <param name="word"> the word that we are looking for </param>
         /// <param name="player">The player that is searching the word</param>
@@ -184,12 +189,12 @@ namespace Projet_A2_S1
                 }
                 else
                 {
-                    foreach (var item in dico) // on affiche le dictionnaire les coordonnées et les lettres)
+                    foreach (var item in dico) 
                     {
                         board.Board[item.Key.Item1, item.Key.Item2] = ' ';
                     }
-                    board.Maj_Plateau(); // on met à jour le tableau 
-                    board.SaveAndWrite(); // on sauvegarde le tableau 
+                    board.Maj_Plateau(); // we update the board 
+                    board.SaveAndWrite(); // we save the board
                     return true;
                 }
             }

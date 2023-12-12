@@ -33,7 +33,7 @@ public class Player
     }
 
     /// <summary>
-    /// This function add a word passed in parameter in the word list of the player
+    /// This function add a word passed win parameter in the word list of the player
     /// </summary>
     /// <param name="word">tThe word that we are adding at the wordlist </param>
     public void Add_Mot (string word) 

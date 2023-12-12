@@ -154,7 +154,7 @@
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Build a Object GameBoard. In it the user personalised his board
+  <div class="markdown level1 summary"><p>Build a Object GameBoard. In it the user personalized his board
 It is also the <strong>ToRead</strong> function</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -182,7 +182,7 @@ It is also the <strong>ToRead</strong> function</p>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Second constructor for the Test Function</p>
+  <div class="markdown level1 summary"><p>Second constructor for the Test Function.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -254,7 +254,7 @@ It is also the <strong>ToRead</strong> function</p>
 
   <div class="markdown level1 summary"><p>This function can find the word in the board
 It returns a dictionnary with each position as key and the character of this position in value
-Is is the <strong>RecherMot</strong> function</p>
+Is is the <strong>RechercheMot</strong> function</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -274,7 +274,7 @@ Is is the <strong>RecherMot</strong> function</p>
     <dd><p>the word that we are looking for</p>
 </dd>
     <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>the number of position that are explored in the matrix that works like a compteur to indicate when we travel the distance of the word</p>
+    <dd><p>the number of position that are explored in the matrix that works like a int to indicate when we travel the distance of the word</p>
 </dd>
     <dt><code>dico</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>), <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
     <dd><p>the dictionnary that is return by the function</p>
@@ -304,7 +304,8 @@ Is is the <strong>RecherMot</strong> function</p>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Function that update the board according to the character and the spaces</p>
+  <div class="markdown level1 summary"><p>Function that update the board according to the character and the spaces.
+This function appear after each time the board has changed</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -331,7 +332,8 @@ Is is the <strong>RecherMot</strong> function</p>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Function that save the board in a CSV file it is the <strong>ToFile</strong> function</p>
+  <div class="markdown level1 summary"><p>Function that save the board in a CSV file it is the <strong>ToFile</strong> function
+This can write the new board into the same CSV file</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -358,7 +360,8 @@ Is is the <strong>RecherMot</strong> function</p>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Return the string taht represent the board</p>
+  <div class="markdown level1 summary"><p>Return the string that represent the board
+the override allows us to do a <strong>Console.WriteLine(board)</strong></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -383,7 +386,8 @@ Is is the <strong>RecherMot</strong> function</p>
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filenotfoundexception">FileNotFoundException</a></dt>
-    <dd></dd>
+    <dd><p>The file is not found</p>
+</dd>
   </dl>
 
 

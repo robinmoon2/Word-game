@@ -1,0 +1,782 @@
+### YamlMime:ManagedReference
+items:
+- uid: Projet_A2_S1.Player
+  commentId: T:Projet_A2_S1.Player
+  id: Player
+  parent: Projet_A2_S1
+  children:
+  - Projet_A2_S1.Player.#ctor
+  - Projet_A2_S1.Player.Add_Mot(System.String)
+  - Projet_A2_S1.Player.Add_Score(System.Int32)
+  - Projet_A2_S1.Player.Contient(System.String)
+  - Projet_A2_S1.Player.Letter_Value(System.Char)
+  - Projet_A2_S1.Player.Name
+  - Projet_A2_S1.Player.Score
+  - Projet_A2_S1.Player.Timer
+  - Projet_A2_S1.Player.WordList
+  - Projet_A2_S1.Player.Word_Value(System.String)
+  - Projet_A2_S1.Player.toString
+  langs:
+  - csharp
+  - vb
+  name: Player
+  nameWithType: Player
+  fullName: Projet_A2_S1.Player
+  type: Class
+  assemblies:
+  - Projet-A2-S1
+  namespace: Projet_A2_S1
+  syntax:
+    content: public class Player
+    content.vb: Public Class Player
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Projet_A2_S1.Player.toString
+  commentId: M:Projet_A2_S1.Player.toString
+  id: toString
+  parent: Projet_A2_S1.Player
+  langs:
+  - csharp
+  - vb
+  name: toString()
+  nameWithType: Player.toString()
+  fullName: Projet_A2_S1.Player.toString()
+  type: Method
+  assemblies:
+  - Projet-A2-S1
+  namespace: Projet_A2_S1
+  summary: This function can create a string of the player's information with his name, timer, score and wordlist
+  example: []
+  syntax:
+    content: public string toString()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Function toString() As String
+  overload: Projet_A2_S1.Player.toString*
+- uid: Projet_A2_S1.Player.Add_Mot(System.String)
+  commentId: M:Projet_A2_S1.Player.Add_Mot(System.String)
+  id: Add_Mot(System.String)
+  parent: Projet_A2_S1.Player
+  langs:
+  - csharp
+  - vb
+  name: Add_Mot(string)
+  nameWithType: Player.Add_Mot(string)
+  fullName: Projet_A2_S1.Player.Add_Mot(string)
+  type: Method
+  assemblies:
+  - Projet-A2-S1
+  namespace: Projet_A2_S1
+  summary: This function add a word passed win parameter in the word list of the player
+  example: []
+  syntax:
+    content: public void Add_Mot(string word)
+    parameters:
+    - id: word
+      type: System.String
+      description: tThe word that we are adding at the wordlist
+    content.vb: Public Sub Add_Mot(word As String)
+  overload: Projet_A2_S1.Player.Add_Mot*
+  nameWithType.vb: Player.Add_Mot(String)
+  fullName.vb: Projet_A2_S1.Player.Add_Mot(String)
+  name.vb: Add_Mot(String)
+- uid: Projet_A2_S1.Player.Contient(System.String)
+  commentId: M:Projet_A2_S1.Player.Contient(System.String)
+  id: Contient(System.String)
+  parent: Projet_A2_S1.Player
+  langs:
+  - csharp
+  - vb
+  name: Contient(string)
+  nameWithType: Player.Contient(string)
+  fullName: Projet_A2_S1.Player.Contient(string)
+  type: Method
+  assemblies:
+  - Projet-A2-S1
+  namespace: Projet_A2_S1
+  summary: This function take a string in parameter and look if it's in the player's wordlist
+  example: []
+  syntax:
+    content: public bool Contient(string word)
+    parameters:
+    - id: word
+      type: System.String
+      description: the word that we are looking for
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Function Contient(word As String) As Boolean
+  overload: Projet_A2_S1.Player.Contient*
+  nameWithType.vb: Player.Contient(String)
+  fullName.vb: Projet_A2_S1.Player.Contient(String)
+  name.vb: Contient(String)
+- uid: Projet_A2_S1.Player.Add_Score(System.Int32)
+  commentId: M:Projet_A2_S1.Player.Add_Score(System.Int32)
+  id: Add_Score(System.Int32)
+  parent: Projet_A2_S1.Player
+  langs:
+  - csharp
+  - vb
+  name: Add_Score(int)
+  nameWithType: Player.Add_Score(int)
+  fullName: Projet_A2_S1.Player.Add_Score(int)
+  type: Method
+  assemblies:
+  - Projet-A2-S1
+  namespace: Projet_A2_S1
+  summary: This function take an int as parameter and add it to the player's score
+  example: []
+  syntax:
+    content: public void Add_Score(int value)
+    parameters:
+    - id: value
+      type: System.Int32
+      description: ''
+    content.vb: Public Sub Add_Score(value As Integer)
+  overload: Projet_A2_S1.Player.Add_Score*
+  nameWithType.vb: Player.Add_Score(Integer)
+  fullName.vb: Projet_A2_S1.Player.Add_Score(Integer)
+  name.vb: Add_Score(Integer)
+- uid: Projet_A2_S1.Player.Word_Value(System.String)
+  commentId: M:Projet_A2_S1.Player.Word_Value(System.String)
+  id: Word_Value(System.String)
+  parent: Projet_A2_S1.Player
+  langs:
+  - csharp
+  - vb
+  name: Word_Value(string)
+  nameWithType: Player.Word_Value(string)
+  fullName: Projet_A2_S1.Player.Word_Value(string)
+  type: Method
+  assemblies:
+  - Projet-A2-S1
+  namespace: Projet_A2_S1
+  summary: Function that calculate the value of the word
+  example: []
+  syntax:
+    content: public int Word_Value(string word)
+    parameters:
+    - id: word
+      type: System.String
+      description: word that we are looking for
+    return:
+      type: System.Int32
+      description: ''
+    content.vb: Public Function Word_Value(word As String) As Integer
+  overload: Projet_A2_S1.Player.Word_Value*
+  nameWithType.vb: Player.Word_Value(String)
+  fullName.vb: Projet_A2_S1.Player.Word_Value(String)
+  name.vb: Word_Value(String)
+- uid: Projet_A2_S1.Player.Letter_Value(System.Char)
+  commentId: M:Projet_A2_S1.Player.Letter_Value(System.Char)
+  id: Letter_Value(System.Char)
+  parent: Projet_A2_S1.Player
+  langs:
+  - csharp
+  - vb
+  name: Letter_Value(char)
+  nameWithType: Player.Letter_Value(char)
+  fullName: Projet_A2_S1.Player.Letter_Value(char)
+  type: Method
+  assemblies:
+  - Projet-A2-S1
+  namespace: Projet_A2_S1
+  summary: This function can calculate the value of a letter according to the file Lettre.txt ( the value of the letter is in the third column of the file)
+  example: []
+  syntax:
+    content: public static int Letter_Value(char letter)
+    parameters:
+    - id: letter
+      type: System.Char
+      description: the letter that we are looking for
+    return:
+      type: System.Int32
+      description: ''
+    content.vb: Public Shared Function Letter_Value(letter As Char) As Integer
+  overload: Projet_A2_S1.Player.Letter_Value*
+  nameWithType.vb: Player.Letter_Value(Char)
+  fullName.vb: Projet_A2_S1.Player.Letter_Value(Char)
+  name.vb: Letter_Value(Char)
+- uid: Projet_A2_S1.Player.#ctor
+  commentId: M:Projet_A2_S1.Player.#ctor
+  id: '#ctor'
+  parent: Projet_A2_S1.Player
+  langs:
+  - csharp
+  - vb
+  name: Player()
+  nameWithType: Player.Player()
+  fullName: Projet_A2_S1.Player.Player()
+  type: Constructor
+  assemblies:
+  - Projet-A2-S1
+  namespace: Projet_A2_S1
+  syntax:
+    content: public Player()
+    content.vb: Public Sub New()
+  overload: Projet_A2_S1.Player.#ctor*
+  nameWithType.vb: Player.New()
+  fullName.vb: Projet_A2_S1.Player.New()
+  name.vb: New()
+- uid: Projet_A2_S1.Player.Name
+  commentId: P:Projet_A2_S1.Player.Name
+  id: Name
+  parent: Projet_A2_S1.Player
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Player.Name
+  fullName: Projet_A2_S1.Player.Name
+  type: Property
+  assemblies:
+  - Projet-A2-S1
+  namespace: Projet_A2_S1
+  syntax:
+    content: public string? Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Projet_A2_S1.Player.Name*
+- uid: Projet_A2_S1.Player.Timer
+  commentId: P:Projet_A2_S1.Player.Timer
+  id: Timer
+  parent: Projet_A2_S1.Player
+  langs:
+  - csharp
+  - vb
+  name: Timer
+  nameWithType: Player.Timer
+  fullName: Projet_A2_S1.Player.Timer
+  type: Property
+  assemblies:
+  - Projet-A2-S1
+  namespace: Projet_A2_S1
+  syntax:
+    content: public int Timer { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Timer As Integer
+  overload: Projet_A2_S1.Player.Timer*
+- uid: Projet_A2_S1.Player.Score
+  commentId: P:Projet_A2_S1.Player.Score
+  id: Score
+  parent: Projet_A2_S1.Player
+  langs:
+  - csharp
+  - vb
+  name: Score
+  nameWithType: Player.Score
+  fullName: Projet_A2_S1.Player.Score
+  type: Property
+  assemblies:
+  - Projet-A2-S1
+  namespace: Projet_A2_S1
+  syntax:
+    content: public int Score { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Score As Integer
+  overload: Projet_A2_S1.Player.Score*
+- uid: Projet_A2_S1.Player.WordList
+  commentId: P:Projet_A2_S1.Player.WordList
+  id: WordList
+  parent: Projet_A2_S1.Player
+  langs:
+  - csharp
+  - vb
+  name: WordList
+  nameWithType: Player.WordList
+  fullName: Projet_A2_S1.Player.WordList
+  type: Property
+  assemblies:
+  - Projet-A2-S1
+  namespace: Projet_A2_S1
+  syntax:
+    content: public List<string>? WordList { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public Property WordList As List(Of String)
+  overload: Projet_A2_S1.Player.WordList*
+references:
+- uid: Projet_A2_S1
+  commentId: N:Projet_A2_S1
+  isExternal: true
+  href: Projet_A2_S1.html
+  name: Projet_A2_S1
+  nameWithType: Projet_A2_S1
+  fullName: Projet_A2_S1
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Projet_A2_S1.Player.toString*
+  commentId: Overload:Projet_A2_S1.Player.toString
+  isExternal: true
+  href: Projet_A2_S1.Player.html#Projet_A2_S1_Player_toString
+  name: toString
+  nameWithType: Player.toString
+  fullName: Projet_A2_S1.Player.toString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Projet_A2_S1.Player.Add_Mot*
+  commentId: Overload:Projet_A2_S1.Player.Add_Mot
+  isExternal: true
+  href: Projet_A2_S1.Player.html#Projet_A2_S1_Player_Add_Mot_System_String_
+  name: Add_Mot
+  nameWithType: Player.Add_Mot
+  fullName: Projet_A2_S1.Player.Add_Mot
+- uid: Projet_A2_S1.Player.Contient*
+  commentId: Overload:Projet_A2_S1.Player.Contient
+  isExternal: true
+  href: Projet_A2_S1.Player.html#Projet_A2_S1_Player_Contient_System_String_
+  name: Contient
+  nameWithType: Player.Contient
+  fullName: Projet_A2_S1.Player.Contient
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Projet_A2_S1.Player.Add_Score*
+  commentId: Overload:Projet_A2_S1.Player.Add_Score
+  isExternal: true
+  href: Projet_A2_S1.Player.html#Projet_A2_S1_Player_Add_Score_System_Int32_
+  name: Add_Score
+  nameWithType: Player.Add_Score
+  fullName: Projet_A2_S1.Player.Add_Score
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Projet_A2_S1.Player.Word_Value*
+  commentId: Overload:Projet_A2_S1.Player.Word_Value
+  isExternal: true
+  href: Projet_A2_S1.Player.html#Projet_A2_S1_Player_Word_Value_System_String_
+  name: Word_Value
+  nameWithType: Player.Word_Value
+  fullName: Projet_A2_S1.Player.Word_Value
+- uid: Projet_A2_S1.Player.Letter_Value*
+  commentId: Overload:Projet_A2_S1.Player.Letter_Value
+  isExternal: true
+  href: Projet_A2_S1.Player.html#Projet_A2_S1_Player_Letter_Value_System_Char_
+  name: Letter_Value
+  nameWithType: Player.Letter_Value
+  fullName: Projet_A2_S1.Player.Letter_Value
+- uid: System.Char
+  commentId: T:System.Char
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.char
+  name: char
+  nameWithType: char
+  fullName: char
+  nameWithType.vb: Char
+  fullName.vb: Char
+  name.vb: Char
+- uid: Projet_A2_S1.Player.#ctor*
+  commentId: Overload:Projet_A2_S1.Player.#ctor
+  isExternal: true
+  href: Projet_A2_S1.Player.html#Projet_A2_S1_Player__ctor
+  name: Player
+  nameWithType: Player.Player
+  fullName: Projet_A2_S1.Player.Player
+  nameWithType.vb: Player.New
+  fullName.vb: Projet_A2_S1.Player.New
+  name.vb: New
+- uid: Projet_A2_S1.Player.Name*
+  commentId: Overload:Projet_A2_S1.Player.Name
+  isExternal: true
+  href: Projet_A2_S1.Player.html#Projet_A2_S1_Player_Name
+  name: Name
+  nameWithType: Player.Name
+  fullName: Projet_A2_S1.Player.Name
+- uid: Projet_A2_S1.Player.Timer*
+  commentId: Overload:Projet_A2_S1.Player.Timer
+  isExternal: true
+  href: Projet_A2_S1.Player.html#Projet_A2_S1_Player_Timer
+  name: Timer
+  nameWithType: Player.Timer
+  fullName: Projet_A2_S1.Player.Timer
+- uid: Projet_A2_S1.Player.Score*
+  commentId: Overload:Projet_A2_S1.Player.Score
+  isExternal: true
+  href: Projet_A2_S1.Player.html#Projet_A2_S1_Player_Score
+  name: Score
+  nameWithType: Player.Score
+  fullName: Projet_A2_S1.Player.Score
+- uid: Projet_A2_S1.Player.WordList*
+  commentId: Overload:Projet_A2_S1.Player.WordList
+  isExternal: true
+  href: Projet_A2_S1.Player.html#Projet_A2_S1_Player_WordList
+  name: WordList
+  nameWithType: Player.WordList
+  fullName: Projet_A2_S1.Player.WordList
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

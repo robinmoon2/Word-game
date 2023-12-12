@@ -5,7 +5,8 @@ namespace Projet_A2_S1
     public class Method
     {
         /// <summary>
-        /// This function create the main menu of the game
+        /// This function create the main menu of the game. 
+        /// It is the first function that is called in the programm.
         /// </summary>
         static public void main_menu()
         {
@@ -72,7 +73,9 @@ namespace Projet_A2_S1
 
 
         /// <summary>
-        /// Function that time the turn of the player. Its stop when the player press enter of when the timer == 0 
+        /// Function that time the turn of the player. Its stop when the player press enter of when the timer == 0. 
+        /// This function work with sub-function that are called **PrintTimer** and **Timer**.
+        /// The function wait for an Keyboard input, if it is the ENTER key it stops.
         /// </summary>
         /// <param name="timeLimit"> Time limit of the turn</param>
         /// <returns></returns>
@@ -83,7 +86,7 @@ namespace Projet_A2_S1
             bool timeUp = false;
             int remainingTime = timeLimit;
 
-            timer = new Timer((state) =>
+            timer = new Timer((state) => 
             {
                 timeUp = true;
                 timer?.Dispose();
@@ -91,7 +94,7 @@ namespace Projet_A2_S1
                 Core.WritePositionedString("Time is up", Placement.Center, default, 20, default);
             }, null, timeLimit * 1000, Timeout.Infinite);
 
-            printTimer = new Timer((state) =>
+            printTimer = new Timer((state) => 
             {
                 remainingTime--;
                 Core.WritePositionedString($"Temps restant : {remainingTime}", Placement.Right, default, 20, default);
@@ -126,7 +129,9 @@ namespace Projet_A2_S1
 
 
         /// <summary>
-        /// Function that is used to time for a player to write a word and stop when the key Enter is pressed with an input or the timer == 0 
+        /// Function that is used to time for a player to write a word and stop when the key Enter is pressed with an input or the timer == 0.
+        /// This timer is used in second to allow the user to enter a word. The is confirm when the key Enter is pressed
+        /// This function use tasks to allow a clearer expression of the function to have a timer in background while the user is typing what he wants
         /// </summary>
         /// <param name="timeLimit">the time limit to write the word </param>
         /// <param name="prompt">The message that we write to the user </param>
@@ -221,7 +226,7 @@ namespace Projet_A2_S1
                 Core.ClearLine(10);
                 Core.ClearLine(11);
             }
-            players.WriteYAML("config.yml");
+            players.WriteYAML();
             Console.WriteLine("Liste des joueurs : ");
             Console.WriteLine("");
             Console.WriteLine(players.toString());
