@@ -88,7 +88,8 @@ public class CustomDictionary
     }
 
     /// <summary>
-    /// This function search a word in a list of string
+    /// This function search a word in a list of string. 
+    /// For this research we used a dichotomic algorithm to find the word in a list of string sorted
     /// </summary>
     /// <param name="word"> word that we are looking for </param>
     /// <param name="wordlist">the list of string where we are searching </param>
@@ -118,7 +119,7 @@ public class CustomDictionary
 
     /// <summary>
     /// This function sort a list of string with the quick_sort method 
-    /// It is the "TriRapide" function
+    /// It is the quickSort function
     /// </summary>
     /// <param name="wordlist">the list that we want to sort</param>
     /// <returns></returns>
@@ -150,7 +151,8 @@ public class CustomDictionary
 
 
     /// <summary>
-    /// Function that return the string that tell how many words per letter exist in the dictionary
+    /// Function that return the string that tell how many words per letter exist in the dictionary.
+    /// The override allows us to do **Console.WriteLine(CustomDictionnary)**
     /// </summary>
     /// <returns></returns>
     public override string ToString()

@@ -14,8 +14,9 @@ public class GameBoard
     private const string RANDOM_FILE = "Lettre.txt";
     private static readonly Random s_rnd = new();
     public char[,] Board;
+
     /// <summary>
-    /// Build a Object GameBoard. In it the user personalised his board 
+    /// Build a Object GameBoard. In it the user personalized his board 
     /// It is also the **ToRead** function
     /// </summary>
     public GameBoard()
@@ -51,7 +52,8 @@ public class GameBoard
     }
 
     /// <summary>
-    /// Second constructor for the Test Function
+    /// Second constructor for the Test Function.
+    /// 
     /// </summary>
     /// <param name="test"></param>
     public GameBoard(bool test)
@@ -161,12 +163,12 @@ public class GameBoard
     /// <summary>
     /// This function can find the word in the board
     /// It returns a dictionnary with each position as key and the character of this position in value
-    /// Is is the **RecherMot** function
+    /// Is is the **RechercheMot** function
     /// </summary>
     /// <param name="x"> the line of the start of the word , the first character of the word </param>
     /// <param name="y">the column of the start of the word , the first character of the word </param>
     /// <param name="word">the word that we are looking for</param>
-    /// <param name="index">the number of position that are explored in the matrix that works like a compteur to indicate when we travel the distance of the word</param>
+    /// <param name="index">the number of position that are explored in the matrix that works like a int to indicate when we travel the distance of the word</param>
     /// <param name="dico">the dictionnary that is return by the function</param>
     /// <returns></returns>
     public Dictionary<(int, int), char>? GetWord(int x, int y, string word, int index = 0, Dictionary<(int, int), char>? dico = null)
@@ -251,5 +253,3 @@ public class GameBoard
         return plate_string;
     }
 }
-
-

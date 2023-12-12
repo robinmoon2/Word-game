@@ -68,7 +68,7 @@ items:
   - Projet-A2-S1
   namespace: Projet_A2_S1
   summary: >-
-    Build a Object GameBoard. In it the user personalised his board 
+    Build a Object GameBoard. In it the user personalized his board 
 
     It is also the **ToRead** function
   example: []
@@ -93,7 +93,7 @@ items:
   assemblies:
   - Projet-A2-S1
   namespace: Projet_A2_S1
-  summary: Second constructor for the Test Function
+  summary: Second constructor for the Test Function.
   example: []
   syntax:
     content: public GameBoard(bool test)
@@ -148,7 +148,7 @@ items:
 
     It returns a dictionnary with each position as key and the character of this position in value
 
-    Is is the **RecherMot** function
+    Is is the **RechercheMot** function
   example: []
   syntax:
     content: public Dictionary<(int, int), char>? GetWord(int x, int y, string word, int index = 0, Dictionary<(int, int), char>? dico = null)
@@ -164,7 +164,7 @@ items:
       description: the word that we are looking for
     - id: index
       type: System.Int32
-      description: the number of position that are explored in the matrix that works like a compteur to indicate when we travel the distance of the word
+      description: the number of position that are explored in the matrix that works like a int to indicate when we travel the distance of the word
     - id: dico
       type: System.Collections.Generic.Dictionary{System.ValueTuple{System.Int32,System.Int32},System.Char}
       description: the dictionnary that is return by the function

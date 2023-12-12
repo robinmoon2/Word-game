@@ -138,7 +138,10 @@ items:
   assemblies:
   - Projet-A2-S1
   namespace: Projet_A2_S1
-  summary: This function search a word in a list of string
+  summary: >-
+    This function search a word in a list of string. 
+
+    For this research we used a dichotomic algorithm to find the word in a list of string sorted
   example: []
   syntax:
     content: public bool RechDichoRecursif(string word, List<string> wordlist)
@@ -174,7 +177,7 @@ items:
   summary: >-
     This function sort a list of string with the quick_sort method 
 
-    It is the "TriRapide" function
+    It is the quickSort function
   example: []
   syntax:
     content: public List<string> Sort(List<string> wordlist)
@@ -204,7 +207,10 @@ items:
   assemblies:
   - Projet-A2-S1
   namespace: Projet_A2_S1
-  summary: Function that return the string that tell how many words per letter exist in the dictionary
+  summary: >-
+    Function that return the string that tell how many words per letter exist in the dictionary.
+
+    The override allows us to do **Console.WriteLine(CustomDictionnary)**
   example: []
   syntax:
     content: public override string ToString()

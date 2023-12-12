@@ -122,7 +122,10 @@ items:
   assemblies:
   - Projet-A2-S1
   namespace: Projet_A2_S1
-  summary: This function can pass the turn over each players if their timer !=0
+  summary: >-
+    This function can pass the turn over each players if their timer !=0. 
+
+    It's also it that structure the organisation of the game
   example: []
   syntax:
     content: public void Turn()
@@ -142,7 +145,10 @@ items:
   assemblies:
   - Projet-A2-S1
   namespace: Projet_A2_S1
-  summary: Print the results of the game
+  summary: >-
+    Print the results of the game 
+
+    Every player is sort by score from the higher to lower
   example: []
   syntax:
     content: public void Results()
@@ -162,7 +168,10 @@ items:
   assemblies:
   - Projet-A2-S1
   namespace: Projet_A2_S1
-  summary: This function look if the word is not in the list of the player, if it's in the dictionary and if the word is on the board
+  summary: >-
+    This function look if the word is not in the list of the player, if it's in the dictionary and if the word is on the board.
+
+    It also look if the word entered is in the player list or not and in the dictionnary
   example: []
   syntax:
     content: public bool WordValidate(string word, Player player)

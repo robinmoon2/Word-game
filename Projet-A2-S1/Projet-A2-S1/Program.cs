@@ -1,5 +1,6 @@
 ﻿
 using Microsoft.VisualBasic;
+using System;
 
 namespace Projet_A2_S1
 {
@@ -21,13 +22,7 @@ namespace Projet_A2_S1
             Core.ApplyNegative(false);
             Core.ChangeForeground(ConsoleColor.White);
 
-            string explication = "Le but du jeu est de trouver des mots dans la grille de caractères donnée.\n" +
-                "La première lettre de chaque mot doit être située dans la ligne du bas du plateau.\n" +
-                "Pour trouver les mots, il faut aller de case en case en passant par la droite, la gauche, le haut et en diagonale. Il est impossible d'aller vers le bas.\n\n" +
-                "Si vous avez trouvé un mot, il faut appuyer sur Entrée puis ÉCRIRE votre mot.\n" +
-                "Maintenant, vous allez sélectionner le timer en secondes dont chaque joueur disposera, puis le nombre de joueurs et le plateau.\n" +
-                "Pour le plateau, soit vous choisissez un exemple déjà conçu, soit une version aléatoire. Dans la version aléatoire, vous pouvez choisir la taille du plateau.\n\n" +
-                "Pressez Entrée pour continuer";
+            string explication = "Le jeu a pour but de trouver des mots qui sont présents dans un plateau de caractères.\r\n\r\nPour former un mot, la première lettre du mot doit être dans la dernière ligne du plateau (celle du bas) et ensuite on peut aller de caractère en caractère avec celui d'à côté, d'en haut, sur les diagonales hautes et basses. \r\n\r\nPour rentrer un mot :\r\nVous avez chacun un timer global que vous allez définir, vous allez devoir chercher un mot pendant que votre timer baisse, une fois arrivé à 0 vous ne pouvez plus rentrer de mot. Pour rentrer un mot (quand vous en avez trouvés un) Vous pressez la touche entrée et vous l'écrivez puis à nouveau entrée. \r\n\r\nAttention, il faut que le mot existe dans la langue française, qu'il ne soit pas dans votre liste et qu'il soit sur le plateau. \r\n\r\nBonne partie à vous  !";
 
 
             Core.WriteContinuousString(explication, 10);
