@@ -33,7 +33,7 @@ public class Player
     }
 
     /// <summary>
-    /// This function take a string in parameter and add it to the player's wordlist if it's not already in it and if the word is not null and call the function Contient
+    /// This function add a word passed in parameter in the word list of the player
     /// </summary>
     /// <param name="word">tThe word that we are adding at the wordlist </param>
     public void Add_Mot (string word) 

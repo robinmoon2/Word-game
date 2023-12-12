@@ -116,6 +116,7 @@ public class CustomDictionary
 
     /// <summary>
     /// This function sort a list of string with the quick_sort method 
+    /// It is the "TriRapide" function
     /// </summary>
     /// <param name="wordlist">the list that we want to sort</param>
     /// <returns></returns>

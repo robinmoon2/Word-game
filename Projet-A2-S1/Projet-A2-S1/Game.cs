@@ -102,7 +102,7 @@ namespace Projet_A2_S1
                     {
                         if (WordValidate(input.ToUpper(), Player))
                         {
-                            Core.WritePositionedString("Mot ajouté ! Bravo : " + Player.Word_Value(input), Placement.Right, default, 20, default);
+                            Core.WritePositionedString("Mot ajouté ! Bravo : " + Player.Word_Value(input), Placement.Right, default, 22, default);
                             Player.Add_Mot(input.ToUpper());
                             Player.Add_Score(Player.Word_Value(input.ToUpper()));
                             Player.Timer = timer.Item1;
