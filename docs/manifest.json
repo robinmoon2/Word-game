@@ -107,10 +107,10 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/getting-started.md",
+      "source_relative_path": "articles/Rules of the game.md",
       "output": {
         ".html": {
-          "relative_path": "articles/getting-started.html"
+          "relative_path": "articles/Rules of the game.html"
         }
       },
       "version": ""
