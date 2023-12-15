@@ -6,11 +6,6 @@ _layout: landing
 ## By hugo Peltier and Robin l'hyver
 
 
-Refer to [Markdown](http://daringfireball.net/projects/markdown/) for how to write markdown files.
-
-
-
-
 ## This is the officials documentation of the game , in it you will find :
 
 1. Every class used in the project 
