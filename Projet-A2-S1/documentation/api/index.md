@@ -2,6 +2,7 @@
  Cette partie devrait être disponible sous peu le temps que tous les projets aient été rendus ! 
 
 # Tree of the project : 
+```bash
 .
 ├── bin
 │   └── Debug
@@ -30,3 +31,4 @@
 ├── Program.cs
 ├── Projet-A2-S1.csproj
 └── Usings.cs
+``` 
