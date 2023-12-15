@@ -112,7 +112,7 @@ namespace Projet_A2_S1
                 if (Console.KeyAvailable)
                 {
                     var input = Console.ReadKey(true);
-                    if (input.Key == ConsoleKey.Enter)
+                    if (input.Key == ConstreoleKey.Enter)
                     {
                         timer?.Dispose();
                         printTimer?.Dispose();
