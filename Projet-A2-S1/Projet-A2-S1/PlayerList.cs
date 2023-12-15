@@ -2,10 +2,16 @@ using System.Reflection.Metadata;
 
 namespace Projet_A2_S1
 {
+    /// <summary>
+    /// This class is dedicated to the lecture of the YAML file that stocks every player in a list of player
+    /// </summary>
     public class PlayerList
     {
         private const string YAML_PATH = "config.yml";
 
+        /// <summary>
+        /// The playerlist is the only instance for this classe. It is only a list of player
+        /// </summary>
         public List<Player> playerlist { get; set; }
 
 

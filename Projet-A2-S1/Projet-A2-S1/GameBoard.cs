@@ -6,6 +6,9 @@ using System.Security.AccessControl;
 using System.Security.Cryptography.X509Certificates;
 
 namespace Projet_A2_S1;
+/// <summary>
+/// This class is for the board of the game
+/// </summary>
 public class GameBoard
 {
 
@@ -13,6 +16,9 @@ public class GameBoard
     private const string EXAMPLE_FILE = "Plate1.csv";
     private const string RANDOM_FILE = "Lettre.txt";
     private static readonly Random s_rnd = new();
+    /// <summary>
+    /// The board is a matrix of char that represent the board
+    /// </summary>
     public char[,] Board;
 
     /// <summary>
@@ -53,9 +59,8 @@ public class GameBoard
 
     /// <summary>
     /// Second constructor for the Test Function.
-    /// 
     /// </summary>
-    /// <param name="test"></param>
+    /// <param name="test">Boolean that indicates that is the constructor for the test project</param>
     public GameBoard(bool test)
     {
         Board = new char[8, 8];

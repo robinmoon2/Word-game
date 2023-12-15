@@ -21,6 +21,8 @@ items:
   assemblies:
   - Projet-A2-S1
   namespace: Projet_A2_S1
+  summary: This class is dedicated to the lecture of the YAML file that stocks every player in a list of player
+  example: []
   syntax:
     content: public class PlayerList
     content.vb: Public Class PlayerList
@@ -176,6 +178,8 @@ items:
   assemblies:
   - Projet-A2-S1
   namespace: Projet_A2_S1
+  summary: The playerlist is the only instance for this classe. It is only a list of player
+  example: []
   syntax:
     content: public List<Player> playerlist { get; set; }
     parameters: []

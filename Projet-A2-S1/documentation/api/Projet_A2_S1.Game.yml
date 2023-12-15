@@ -24,6 +24,8 @@ items:
   assemblies:
   - Projet-A2-S1
   namespace: Projet_A2_S1
+  summary: This classe is the main class of the game. It's the one that will be called in the main program
+  example: []
   syntax:
     content: public class Game
     content.vb: Public Class Game
@@ -51,6 +53,8 @@ items:
   assemblies:
   - Projet-A2-S1
   namespace: Projet_A2_S1
+  summary: This is the main constructor of the game. It's the one that will be called in the main program
+  example: []
   syntax:
     content: public Game()
     content.vb: Public Sub New()
@@ -79,7 +83,7 @@ items:
     parameters:
     - id: test
       type: System.Boolean
-      description: ''
+      description: Boolean that indicate that this constructor is for the Test project
     content.vb: Public Sub New(test As Boolean)
   overload: Projet_A2_S1.Game.#ctor*
   nameWithType.vb: Game.New(Boolean)
@@ -105,7 +109,7 @@ items:
     content: public bool EndGame()
     return:
       type: System.Boolean
-      description: ''
+      description: if it's the end of the game
     content.vb: Public Function EndGame() As Boolean
   overload: Projet_A2_S1.Game.EndGame*
 - uid: Projet_A2_S1.Game.Turn
@@ -184,7 +188,7 @@ items:
       description: The player that is searching the word
     return:
       type: System.Boolean
-      description: ''
+      description: Return if the word is in the player word list or not
     content.vb: Public Function WordValidate(word As String, player As Player) As Boolean
   overload: Projet_A2_S1.Game.WordValidate*
   nameWithType.vb: Game.WordValidate(String, Player)
@@ -204,6 +208,8 @@ items:
   assemblies:
   - Projet-A2-S1
   namespace: Projet_A2_S1
+  summary: This instance is the dictionnary that is using during the game
+  example: []
   syntax:
     content: public CustomDictionary Dictionary { get; set; }
     parameters: []
@@ -225,6 +231,8 @@ items:
   assemblies:
   - Projet-A2-S1
   namespace: Projet_A2_S1
+  summary: This instance is the board of the game
+  example: []
   syntax:
     content: public GameBoard Board { get; set; }
     parameters: []
@@ -246,6 +254,8 @@ items:
   assemblies:
   - Projet-A2-S1
   namespace: Projet_A2_S1
+  summary: This instance is the list of the players
+  example: []
   syntax:
     content: public PlayerList Players { get; set; }
     parameters: []

@@ -1,5 +1,7 @@
 ﻿namespace Projet_A2_S1;
-
+/// <summary>
+/// The player class if a class were each information about the player are stocked. We have one player object for each player
+/// </summary>
 public class Player
 {
      string? name;
@@ -7,10 +9,21 @@ public class Player
      int score;
      List<string>? wordList;
     
-
+    /// <summary>
+    /// The name of the player 
+    /// </summary>
     public string? Name{get{return name;} set{name = value;}}
+    /// <summary>
+    /// The timer of the player
+    /// </summary>
     public int Timer{get{return timer;} set{timer = value;}}
+    /// <summary>
+    /// The score of the player
+    /// </summary>
     public int Score{get{return score;} set{score = value;}}
+    /// <summary>
+    /// The wordlist of the player, the list of every word that he found
+    /// </summary>
     public List<string>? WordList{get{return wordList;} set{wordList = value;}}
 
 
@@ -38,8 +51,9 @@ public class Player
     /// <param name="word">tThe word that we are adding at the wordlist </param>
     public void Add_Mot (string word) 
     {
-        if(!Contient(word) && word is not null && wordList is not null){
-            wordList.Add(word);
+
+        if(!Contains(word)){
+            wordList?.Add(word);
             Console.WriteLine("Mot ajoué, bravo ! ");
         }
         else{
@@ -52,7 +66,7 @@ public class Player
     /// </summary>
     /// <param name="word"> the word that we are looking for</param>
     /// <returns></returns>
-    public bool Contient (string word) 
+    public bool Contains (string word) 
     {
         bool verif = false;
         if(wordList is null){

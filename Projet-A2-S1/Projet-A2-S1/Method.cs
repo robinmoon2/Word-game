@@ -2,6 +2,9 @@ using YamlDotNet.Core;
 
 namespace Projet_A2_S1
 {
+    /// <summary>
+    /// This classe is used to create the main menu of the game and the timer for each player.
+    /// </summary>
     public class Method
     {
         /// <summary>
@@ -78,6 +81,7 @@ namespace Projet_A2_S1
         /// The function wait for an Keyboard input, if it is the ENTER key it stops.
         /// </summary>
         /// <param name="timeLimit"> Time limit of the turn</param>
+        /// <param name="message"> The message that we write to the user </param>
         /// <returns></returns>
         public static (int, string?) TimedInput(int timeLimit, string message = "Pressez la touche ENTREE pour ensuite rentrer un mot :  ")
         {

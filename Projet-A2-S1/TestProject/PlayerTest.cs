@@ -16,7 +16,7 @@ namespace TestProject
             Player player = new Player { Name = "joueur", Timer = 60, Score = 0, WordList = new List<string>() };
             player.Add_Mot(word);
             bool verif = false;
-            if (player.Contient(word) && player.WordList.Count() !=0)
+            if (player.Contains(word) && player.WordList.Count() !=0)
                 verif = true;
             Assert.That(true, Is.EqualTo(verif));
         }
@@ -33,7 +33,7 @@ namespace TestProject
             bool verif = false;
             if (player.WordList.Contains(word))
                 verif = true;
-            Assert.That(player.Contient(word), Is.EqualTo(verif));
+            Assert.That(player.Contains(word), Is.EqualTo(verif));
         }
 
         [Test]

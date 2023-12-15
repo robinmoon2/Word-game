@@ -1,9 +1,15 @@
 ﻿namespace Projet_A2_S1;
+/// <summary>
+/// Class used to build a dictionnary to look after the words
+/// </summary>
 public class CustomDictionary
 {
     
     private const string TXT_DICTIONARY_PATH = "Mots_Français.txt";
     private const string JSON_DICTIONARY_PATH = "Dictionary.Json";
+    /// <summary>
+    /// Dictionnary used to stock the dictionnary of a langage
+    /// </summary>
     public Dictionary<char, List<string>> Dict = new();
 
     /// <summary>
@@ -126,7 +132,7 @@ public class CustomDictionary
     public List<string> Sort(List<string> wordlist) 
     {
         if(wordlist is null || wordlist.Count()<=1 ){
-            return wordlist;
+            return null;
         }
         else{
             var pivot = wordlist[0];

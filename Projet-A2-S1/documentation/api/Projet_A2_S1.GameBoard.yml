@@ -22,6 +22,8 @@ items:
   assemblies:
   - Projet-A2-S1
   namespace: Projet_A2_S1
+  summary: This class is for the board of the game
+  example: []
   syntax:
     content: public class GameBoard
     content.vb: Public Class GameBoard
@@ -48,6 +50,8 @@ items:
   assemblies:
   - Projet-A2-S1
   namespace: Projet_A2_S1
+  summary: The board is a matrix of char that represent the board
+  example: []
   syntax:
     content: public char[,] Board
     return:
@@ -100,7 +104,7 @@ items:
     parameters:
     - id: test
       type: System.Boolean
-      description: ''
+      description: Boolean that indicates that is the constructor for the test project
     content.vb: Public Sub New(test As Boolean)
   overload: Projet_A2_S1.GameBoard.#ctor*
   nameWithType.vb: GameBoard.New(Boolean)

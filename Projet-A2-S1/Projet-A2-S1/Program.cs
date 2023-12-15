@@ -4,6 +4,9 @@ using System;
 
 namespace Projet_A2_S1
 {
+    /// <summary>
+    /// The main class of the project
+    /// </summary>
     public class Program
     {
         static void Main()

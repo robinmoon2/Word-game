@@ -3,15 +3,27 @@ using System.Text.Json.Serialization.Metadata;
 
 namespace Projet_A2_S1
 {
+    /// <summary>
+    /// This classe is the main class of the game. It's the one that will be called in the main program
+    /// </summary>
     public class Game
     {
         /// <summary>
-        /// This class build the game during the running program
-        /// One run is equal to one game
+        /// This instance is the dictionnary that is using during the game
         /// </summary>
         private CustomDictionary dictionary;
+        /// <summary>
+        /// This instance is the board of the game
+        /// </summary>
         private GameBoard board;
+        /// <summary>
+        /// This instance is the list of the players
+        /// </summary>
         private PlayerList players;
+
+        /// <summary>
+        /// This is the main constructor of the game. It's the one that will be called in the main program
+        /// </summary>
         public Game()
         {
             dictionary = new CustomDictionary();
@@ -23,7 +35,7 @@ namespace Projet_A2_S1
         /// <summary>
         /// Second constructor for the test function
         /// </summary>
-        /// <param name="test"></param>
+        /// <param name="test">Boolean that indicate that this constructor is for the Test project</param>
         public Game(bool test)
         {
             dictionary = new CustomDictionary();
@@ -35,15 +47,23 @@ namespace Projet_A2_S1
 
 
 
-
+        /// <summary>
+        /// This instance is the dictionnary that is using during the game
+        /// </summary>
         public CustomDictionary Dictionary { get => dictionary; set => dictionary = value; }
+        /// <summary>
+        /// This instance is the board of the game
+        /// </summary>
         public GameBoard Board { get => board; set => board = value; }
+        /// <summary>
+        /// This instance is the list of the players
+        /// </summary>
         public PlayerList Players { get => players; set => players = value; }
 
         /// <summary>
         /// This function can tel if the game is over or not 
         /// </summary>
-        /// <returns></returns>
+        /// <returns>if it's the end of the game</returns>
         public bool EndGame()
         {
             bool endtimer = true;
@@ -83,12 +103,13 @@ namespace Projet_A2_S1
                 Core.WritePositionedString("C'est au tour de " + Player.Name, Placement.Right, default, 10, default);
                 Core.WritePositionedString("Score : " + Player.Score, Placement.Right, default, 11, default);
                 int cmp = 0;
-                foreach (string word in Player.WordList)
-                {
-                    Core.WritePositionedString("-" + word, Placement.Right, default, 12 + cmp, default);
-                    cmp++;
+                if(Player.WordList is not null ){
+                    foreach (string word in Player.WordList)
+                    {
+                        Core.WritePositionedString("-" + word, Placement.Right, default, 12 + cmp, default);
+                        cmp++;
+                    }
                 }
-
                 Core.WritePositionedString(board.ToString(), Placement.Left, default, 10, default);
                 var timer = Method.TimedInput(Player.Timer);
                 //temps global -= timer.Item1;
@@ -97,7 +118,7 @@ namespace Projet_A2_S1
                 if (Player.Timer != 0)
                 {
                     var LimitedInput = Method.TimedEnterInput(5, "Entrez un mot : ");
-                    var input = LimitedInput.Item1;
+                    var input = LimitedInput.Item1 ;
                     if (input is not null && input.Length >=2)
                     {
                         if (WordValidate(input.ToUpper(), Player))
@@ -111,7 +132,7 @@ namespace Projet_A2_S1
                     }
                     else
                     {
-                        if (input.Length >= 2)
+                        if ( input is not null && input.Length >= 2)
                             Core.WritePositionedString("Mot trop court ",Placement.Right,default,20,default);
                         else
                             Core.WritePositionedString("Vous n'avez rien rentré", Placement.Right, default, 20, default);
@@ -155,53 +176,58 @@ namespace Projet_A2_S1
         /// </summary>
         /// <param name="word"> the word that we are looking for </param>
         /// <param name="player">The player that is searching the word</param>
-        /// <returns></returns>
+        /// <returns>Return if the word is in the player word list or not </returns>
         public bool WordValidate(string word, Player player)
         {
-            for (int i = 0; i < player.WordList.Count; i++)
-            {
-                if (player.WordList[i] == word)
-                {
-                    Core.WritePositionedString("Ce mot est déjà dans votre liste", Placement.Right, default, 20, default);
-                    return false;
-                }
+            if(player is null || word is null){
+                return false;
             }
-            if (dictionary.FindWord(word))
-            {
-
-                var dico = new Dictionary<(int, int), char>();
-                for (int y = 0; y < board.Board.GetLength(1); y++)
+            else{
+                for (int i = 0; i < player.WordList.Count ; i++)
                 {
-                    if (char.ToLower(board.Board[board.Board.GetLength(0) - 1, y]) == char.ToLower(word[0])) // si la lettre est la même que la première lettre du mot (on commence par la dernière ligne du plateau car on cherche le mot à l'envers)
+                    if (player.WordList[i] == word)
                     {
-                        dico = board.GetWord(board.Board.GetLength(0) - 1, y, word.ToLower()); // on lance la recherche du mot
-                        if (dico is not null)
-                        {
-                            y = board.Board.GetLength(1);
-                        }
+                        Core.WritePositionedString("Ce mot est déjà dans votre liste", Placement.Right, default, 20, default);
+                        return false;
                     }
                 }
-                board.SaveAndWrite();
-                if (dico is null || dico.Count() < word.Length)
+                if (dictionary.FindWord(word))
                 {
-                    Core.WritePositionedString("Le mot n'est pas présent sur le plateau", Placement.Right, default, 20, default);
-                    return false;
+
+                    var dico = new Dictionary<(int, int), char>();
+                    for (int y = 0; y < board.Board.GetLength(1); y++)
+                    {
+                        if (char.ToLower(board.Board[board.Board.GetLength(0) - 1, y]) == char.ToLower(word[0])) // si la lettre est la même que la première lettre du mot (on commence par la dernière ligne du plateau car on cherche le mot à l'envers)
+                        {
+                            dico = board.GetWord(board.Board.GetLength(0) - 1, y, word.ToLower()); // on lance la recherche du mot
+                            if (dico is not null)
+                            {
+                                y = board.Board.GetLength(1);
+                            }
+                        }
+                    }
+                    board.SaveAndWrite();
+                    if (dico is null || dico.Count() < word.Length)
+                    {
+                        Core.WritePositionedString("Le mot n'est pas présent sur le plateau", Placement.Right, default, 20, default);
+                        return false;
+                    }
+                    else
+                    {
+                        foreach (var item in dico) 
+                        {
+                            board.Board[item.Key.Item1, item.Key.Item2] = ' ';
+                        }
+                        board.Maj_Plateau(); // we update the board 
+                        board.SaveAndWrite(); // we save the board
+                        return true;
+                    }
                 }
                 else
                 {
-                    foreach (var item in dico) 
-                    {
-                        board.Board[item.Key.Item1, item.Key.Item2] = ' ';
-                    }
-                    board.Maj_Plateau(); // we update the board 
-                    board.SaveAndWrite(); // we save the board
-                    return true;
+                    Core.WritePositionedString("Le mot n'est pas contenu dans le dictionnaire", Placement.Right, default, 20, default);
+                    return false;
                 }
-            }
-            else
-            {
-                Core.WritePositionedString("Le mot n'est pas contenu dans le dictionnaire", Placement.Right, default, 20, default);
-                return false;
             }
         }
     }

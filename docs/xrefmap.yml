@@ -436,21 +436,21 @@ references:
   commentId: Overload:Projet_A2_S1.Player.Add_Score
   fullName: Projet_A2_S1.Player.Add_Score
   nameWithType: Player.Add_Score
-- uid: Projet_A2_S1.Player.Contient(System.String)
-  name: Contient(string)
-  href: api/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Contient_System_String_
-  commentId: M:Projet_A2_S1.Player.Contient(System.String)
-  name.vb: Contient(String)
-  fullName: Projet_A2_S1.Player.Contient(string)
-  fullName.vb: Projet_A2_S1.Player.Contient(String)
-  nameWithType: Player.Contient(string)
-  nameWithType.vb: Player.Contient(String)
-- uid: Projet_A2_S1.Player.Contient*
-  name: Contient
-  href: api/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Contient_
-  commentId: Overload:Projet_A2_S1.Player.Contient
-  fullName: Projet_A2_S1.Player.Contient
-  nameWithType: Player.Contient
+- uid: Projet_A2_S1.Player.Contains(System.String)
+  name: Contains(string)
+  href: api/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Contains_System_String_
+  commentId: M:Projet_A2_S1.Player.Contains(System.String)
+  name.vb: Contains(String)
+  fullName: Projet_A2_S1.Player.Contains(string)
+  fullName.vb: Projet_A2_S1.Player.Contains(String)
+  nameWithType: Player.Contains(string)
+  nameWithType.vb: Player.Contains(String)
+- uid: Projet_A2_S1.Player.Contains*
+  name: Contains
+  href: api/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Contains_
+  commentId: Overload:Projet_A2_S1.Player.Contains
+  fullName: Projet_A2_S1.Player.Contains
+  nameWithType: Player.Contains
 - uid: Projet_A2_S1.Player.Letter_Value(System.Char)
   name: Letter_Value(char)
   href: api/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Letter_Value_System_Char_

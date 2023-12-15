@@ -20,6 +20,8 @@ items:
   assemblies:
   - Projet-A2-S1
   namespace: Projet_A2_S1
+  summary: This classe is used to create the main menu of the game and the timer for each player.
+  example: []
   syntax:
     content: public class Method
     content.vb: Public Class Method
@@ -85,6 +87,7 @@ items:
       description: Time limit of the turn
     - id: message
       type: System.String
+      description: The message that we write to the user
     return:
       type: System.ValueTuple{System.Int32,System.String}
       description: ''

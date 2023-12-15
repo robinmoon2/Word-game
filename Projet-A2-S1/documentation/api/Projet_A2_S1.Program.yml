@@ -16,6 +16,8 @@ items:
   assemblies:
   - Projet-A2-S1
   namespace: Projet_A2_S1
+  summary: The main class of the project
+  example: []
   syntax:
     content: public class Program
     content.vb: Public Class Program

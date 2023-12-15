@@ -21,6 +21,8 @@ items:
   assemblies:
   - Projet-A2-S1
   namespace: Projet_A2_S1
+  summary: Class used to build a dictionnary to look after the words
+  example: []
   syntax:
     content: public class CustomDictionary
     content.vb: Public Class CustomDictionary
@@ -47,6 +49,8 @@ items:
   assemblies:
   - Projet-A2-S1
   namespace: Projet_A2_S1
+  summary: Dictionnary used to stock the dictionnary of a langage
+  example: []
   syntax:
     content: public Dictionary<char, List<string>> Dict
     return:
