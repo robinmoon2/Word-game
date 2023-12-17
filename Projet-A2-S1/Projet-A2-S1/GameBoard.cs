@@ -12,9 +12,9 @@ namespace Projet_A2_S1;
 public class GameBoard
 {
 
-    private const string WORKING_FILE = "AcutalPlate.csv";
-    private const string EXAMPLE_FILE = "Plate1.csv";
-    private const string RANDOM_FILE = "Lettre.txt";
+    private const string WORKING_FILE = "data/AcutalPlate.csv";
+    private const string EXAMPLE_FILE = "data/Plate1.csv";
+    public const string RANDOM_FILE = "data/Lettre.txt";
     private static readonly Random s_rnd = new();
     /// <summary>
     /// The board is a matrix of char that represent the board
@@ -150,19 +150,21 @@ public class GameBoard
     /// </summary>
     public void SaveAndWrite()
     {
-        using var reader = new StreamWriter(WORKING_FILE);
+        string[] file = File.ReadAllLines(WORKING_FILE);
         for (int i = 0; i < Board.GetLength(0); i++)
         {
+            string line = string.Empty;
             for (int j = 0; j < Board.GetLength(1); j++)
             {
-                reader.Write(Board[i, j]);
+                line += Board[i, j];
                 if (j != Board.GetLength(1) - 1)
                 {
-                    reader.Write(",");
+                    line += ",";
                 }
             }
-            reader.WriteLine();
+            file[i] = line;
         }
+        File.WriteAllLines(WORKING_FILE,file);
     }
 
     /// <summary>

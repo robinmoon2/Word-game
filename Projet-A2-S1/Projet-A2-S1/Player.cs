@@ -114,17 +114,13 @@ public class Player
     /// <returns></returns>
     public static int Letter_Value(char letter)
     {
-        using (StreamReader reader = new StreamReader("Lettre.txt"))
+        string[] file = File.ReadAllLines(GameBoard.RANDOM_FILE);
+        foreach (string line in file)
         {
-            string line = reader.ReadLine() ?? "" ;
-            while (line is not null)
+            string[] parts = line.Split(',');
+            if (parts[0] == letter.ToString().ToUpper())
             {
-                string[] parts = line.Split(',');
-                if (parts[0] == letter.ToString().ToUpper())
-                {
-                    return int.Parse(parts[2]);
-                }
-                line = reader.ReadLine() ?? "";
+                return int.Parse(parts[2]);
             }
         }
         return 0;
