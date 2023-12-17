@@ -24,8 +24,7 @@ namespace Projet_A2_S1
         /// Write the information of the players in a YAML file.
         /// The 
         /// </summary>
-        /// <param name="YAML_PATH"> location of the YAML file </param>
-        public void WriteYAML(string YAML_PATH=YAML_PATH){
+        public void WriteYAML(){
             var serializer = new SerializerBuilder()
                 .WithNamingConvention(CamelCaseNamingConvention.Instance)
                 .Build();
@@ -39,8 +38,7 @@ namespace Projet_A2_S1
         /// <summary>
         /// Read the YAML file and create a list of player
         /// </summary>
-        /// <param name="YAML_PATH">Location of the yaml file </param>
-        public void ReadYAML(string YAML_PATH=YAML_PATH)
+        public void ReadYAML()
         {
             var deserializer = new DeserializerBuilder()
             .WithNamingConvention(CamelCaseNamingConvention.Instance)

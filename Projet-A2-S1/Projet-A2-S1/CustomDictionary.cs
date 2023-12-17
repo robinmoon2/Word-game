@@ -85,7 +85,7 @@ public class CustomDictionary
         }
         if(dictionary.ContainsKey(word[0]))
         {
-            return RechDichoRecursif(word.ToUpper(),dictionary[word[0]]);
+            return DichotomicReseach(word.ToUpper(),dictionary[word[0]]);
         }
         else{
             Console.WriteLine("Mot invalide ");
@@ -100,7 +100,7 @@ public class CustomDictionary
     /// <param name="word"> word that we are looking for </param>
     /// <param name="wordlist">the list of string where we are searching </param>
     /// <returns></returns>
-    public bool RechDichoRecursif(string word, List<string> wordlist)
+    public bool DichotomicReseach(string word, List<string> wordlist)
     {
         if(wordlist.Count<1){
             return false;
@@ -112,10 +112,10 @@ public class CustomDictionary
                 return true;
             }
             else if ( (string.Compare(wordlist[middle].ToUpper(), word)) < 0){
-                return RechDichoRecursif(word, wordlist.GetRange(middle+1,wordlist.Count-middle-1)); // We start at middle+1 because we have already try it
+                return DichotomicReseach(word, wordlist.GetRange(middle+1,wordlist.Count-middle-1)); // We start at middle+1 because we have already try it
             }
             else{
-                return RechDichoRecursif(word, wordlist.GetRange(0,middle));
+                return DichotomicReseach(word, wordlist.GetRange(0,middle));
             }
             
                 

@@ -4,6 +4,8 @@
 /// </summary>
 public class Player
 {
+    
+
      string? name;
      int timer;
      int score;

@@ -3,8 +3,11 @@ _layout: landing
 ---
 
 # Welcome on the  **Mots Glissants Project**.
+#
 ## By hugo Peltier and Robin l'hyver
 
+#
+#
 
 ## This is the officials documentation of the game , in it you will find :
 
@@ -14,6 +17,6 @@ _layout: landing
 
 
 
-
-
+#
+#
 # If you want to have a look at all of this go in _Api Documentation_

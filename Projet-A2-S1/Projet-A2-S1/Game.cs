@@ -8,6 +8,8 @@ namespace Projet_A2_S1
     /// </summary>
     public class Game
     {
+
+
         /// <summary>
         /// This instance is the dictionnary that is using during the game
         /// </summary>
@@ -30,7 +32,7 @@ namespace Projet_A2_S1
             board = new GameBoard();
             List<Player> ListOfPlayer = new List<Player>();
             players = new PlayerList(ListOfPlayer);
-            players.ReadYAML("config.yml");
+            players.ReadYAML();
         }
         /// <summary>
         /// Second constructor for the test function
@@ -42,7 +44,7 @@ namespace Projet_A2_S1
             board = new GameBoard(test);
             List<Player> ListOfPlayer = new List<Player>();
             players = new PlayerList(ListOfPlayer);
-            players.ReadYAML("config.yml");
+            players.ReadYAML();
         }
 
 
@@ -128,7 +130,7 @@ namespace Projet_A2_S1
                             Player.Add_Score(Player.Word_Value(input.ToUpper()));
                             Player.Timer = timer.Item1;
                         }
-                        players.WriteYAML("config.yml");
+                        players.WriteYAML();
                     }
                     else
                     {
