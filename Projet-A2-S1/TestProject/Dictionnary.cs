@@ -14,6 +14,5 @@ namespace TestProject{
             bool verif = dictionary.FindWord(word);
             Assert.That(result, Is.EqualTo(verif));
         }
-
     }
 }

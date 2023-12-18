@@ -55,7 +55,10 @@ items:
   assemblies:
   - Projet-A2-S1
   namespace: Projet_A2_S1
-  summary: This function can create a string of the player's information with his name, timer, score and wordlist
+  summary: >-
+    This function can create a string of the player's information with his 
+
+    <ul><li>Name</li><li>Timer</li><li>Score</li><li>WordList</li></ul>
   example: []
   syntax:
     content: public string toString()

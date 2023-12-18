@@ -150,7 +150,7 @@ public class GameBoard
     /// </summary>
     public void SaveAndWrite()
     {
-        string[] file = File.ReadAllLines(WORKING_FILE);
+        string[] file = new string[Board.GetLength(1)];
         for (int i = 0; i < Board.GetLength(0); i++)
         {
             string line = string.Empty;

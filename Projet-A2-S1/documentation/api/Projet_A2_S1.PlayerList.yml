@@ -6,8 +6,8 @@ items:
   parent: Projet_A2_S1
   children:
   - Projet_A2_S1.PlayerList.#ctor(System.Collections.Generic.List{Projet_A2_S1.Player})
-  - Projet_A2_S1.PlayerList.ReadYAML(System.String)
-  - Projet_A2_S1.PlayerList.WriteYAML(System.String)
+  - Projet_A2_S1.PlayerList.ReadYAML
+  - Projet_A2_S1.PlayerList.WriteYAML
   - Projet_A2_S1.PlayerList.playerlist
   - Projet_A2_S1.PlayerList.toString
   - Projet_A2_S1.PlayerList.toStringArray
@@ -61,16 +61,16 @@ items:
   nameWithType.vb: PlayerList.New(List(Of Player))
   fullName.vb: Projet_A2_S1.PlayerList.New(System.Collections.Generic.List(Of Projet_A2_S1.Player))
   name.vb: New(List(Of Player))
-- uid: Projet_A2_S1.PlayerList.WriteYAML(System.String)
-  commentId: M:Projet_A2_S1.PlayerList.WriteYAML(System.String)
-  id: WriteYAML(System.String)
+- uid: Projet_A2_S1.PlayerList.WriteYAML
+  commentId: M:Projet_A2_S1.PlayerList.WriteYAML
+  id: WriteYAML
   parent: Projet_A2_S1.PlayerList
   langs:
   - csharp
   - vb
-  name: WriteYAML(string)
-  nameWithType: PlayerList.WriteYAML(string)
-  fullName: Projet_A2_S1.PlayerList.WriteYAML(string)
+  name: WriteYAML()
+  nameWithType: PlayerList.WriteYAML()
+  fullName: Projet_A2_S1.PlayerList.WriteYAML()
   type: Method
   assemblies:
   - Projet-A2-S1
@@ -81,26 +81,19 @@ items:
     The
   example: []
   syntax:
-    content: public void WriteYAML(string YAML_PATH = "config.yml")
-    parameters:
-    - id: YAML_PATH
-      type: System.String
-      description: location of the YAML file
-    content.vb: Public Sub WriteYAML(YAML_PATH As String = "config.yml")
+    content: public void WriteYAML()
+    content.vb: Public Sub WriteYAML()
   overload: Projet_A2_S1.PlayerList.WriteYAML*
-  nameWithType.vb: PlayerList.WriteYAML(String)
-  fullName.vb: Projet_A2_S1.PlayerList.WriteYAML(String)
-  name.vb: WriteYAML(String)
-- uid: Projet_A2_S1.PlayerList.ReadYAML(System.String)
-  commentId: M:Projet_A2_S1.PlayerList.ReadYAML(System.String)
-  id: ReadYAML(System.String)
+- uid: Projet_A2_S1.PlayerList.ReadYAML
+  commentId: M:Projet_A2_S1.PlayerList.ReadYAML
+  id: ReadYAML
   parent: Projet_A2_S1.PlayerList
   langs:
   - csharp
   - vb
-  name: ReadYAML(string)
-  nameWithType: PlayerList.ReadYAML(string)
-  fullName: Projet_A2_S1.PlayerList.ReadYAML(string)
+  name: ReadYAML()
+  nameWithType: PlayerList.ReadYAML()
+  fullName: Projet_A2_S1.PlayerList.ReadYAML()
   type: Method
   assemblies:
   - Projet-A2-S1
@@ -108,16 +101,9 @@ items:
   summary: Read the YAML file and create a list of player
   example: []
   syntax:
-    content: public void ReadYAML(string YAML_PATH = "config.yml")
-    parameters:
-    - id: YAML_PATH
-      type: System.String
-      description: Location of the yaml file
-    content.vb: Public Sub ReadYAML(YAML_PATH As String = "config.yml")
+    content: public void ReadYAML()
+    content.vb: Public Sub ReadYAML()
   overload: Projet_A2_S1.PlayerList.ReadYAML*
-  nameWithType.vb: PlayerList.ReadYAML(String)
-  fullName.vb: Projet_A2_S1.PlayerList.ReadYAML(String)
-  name.vb: ReadYAML(String)
 - uid: Projet_A2_S1.PlayerList.toString
   commentId: M:Projet_A2_S1.PlayerList.toString
   id: toString
@@ -138,7 +124,7 @@ items:
     content: public string toString()
     return:
       type: System.String
-      description: ''
+      description: Return a string that represent every player in the game
     content.vb: Public Function toString() As String
   overload: Projet_A2_S1.PlayerList.toString*
 - uid: Projet_A2_S1.PlayerList.toStringArray
@@ -545,10 +531,24 @@ references:
 - uid: Projet_A2_S1.PlayerList.WriteYAML*
   commentId: Overload:Projet_A2_S1.PlayerList.WriteYAML
   isExternal: true
-  href: Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_WriteYAML_System_String_
+  href: Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_WriteYAML
   name: WriteYAML
   nameWithType: PlayerList.WriteYAML
   fullName: Projet_A2_S1.PlayerList.WriteYAML
+- uid: Projet_A2_S1.PlayerList.ReadYAML*
+  commentId: Overload:Projet_A2_S1.PlayerList.ReadYAML
+  isExternal: true
+  href: Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_ReadYAML
+  name: ReadYAML
+  nameWithType: PlayerList.ReadYAML
+  fullName: Projet_A2_S1.PlayerList.ReadYAML
+- uid: Projet_A2_S1.PlayerList.toString*
+  commentId: Overload:Projet_A2_S1.PlayerList.toString
+  isExternal: true
+  href: Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_toString
+  name: toString
+  nameWithType: PlayerList.toString
+  fullName: Projet_A2_S1.PlayerList.toString
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -560,20 +560,6 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
-- uid: Projet_A2_S1.PlayerList.ReadYAML*
-  commentId: Overload:Projet_A2_S1.PlayerList.ReadYAML
-  isExternal: true
-  href: Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_ReadYAML_System_String_
-  name: ReadYAML
-  nameWithType: PlayerList.ReadYAML
-  fullName: Projet_A2_S1.PlayerList.ReadYAML
-- uid: Projet_A2_S1.PlayerList.toString*
-  commentId: Overload:Projet_A2_S1.PlayerList.toString
-  isExternal: true
-  href: Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_toString
-  name: toString
-  nameWithType: PlayerList.toString
-  fullName: Projet_A2_S1.PlayerList.toString
 - uid: Projet_A2_S1.PlayerList.toStringArray*
   commentId: Overload:Projet_A2_S1.PlayerList.toStringArray
   isExternal: true

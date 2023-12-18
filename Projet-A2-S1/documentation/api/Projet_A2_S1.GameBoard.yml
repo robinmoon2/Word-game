@@ -10,6 +10,7 @@ items:
   - Projet_A2_S1.GameBoard.Board
   - Projet_A2_S1.GameBoard.GetWord(System.Int32,System.Int32,System.String,System.Int32,System.Collections.Generic.Dictionary{System.ValueTuple{System.Int32,System.Int32},System.Char})
   - Projet_A2_S1.GameBoard.Maj_Plateau
+  - Projet_A2_S1.GameBoard.RANDOM_FILE
   - Projet_A2_S1.GameBoard.SaveAndWrite
   - Projet_A2_S1.GameBoard.ToString
   langs:
@@ -36,6 +37,25 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
+- uid: Projet_A2_S1.GameBoard.RANDOM_FILE
+  commentId: F:Projet_A2_S1.GameBoard.RANDOM_FILE
+  id: RANDOM_FILE
+  parent: Projet_A2_S1.GameBoard
+  langs:
+  - csharp
+  - vb
+  name: RANDOM_FILE
+  nameWithType: GameBoard.RANDOM_FILE
+  fullName: Projet_A2_S1.GameBoard.RANDOM_FILE
+  type: Field
+  assemblies:
+  - Projet-A2-S1
+  namespace: Projet_A2_S1
+  syntax:
+    content: public const string RANDOM_FILE = "data/Lettre.txt"
+    return:
+      type: System.String
+    content.vb: Public Const RANDOM_FILE As String = "data/Lettre.txt"
 - uid: Projet_A2_S1.GameBoard.Board
   commentId: F:Projet_A2_S1.GameBoard.Board
   id: Board
@@ -455,6 +475,17 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
 - uid: System.Char[,]
   isExternal: true
   href: https://learn.microsoft.com/dotnet/api/system.char
@@ -526,17 +557,6 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
 - uid: System.Collections.Generic.Dictionary{System.ValueTuple{System.Int32,System.Int32},System.Char}
   commentId: T:System.Collections.Generic.Dictionary{System.ValueTuple{System.Int32,System.Int32},System.Char}
   parent: System.Collections.Generic

@@ -3,6 +3,29 @@
   "xrefmap": "xrefmap.yml",
   "files": [
     {
+      "type": "Conceptual",
+      "source_relative_path": "Rules/Rules.md",
+      "output": {
+        ".html": {
+          "relative_path": "Rules/Rules.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "Rules/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Rules/toc.html"
+        },
+        ".json": {
+          "relative_path": "Rules/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "ManagedReference",
       "source_relative_path": "api/Projet_A2_S1.CustomDictionary.yml",
       "output": {
@@ -101,39 +124,6 @@
         },
         ".json": {
           "relative_path": "api/toc.json"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/Rules of the game.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/Rules of the game.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/introduction.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/introduction.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "articles/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "articles/toc.html"
-        },
-        ".json": {
-          "relative_path": "articles/toc.json"
         }
       },
       "version": ""

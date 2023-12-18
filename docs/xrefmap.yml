@@ -31,6 +31,21 @@ references:
   fullName.vb: Projet_A2_S1.CustomDictionary.New
   nameWithType: CustomDictionary.CustomDictionary
   nameWithType.vb: CustomDictionary.New
+- uid: Projet_A2_S1.CustomDictionary.DichotomicReseach(System.String,System.Collections.Generic.List{System.String})
+  name: DichotomicReseach(string, List<string>)
+  href: api/Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_DichotomicReseach_System_String_System_Collections_Generic_List_System_String__
+  commentId: M:Projet_A2_S1.CustomDictionary.DichotomicReseach(System.String,System.Collections.Generic.List{System.String})
+  name.vb: DichotomicReseach(String, List(Of String))
+  fullName: Projet_A2_S1.CustomDictionary.DichotomicReseach(string, System.Collections.Generic.List<string>)
+  fullName.vb: Projet_A2_S1.CustomDictionary.DichotomicReseach(String, System.Collections.Generic.List(Of String))
+  nameWithType: CustomDictionary.DichotomicReseach(string, List<string>)
+  nameWithType.vb: CustomDictionary.DichotomicReseach(String, List(Of String))
+- uid: Projet_A2_S1.CustomDictionary.DichotomicReseach*
+  name: DichotomicReseach
+  href: api/Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_DichotomicReseach_
+  commentId: Overload:Projet_A2_S1.CustomDictionary.DichotomicReseach
+  fullName: Projet_A2_S1.CustomDictionary.DichotomicReseach
+  nameWithType: CustomDictionary.DichotomicReseach
 - uid: Projet_A2_S1.CustomDictionary.Dict
   name: Dict
   href: api/Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_Dict
@@ -52,21 +67,6 @@ references:
   commentId: Overload:Projet_A2_S1.CustomDictionary.FindWord
   fullName: Projet_A2_S1.CustomDictionary.FindWord
   nameWithType: CustomDictionary.FindWord
-- uid: Projet_A2_S1.CustomDictionary.RechDichoRecursif(System.String,System.Collections.Generic.List{System.String})
-  name: RechDichoRecursif(string, List<string>)
-  href: api/Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_RechDichoRecursif_System_String_System_Collections_Generic_List_System_String__
-  commentId: M:Projet_A2_S1.CustomDictionary.RechDichoRecursif(System.String,System.Collections.Generic.List{System.String})
-  name.vb: RechDichoRecursif(String, List(Of String))
-  fullName: Projet_A2_S1.CustomDictionary.RechDichoRecursif(string, System.Collections.Generic.List<string>)
-  fullName.vb: Projet_A2_S1.CustomDictionary.RechDichoRecursif(String, System.Collections.Generic.List(Of String))
-  nameWithType: CustomDictionary.RechDichoRecursif(string, List<string>)
-  nameWithType.vb: CustomDictionary.RechDichoRecursif(String, List(Of String))
-- uid: Projet_A2_S1.CustomDictionary.RechDichoRecursif*
-  name: RechDichoRecursif
-  href: api/Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_RechDichoRecursif_
-  commentId: Overload:Projet_A2_S1.CustomDictionary.RechDichoRecursif
-  fullName: Projet_A2_S1.CustomDictionary.RechDichoRecursif
-  nameWithType: CustomDictionary.RechDichoRecursif
 - uid: Projet_A2_S1.CustomDictionary.Sort(System.Collections.Generic.List{System.String})
   name: Sort(List<string>)
   href: api/Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_Sort_System_Collections_Generic_List_System_String__
@@ -280,6 +280,12 @@ references:
   commentId: Overload:Projet_A2_S1.GameBoard.Maj_Plateau
   fullName: Projet_A2_S1.GameBoard.Maj_Plateau
   nameWithType: GameBoard.Maj_Plateau
+- uid: Projet_A2_S1.GameBoard.RANDOM_FILE
+  name: RANDOM_FILE
+  href: api/Projet_A2_S1.GameBoard.html#Projet_A2_S1_GameBoard_RANDOM_FILE
+  commentId: F:Projet_A2_S1.GameBoard.RANDOM_FILE
+  fullName: Projet_A2_S1.GameBoard.RANDOM_FILE
+  nameWithType: GameBoard.RANDOM_FILE
 - uid: Projet_A2_S1.GameBoard.SaveAndWrite
   name: SaveAndWrite()
   href: api/Projet_A2_S1.GameBoard.html#Projet_A2_S1_GameBoard_SaveAndWrite
@@ -565,30 +571,24 @@ references:
   fullName.vb: Projet_A2_S1.PlayerList.New
   nameWithType: PlayerList.PlayerList
   nameWithType.vb: PlayerList.New
-- uid: Projet_A2_S1.PlayerList.ReadYAML(System.String)
-  name: ReadYAML(string)
-  href: api/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_ReadYAML_System_String_
-  commentId: M:Projet_A2_S1.PlayerList.ReadYAML(System.String)
-  name.vb: ReadYAML(String)
-  fullName: Projet_A2_S1.PlayerList.ReadYAML(string)
-  fullName.vb: Projet_A2_S1.PlayerList.ReadYAML(String)
-  nameWithType: PlayerList.ReadYAML(string)
-  nameWithType.vb: PlayerList.ReadYAML(String)
+- uid: Projet_A2_S1.PlayerList.ReadYAML
+  name: ReadYAML()
+  href: api/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_ReadYAML
+  commentId: M:Projet_A2_S1.PlayerList.ReadYAML
+  fullName: Projet_A2_S1.PlayerList.ReadYAML()
+  nameWithType: PlayerList.ReadYAML()
 - uid: Projet_A2_S1.PlayerList.ReadYAML*
   name: ReadYAML
   href: api/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_ReadYAML_
   commentId: Overload:Projet_A2_S1.PlayerList.ReadYAML
   fullName: Projet_A2_S1.PlayerList.ReadYAML
   nameWithType: PlayerList.ReadYAML
-- uid: Projet_A2_S1.PlayerList.WriteYAML(System.String)
-  name: WriteYAML(string)
-  href: api/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_WriteYAML_System_String_
-  commentId: M:Projet_A2_S1.PlayerList.WriteYAML(System.String)
-  name.vb: WriteYAML(String)
-  fullName: Projet_A2_S1.PlayerList.WriteYAML(string)
-  fullName.vb: Projet_A2_S1.PlayerList.WriteYAML(String)
-  nameWithType: PlayerList.WriteYAML(string)
-  nameWithType.vb: PlayerList.WriteYAML(String)
+- uid: Projet_A2_S1.PlayerList.WriteYAML
+  name: WriteYAML()
+  href: api/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_WriteYAML
+  commentId: M:Projet_A2_S1.PlayerList.WriteYAML
+  fullName: Projet_A2_S1.PlayerList.WriteYAML()
+  nameWithType: PlayerList.WriteYAML()
 - uid: Projet_A2_S1.PlayerList.WriteYAML*
   name: WriteYAML
   href: api/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_WriteYAML_

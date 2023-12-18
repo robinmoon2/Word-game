@@ -31,7 +31,13 @@ public class Player
 
 
     /// <summary>
-    /// This function can create a string of the player's information with his name, timer, score and wordlist  
+    /// This function can create a string of the player's information with his 
+    /// <list type= "bullet">
+    /// <item><description>Name</description></item>
+    /// <item><description>Timer</description></item>
+    /// <item><description>Score</description></item>
+    /// <item><description>WordList</description></item>
+    /// </list>
     /// </summary>
     /// <returns></returns>
     public string toString(){

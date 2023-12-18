@@ -51,7 +51,8 @@ namespace Projet_A2_S1
         /// <summary>
         /// Function that return the information of every player
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Return a string that represent every player in the game
+        /// </returns>
         public string toString(){
             string s="";
             foreach(Player player in playerlist){

@@ -1,9 +1,8 @@
 - name: Joueur 1
-  timer: 60
-  score: 7
-  wordList:
-  - MAISON
+  timer: 88
+  score: 0
+  wordList: []
 - name: Joueur 2
-  timer: 60
+  timer: 90
   score: 0
   wordList: []

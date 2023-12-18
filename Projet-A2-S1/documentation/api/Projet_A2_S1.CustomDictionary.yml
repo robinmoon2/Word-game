@@ -6,9 +6,9 @@ items:
   parent: Projet_A2_S1
   children:
   - Projet_A2_S1.CustomDictionary.#ctor
+  - Projet_A2_S1.CustomDictionary.DichotomicReseach(System.String,System.Collections.Generic.List{System.String})
   - Projet_A2_S1.CustomDictionary.Dict
   - Projet_A2_S1.CustomDictionary.FindWord(System.String)
-  - Projet_A2_S1.CustomDictionary.RechDichoRecursif(System.String,System.Collections.Generic.List{System.String})
   - Projet_A2_S1.CustomDictionary.Sort(System.Collections.Generic.List{System.String})
   - Projet_A2_S1.CustomDictionary.ToString
   langs:
@@ -128,16 +128,16 @@ items:
   nameWithType.vb: CustomDictionary.FindWord(String)
   fullName.vb: Projet_A2_S1.CustomDictionary.FindWord(String)
   name.vb: FindWord(String)
-- uid: Projet_A2_S1.CustomDictionary.RechDichoRecursif(System.String,System.Collections.Generic.List{System.String})
-  commentId: M:Projet_A2_S1.CustomDictionary.RechDichoRecursif(System.String,System.Collections.Generic.List{System.String})
-  id: RechDichoRecursif(System.String,System.Collections.Generic.List{System.String})
+- uid: Projet_A2_S1.CustomDictionary.DichotomicReseach(System.String,System.Collections.Generic.List{System.String})
+  commentId: M:Projet_A2_S1.CustomDictionary.DichotomicReseach(System.String,System.Collections.Generic.List{System.String})
+  id: DichotomicReseach(System.String,System.Collections.Generic.List{System.String})
   parent: Projet_A2_S1.CustomDictionary
   langs:
   - csharp
   - vb
-  name: RechDichoRecursif(string, List<string>)
-  nameWithType: CustomDictionary.RechDichoRecursif(string, List<string>)
-  fullName: Projet_A2_S1.CustomDictionary.RechDichoRecursif(string, System.Collections.Generic.List<string>)
+  name: DichotomicReseach(string, List<string>)
+  nameWithType: CustomDictionary.DichotomicReseach(string, List<string>)
+  fullName: Projet_A2_S1.CustomDictionary.DichotomicReseach(string, System.Collections.Generic.List<string>)
   type: Method
   assemblies:
   - Projet-A2-S1
@@ -148,7 +148,7 @@ items:
     For this research we used a dichotomic algorithm to find the word in a list of string sorted
   example: []
   syntax:
-    content: public bool RechDichoRecursif(string word, List<string> wordlist)
+    content: public bool DichotomicReseach(string word, List<string> wordlist)
     parameters:
     - id: word
       type: System.String
@@ -159,11 +159,11 @@ items:
     return:
       type: System.Boolean
       description: ''
-    content.vb: Public Function RechDichoRecursif(word As String, wordlist As List(Of String)) As Boolean
-  overload: Projet_A2_S1.CustomDictionary.RechDichoRecursif*
-  nameWithType.vb: CustomDictionary.RechDichoRecursif(String, List(Of String))
-  fullName.vb: Projet_A2_S1.CustomDictionary.RechDichoRecursif(String, System.Collections.Generic.List(Of String))
-  name.vb: RechDichoRecursif(String, List(Of String))
+    content.vb: Public Function DichotomicReseach(word As String, wordlist As List(Of String)) As Boolean
+  overload: Projet_A2_S1.CustomDictionary.DichotomicReseach*
+  nameWithType.vb: CustomDictionary.DichotomicReseach(String, List(Of String))
+  fullName.vb: Projet_A2_S1.CustomDictionary.DichotomicReseach(String, System.Collections.Generic.List(Of String))
+  name.vb: DichotomicReseach(String, List(Of String))
 - uid: Projet_A2_S1.CustomDictionary.Sort(System.Collections.Generic.List{System.String})
   commentId: M:Projet_A2_S1.CustomDictionary.Sort(System.Collections.Generic.List{System.String})
   id: Sort(System.Collections.Generic.List{System.String})
@@ -637,13 +637,13 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
-- uid: Projet_A2_S1.CustomDictionary.RechDichoRecursif*
-  commentId: Overload:Projet_A2_S1.CustomDictionary.RechDichoRecursif
+- uid: Projet_A2_S1.CustomDictionary.DichotomicReseach*
+  commentId: Overload:Projet_A2_S1.CustomDictionary.DichotomicReseach
   isExternal: true
-  href: Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_RechDichoRecursif_System_String_System_Collections_Generic_List_System_String__
-  name: RechDichoRecursif
-  nameWithType: CustomDictionary.RechDichoRecursif
-  fullName: Projet_A2_S1.CustomDictionary.RechDichoRecursif
+  href: Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_DichotomicReseach_System_String_System_Collections_Generic_List_System_String__
+  name: DichotomicReseach
+  nameWithType: CustomDictionary.DichotomicReseach
+  fullName: Projet_A2_S1.CustomDictionary.DichotomicReseach
 - uid: System.Collections.Generic.List{System.String}
   commentId: T:System.Collections.Generic.List{System.String}
   parent: System.Collections.Generic
