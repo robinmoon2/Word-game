@@ -129,6 +129,16 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "images/main-menu.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/main-menu.png"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
