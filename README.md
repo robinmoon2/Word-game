@@ -13,7 +13,6 @@ To Install the game you need to download the zip file and then run it into your 
 
 This game is a merge between the "candy crush type" and the crossword puzzle.
 The goal is to find words in a boad but the first character of the word need to be on the bottom line of the board and then you can only go to another character next to the one that you begin with (you will see and you would play it).
-
 Each word earns points depend on his length and which letter composed it.
 
 ## Play the game
