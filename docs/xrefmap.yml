@@ -3,19 +3,19 @@ sorted: true
 references:
 - uid: Projet_A2_S1
   name: Projet_A2_S1
-  href: api/Projet_A2_S1.html
+  href: Reference/Projet_A2_S1.html
   commentId: N:Projet_A2_S1
   fullName: Projet_A2_S1
   nameWithType: Projet_A2_S1
 - uid: Projet_A2_S1.CustomDictionary
   name: CustomDictionary
-  href: api/Projet_A2_S1.CustomDictionary.html
+  href: Reference/Projet_A2_S1.CustomDictionary.html
   commentId: T:Projet_A2_S1.CustomDictionary
   fullName: Projet_A2_S1.CustomDictionary
   nameWithType: CustomDictionary
 - uid: Projet_A2_S1.CustomDictionary.#ctor
   name: CustomDictionary()
-  href: api/Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary__ctor
+  href: Reference/Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary__ctor
   commentId: M:Projet_A2_S1.CustomDictionary.#ctor
   name.vb: New()
   fullName: Projet_A2_S1.CustomDictionary.CustomDictionary()
@@ -24,7 +24,7 @@ references:
   nameWithType.vb: CustomDictionary.New()
 - uid: Projet_A2_S1.CustomDictionary.#ctor*
   name: CustomDictionary
-  href: api/Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary__ctor_
+  href: Reference/Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary__ctor_
   commentId: Overload:Projet_A2_S1.CustomDictionary.#ctor
   name.vb: New
   fullName: Projet_A2_S1.CustomDictionary.CustomDictionary
@@ -33,7 +33,7 @@ references:
   nameWithType.vb: CustomDictionary.New
 - uid: Projet_A2_S1.CustomDictionary.DichotomicReseach(System.String,System.Collections.Generic.List{System.String})
   name: DichotomicReseach(string, List<string>)
-  href: api/Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_DichotomicReseach_System_String_System_Collections_Generic_List_System_String__
+  href: Reference/Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_DichotomicReseach_System_String_System_Collections_Generic_List_System_String__
   commentId: M:Projet_A2_S1.CustomDictionary.DichotomicReseach(System.String,System.Collections.Generic.List{System.String})
   name.vb: DichotomicReseach(String, List(Of String))
   fullName: Projet_A2_S1.CustomDictionary.DichotomicReseach(string, System.Collections.Generic.List<string>)
@@ -42,19 +42,19 @@ references:
   nameWithType.vb: CustomDictionary.DichotomicReseach(String, List(Of String))
 - uid: Projet_A2_S1.CustomDictionary.DichotomicReseach*
   name: DichotomicReseach
-  href: api/Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_DichotomicReseach_
+  href: Reference/Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_DichotomicReseach_
   commentId: Overload:Projet_A2_S1.CustomDictionary.DichotomicReseach
   fullName: Projet_A2_S1.CustomDictionary.DichotomicReseach
   nameWithType: CustomDictionary.DichotomicReseach
 - uid: Projet_A2_S1.CustomDictionary.Dict
   name: Dict
-  href: api/Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_Dict
+  href: Reference/Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_Dict
   commentId: F:Projet_A2_S1.CustomDictionary.Dict
   fullName: Projet_A2_S1.CustomDictionary.Dict
   nameWithType: CustomDictionary.Dict
 - uid: Projet_A2_S1.CustomDictionary.FindWord(System.String)
   name: FindWord(string)
-  href: api/Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_FindWord_System_String_
+  href: Reference/Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_FindWord_System_String_
   commentId: M:Projet_A2_S1.CustomDictionary.FindWord(System.String)
   name.vb: FindWord(String)
   fullName: Projet_A2_S1.CustomDictionary.FindWord(string)
@@ -63,13 +63,13 @@ references:
   nameWithType.vb: CustomDictionary.FindWord(String)
 - uid: Projet_A2_S1.CustomDictionary.FindWord*
   name: FindWord
-  href: api/Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_FindWord_
+  href: Reference/Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_FindWord_
   commentId: Overload:Projet_A2_S1.CustomDictionary.FindWord
   fullName: Projet_A2_S1.CustomDictionary.FindWord
   nameWithType: CustomDictionary.FindWord
 - uid: Projet_A2_S1.CustomDictionary.Sort(System.Collections.Generic.List{System.String})
   name: Sort(List<string>)
-  href: api/Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_Sort_System_Collections_Generic_List_System_String__
+  href: Reference/Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_Sort_System_Collections_Generic_List_System_String__
   commentId: M:Projet_A2_S1.CustomDictionary.Sort(System.Collections.Generic.List{System.String})
   name.vb: Sort(List(Of String))
   fullName: Projet_A2_S1.CustomDictionary.Sort(System.Collections.Generic.List<string>)
@@ -78,31 +78,31 @@ references:
   nameWithType.vb: CustomDictionary.Sort(List(Of String))
 - uid: Projet_A2_S1.CustomDictionary.Sort*
   name: Sort
-  href: api/Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_Sort_
+  href: Reference/Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_Sort_
   commentId: Overload:Projet_A2_S1.CustomDictionary.Sort
   fullName: Projet_A2_S1.CustomDictionary.Sort
   nameWithType: CustomDictionary.Sort
 - uid: Projet_A2_S1.CustomDictionary.ToString
   name: ToString()
-  href: api/Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_ToString
+  href: Reference/Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_ToString
   commentId: M:Projet_A2_S1.CustomDictionary.ToString
   fullName: Projet_A2_S1.CustomDictionary.ToString()
   nameWithType: CustomDictionary.ToString()
 - uid: Projet_A2_S1.CustomDictionary.ToString*
   name: ToString
-  href: api/Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_ToString_
+  href: Reference/Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_ToString_
   commentId: Overload:Projet_A2_S1.CustomDictionary.ToString
   fullName: Projet_A2_S1.CustomDictionary.ToString
   nameWithType: CustomDictionary.ToString
 - uid: Projet_A2_S1.Game
   name: Game
-  href: api/Projet_A2_S1.Game.html
+  href: Reference/Projet_A2_S1.Game.html
   commentId: T:Projet_A2_S1.Game
   fullName: Projet_A2_S1.Game
   nameWithType: Game
 - uid: Projet_A2_S1.Game.#ctor
   name: Game()
-  href: api/Projet_A2_S1.Game.html#Projet_A2_S1_Game__ctor
+  href: Reference/Projet_A2_S1.Game.html#Projet_A2_S1_Game__ctor
   commentId: M:Projet_A2_S1.Game.#ctor
   name.vb: New()
   fullName: Projet_A2_S1.Game.Game()
@@ -111,7 +111,7 @@ references:
   nameWithType.vb: Game.New()
 - uid: Projet_A2_S1.Game.#ctor(System.Boolean)
   name: Game(bool)
-  href: api/Projet_A2_S1.Game.html#Projet_A2_S1_Game__ctor_System_Boolean_
+  href: Reference/Projet_A2_S1.Game.html#Projet_A2_S1_Game__ctor_System_Boolean_
   commentId: M:Projet_A2_S1.Game.#ctor(System.Boolean)
   name.vb: New(Boolean)
   fullName: Projet_A2_S1.Game.Game(bool)
@@ -120,7 +120,7 @@ references:
   nameWithType.vb: Game.New(Boolean)
 - uid: Projet_A2_S1.Game.#ctor*
   name: Game
-  href: api/Projet_A2_S1.Game.html#Projet_A2_S1_Game__ctor_
+  href: Reference/Projet_A2_S1.Game.html#Projet_A2_S1_Game__ctor_
   commentId: Overload:Projet_A2_S1.Game.#ctor
   name.vb: New
   fullName: Projet_A2_S1.Game.Game
@@ -129,79 +129,79 @@ references:
   nameWithType.vb: Game.New
 - uid: Projet_A2_S1.Game.Board
   name: Board
-  href: api/Projet_A2_S1.Game.html#Projet_A2_S1_Game_Board
+  href: Reference/Projet_A2_S1.Game.html#Projet_A2_S1_Game_Board
   commentId: P:Projet_A2_S1.Game.Board
   fullName: Projet_A2_S1.Game.Board
   nameWithType: Game.Board
 - uid: Projet_A2_S1.Game.Board*
   name: Board
-  href: api/Projet_A2_S1.Game.html#Projet_A2_S1_Game_Board_
+  href: Reference/Projet_A2_S1.Game.html#Projet_A2_S1_Game_Board_
   commentId: Overload:Projet_A2_S1.Game.Board
   fullName: Projet_A2_S1.Game.Board
   nameWithType: Game.Board
 - uid: Projet_A2_S1.Game.Dictionary
   name: Dictionary
-  href: api/Projet_A2_S1.Game.html#Projet_A2_S1_Game_Dictionary
+  href: Reference/Projet_A2_S1.Game.html#Projet_A2_S1_Game_Dictionary
   commentId: P:Projet_A2_S1.Game.Dictionary
   fullName: Projet_A2_S1.Game.Dictionary
   nameWithType: Game.Dictionary
 - uid: Projet_A2_S1.Game.Dictionary*
   name: Dictionary
-  href: api/Projet_A2_S1.Game.html#Projet_A2_S1_Game_Dictionary_
+  href: Reference/Projet_A2_S1.Game.html#Projet_A2_S1_Game_Dictionary_
   commentId: Overload:Projet_A2_S1.Game.Dictionary
   fullName: Projet_A2_S1.Game.Dictionary
   nameWithType: Game.Dictionary
 - uid: Projet_A2_S1.Game.EndGame
   name: EndGame()
-  href: api/Projet_A2_S1.Game.html#Projet_A2_S1_Game_EndGame
+  href: Reference/Projet_A2_S1.Game.html#Projet_A2_S1_Game_EndGame
   commentId: M:Projet_A2_S1.Game.EndGame
   fullName: Projet_A2_S1.Game.EndGame()
   nameWithType: Game.EndGame()
 - uid: Projet_A2_S1.Game.EndGame*
   name: EndGame
-  href: api/Projet_A2_S1.Game.html#Projet_A2_S1_Game_EndGame_
+  href: Reference/Projet_A2_S1.Game.html#Projet_A2_S1_Game_EndGame_
   commentId: Overload:Projet_A2_S1.Game.EndGame
   fullName: Projet_A2_S1.Game.EndGame
   nameWithType: Game.EndGame
 - uid: Projet_A2_S1.Game.Players
   name: Players
-  href: api/Projet_A2_S1.Game.html#Projet_A2_S1_Game_Players
+  href: Reference/Projet_A2_S1.Game.html#Projet_A2_S1_Game_Players
   commentId: P:Projet_A2_S1.Game.Players
   fullName: Projet_A2_S1.Game.Players
   nameWithType: Game.Players
 - uid: Projet_A2_S1.Game.Players*
   name: Players
-  href: api/Projet_A2_S1.Game.html#Projet_A2_S1_Game_Players_
+  href: Reference/Projet_A2_S1.Game.html#Projet_A2_S1_Game_Players_
   commentId: Overload:Projet_A2_S1.Game.Players
   fullName: Projet_A2_S1.Game.Players
   nameWithType: Game.Players
 - uid: Projet_A2_S1.Game.Results
   name: Results()
-  href: api/Projet_A2_S1.Game.html#Projet_A2_S1_Game_Results
+  href: Reference/Projet_A2_S1.Game.html#Projet_A2_S1_Game_Results
   commentId: M:Projet_A2_S1.Game.Results
   fullName: Projet_A2_S1.Game.Results()
   nameWithType: Game.Results()
 - uid: Projet_A2_S1.Game.Results*
   name: Results
-  href: api/Projet_A2_S1.Game.html#Projet_A2_S1_Game_Results_
+  href: Reference/Projet_A2_S1.Game.html#Projet_A2_S1_Game_Results_
   commentId: Overload:Projet_A2_S1.Game.Results
   fullName: Projet_A2_S1.Game.Results
   nameWithType: Game.Results
 - uid: Projet_A2_S1.Game.Turn
   name: Turn()
-  href: api/Projet_A2_S1.Game.html#Projet_A2_S1_Game_Turn
+  href: Reference/Projet_A2_S1.Game.html#Projet_A2_S1_Game_Turn
   commentId: M:Projet_A2_S1.Game.Turn
   fullName: Projet_A2_S1.Game.Turn()
   nameWithType: Game.Turn()
 - uid: Projet_A2_S1.Game.Turn*
   name: Turn
-  href: api/Projet_A2_S1.Game.html#Projet_A2_S1_Game_Turn_
+  href: Reference/Projet_A2_S1.Game.html#Projet_A2_S1_Game_Turn_
   commentId: Overload:Projet_A2_S1.Game.Turn
   fullName: Projet_A2_S1.Game.Turn
   nameWithType: Game.Turn
 - uid: Projet_A2_S1.Game.WordValidate(System.String,Projet_A2_S1.Player)
   name: WordValidate(string, Player)
-  href: api/Projet_A2_S1.Game.html#Projet_A2_S1_Game_WordValidate_System_String_Projet_A2_S1_Player_
+  href: Reference/Projet_A2_S1.Game.html#Projet_A2_S1_Game_WordValidate_System_String_Projet_A2_S1_Player_
   commentId: M:Projet_A2_S1.Game.WordValidate(System.String,Projet_A2_S1.Player)
   name.vb: WordValidate(String, Player)
   fullName: Projet_A2_S1.Game.WordValidate(string, Projet_A2_S1.Player)
@@ -210,19 +210,19 @@ references:
   nameWithType.vb: Game.WordValidate(String, Player)
 - uid: Projet_A2_S1.Game.WordValidate*
   name: WordValidate
-  href: api/Projet_A2_S1.Game.html#Projet_A2_S1_Game_WordValidate_
+  href: Reference/Projet_A2_S1.Game.html#Projet_A2_S1_Game_WordValidate_
   commentId: Overload:Projet_A2_S1.Game.WordValidate
   fullName: Projet_A2_S1.Game.WordValidate
   nameWithType: Game.WordValidate
 - uid: Projet_A2_S1.GameBoard
   name: GameBoard
-  href: api/Projet_A2_S1.GameBoard.html
+  href: Reference/Projet_A2_S1.GameBoard.html
   commentId: T:Projet_A2_S1.GameBoard
   fullName: Projet_A2_S1.GameBoard
   nameWithType: GameBoard
 - uid: Projet_A2_S1.GameBoard.#ctor
   name: GameBoard()
-  href: api/Projet_A2_S1.GameBoard.html#Projet_A2_S1_GameBoard__ctor
+  href: Reference/Projet_A2_S1.GameBoard.html#Projet_A2_S1_GameBoard__ctor
   commentId: M:Projet_A2_S1.GameBoard.#ctor
   name.vb: New()
   fullName: Projet_A2_S1.GameBoard.GameBoard()
@@ -231,7 +231,7 @@ references:
   nameWithType.vb: GameBoard.New()
 - uid: Projet_A2_S1.GameBoard.#ctor(System.Boolean)
   name: GameBoard(bool)
-  href: api/Projet_A2_S1.GameBoard.html#Projet_A2_S1_GameBoard__ctor_System_Boolean_
+  href: Reference/Projet_A2_S1.GameBoard.html#Projet_A2_S1_GameBoard__ctor_System_Boolean_
   commentId: M:Projet_A2_S1.GameBoard.#ctor(System.Boolean)
   name.vb: New(Boolean)
   fullName: Projet_A2_S1.GameBoard.GameBoard(bool)
@@ -240,7 +240,7 @@ references:
   nameWithType.vb: GameBoard.New(Boolean)
 - uid: Projet_A2_S1.GameBoard.#ctor*
   name: GameBoard
-  href: api/Projet_A2_S1.GameBoard.html#Projet_A2_S1_GameBoard__ctor_
+  href: Reference/Projet_A2_S1.GameBoard.html#Projet_A2_S1_GameBoard__ctor_
   commentId: Overload:Projet_A2_S1.GameBoard.#ctor
   name.vb: New
   fullName: Projet_A2_S1.GameBoard.GameBoard
@@ -249,13 +249,13 @@ references:
   nameWithType.vb: GameBoard.New
 - uid: Projet_A2_S1.GameBoard.Board
   name: Board
-  href: api/Projet_A2_S1.GameBoard.html#Projet_A2_S1_GameBoard_Board
+  href: Reference/Projet_A2_S1.GameBoard.html#Projet_A2_S1_GameBoard_Board
   commentId: F:Projet_A2_S1.GameBoard.Board
   fullName: Projet_A2_S1.GameBoard.Board
   nameWithType: GameBoard.Board
 - uid: Projet_A2_S1.GameBoard.GetWord(System.Int32,System.Int32,System.String,System.Int32,System.Collections.Generic.Dictionary{System.ValueTuple{System.Int32,System.Int32},System.Char})
   name: GetWord(int, int, string, int, Dictionary<(int, int), char>?)
-  href: api/Projet_A2_S1.GameBoard.html#Projet_A2_S1_GameBoard_GetWord_System_Int32_System_Int32_System_String_System_Int32_System_Collections_Generic_Dictionary_System_ValueTuple_System_Int32_System_Int32__System_Char__
+  href: Reference/Projet_A2_S1.GameBoard.html#Projet_A2_S1_GameBoard_GetWord_System_Int32_System_Int32_System_String_System_Int32_System_Collections_Generic_Dictionary_System_ValueTuple_System_Int32_System_Int32__System_Char__
   commentId: M:Projet_A2_S1.GameBoard.GetWord(System.Int32,System.Int32,System.String,System.Int32,System.Collections.Generic.Dictionary{System.ValueTuple{System.Int32,System.Int32},System.Char})
   name.vb: GetWord(Integer, Integer, String, Integer, Dictionary(Of (Integer, Integer), Char))
   fullName: Projet_A2_S1.GameBoard.GetWord(int, int, string, int, System.Collections.Generic.Dictionary<(int, int), char>?)
@@ -264,61 +264,61 @@ references:
   nameWithType.vb: GameBoard.GetWord(Integer, Integer, String, Integer, Dictionary(Of (Integer, Integer), Char))
 - uid: Projet_A2_S1.GameBoard.GetWord*
   name: GetWord
-  href: api/Projet_A2_S1.GameBoard.html#Projet_A2_S1_GameBoard_GetWord_
+  href: Reference/Projet_A2_S1.GameBoard.html#Projet_A2_S1_GameBoard_GetWord_
   commentId: Overload:Projet_A2_S1.GameBoard.GetWord
   fullName: Projet_A2_S1.GameBoard.GetWord
   nameWithType: GameBoard.GetWord
 - uid: Projet_A2_S1.GameBoard.Maj_Plateau
   name: Maj_Plateau()
-  href: api/Projet_A2_S1.GameBoard.html#Projet_A2_S1_GameBoard_Maj_Plateau
+  href: Reference/Projet_A2_S1.GameBoard.html#Projet_A2_S1_GameBoard_Maj_Plateau
   commentId: M:Projet_A2_S1.GameBoard.Maj_Plateau
   fullName: Projet_A2_S1.GameBoard.Maj_Plateau()
   nameWithType: GameBoard.Maj_Plateau()
 - uid: Projet_A2_S1.GameBoard.Maj_Plateau*
   name: Maj_Plateau
-  href: api/Projet_A2_S1.GameBoard.html#Projet_A2_S1_GameBoard_Maj_Plateau_
+  href: Reference/Projet_A2_S1.GameBoard.html#Projet_A2_S1_GameBoard_Maj_Plateau_
   commentId: Overload:Projet_A2_S1.GameBoard.Maj_Plateau
   fullName: Projet_A2_S1.GameBoard.Maj_Plateau
   nameWithType: GameBoard.Maj_Plateau
 - uid: Projet_A2_S1.GameBoard.RANDOM_FILE
   name: RANDOM_FILE
-  href: api/Projet_A2_S1.GameBoard.html#Projet_A2_S1_GameBoard_RANDOM_FILE
+  href: Reference/Projet_A2_S1.GameBoard.html#Projet_A2_S1_GameBoard_RANDOM_FILE
   commentId: F:Projet_A2_S1.GameBoard.RANDOM_FILE
   fullName: Projet_A2_S1.GameBoard.RANDOM_FILE
   nameWithType: GameBoard.RANDOM_FILE
 - uid: Projet_A2_S1.GameBoard.SaveAndWrite
   name: SaveAndWrite()
-  href: api/Projet_A2_S1.GameBoard.html#Projet_A2_S1_GameBoard_SaveAndWrite
+  href: Reference/Projet_A2_S1.GameBoard.html#Projet_A2_S1_GameBoard_SaveAndWrite
   commentId: M:Projet_A2_S1.GameBoard.SaveAndWrite
   fullName: Projet_A2_S1.GameBoard.SaveAndWrite()
   nameWithType: GameBoard.SaveAndWrite()
 - uid: Projet_A2_S1.GameBoard.SaveAndWrite*
   name: SaveAndWrite
-  href: api/Projet_A2_S1.GameBoard.html#Projet_A2_S1_GameBoard_SaveAndWrite_
+  href: Reference/Projet_A2_S1.GameBoard.html#Projet_A2_S1_GameBoard_SaveAndWrite_
   commentId: Overload:Projet_A2_S1.GameBoard.SaveAndWrite
   fullName: Projet_A2_S1.GameBoard.SaveAndWrite
   nameWithType: GameBoard.SaveAndWrite
 - uid: Projet_A2_S1.GameBoard.ToString
   name: ToString()
-  href: api/Projet_A2_S1.GameBoard.html#Projet_A2_S1_GameBoard_ToString
+  href: Reference/Projet_A2_S1.GameBoard.html#Projet_A2_S1_GameBoard_ToString
   commentId: M:Projet_A2_S1.GameBoard.ToString
   fullName: Projet_A2_S1.GameBoard.ToString()
   nameWithType: GameBoard.ToString()
 - uid: Projet_A2_S1.GameBoard.ToString*
   name: ToString
-  href: api/Projet_A2_S1.GameBoard.html#Projet_A2_S1_GameBoard_ToString_
+  href: Reference/Projet_A2_S1.GameBoard.html#Projet_A2_S1_GameBoard_ToString_
   commentId: Overload:Projet_A2_S1.GameBoard.ToString
   fullName: Projet_A2_S1.GameBoard.ToString
   nameWithType: GameBoard.ToString
 - uid: Projet_A2_S1.Method
   name: Method
-  href: api/Projet_A2_S1.Method.html
+  href: Reference/Projet_A2_S1.Method.html
   commentId: T:Projet_A2_S1.Method
   fullName: Projet_A2_S1.Method
   nameWithType: Method
 - uid: Projet_A2_S1.Method.#ctor
   name: Method()
-  href: api/Projet_A2_S1.Method.html#Projet_A2_S1_Method__ctor
+  href: Reference/Projet_A2_S1.Method.html#Projet_A2_S1_Method__ctor
   commentId: M:Projet_A2_S1.Method.#ctor
   name.vb: New()
   fullName: Projet_A2_S1.Method.Method()
@@ -327,7 +327,7 @@ references:
   nameWithType.vb: Method.New()
 - uid: Projet_A2_S1.Method.#ctor*
   name: Method
-  href: api/Projet_A2_S1.Method.html#Projet_A2_S1_Method__ctor_
+  href: Reference/Projet_A2_S1.Method.html#Projet_A2_S1_Method__ctor_
   commentId: Overload:Projet_A2_S1.Method.#ctor
   name.vb: New
   fullName: Projet_A2_S1.Method.Method
@@ -336,19 +336,19 @@ references:
   nameWithType.vb: Method.New
 - uid: Projet_A2_S1.Method.CreatePlayer
   name: CreatePlayer()
-  href: api/Projet_A2_S1.Method.html#Projet_A2_S1_Method_CreatePlayer
+  href: Reference/Projet_A2_S1.Method.html#Projet_A2_S1_Method_CreatePlayer
   commentId: M:Projet_A2_S1.Method.CreatePlayer
   fullName: Projet_A2_S1.Method.CreatePlayer()
   nameWithType: Method.CreatePlayer()
 - uid: Projet_A2_S1.Method.CreatePlayer*
   name: CreatePlayer
-  href: api/Projet_A2_S1.Method.html#Projet_A2_S1_Method_CreatePlayer_
+  href: Reference/Projet_A2_S1.Method.html#Projet_A2_S1_Method_CreatePlayer_
   commentId: Overload:Projet_A2_S1.Method.CreatePlayer
   fullName: Projet_A2_S1.Method.CreatePlayer
   nameWithType: Method.CreatePlayer
 - uid: Projet_A2_S1.Method.TimedEnterInput(System.Int32,System.String)
   name: TimedEnterInput(int, string)
-  href: api/Projet_A2_S1.Method.html#Projet_A2_S1_Method_TimedEnterInput_System_Int32_System_String_
+  href: Reference/Projet_A2_S1.Method.html#Projet_A2_S1_Method_TimedEnterInput_System_Int32_System_String_
   commentId: M:Projet_A2_S1.Method.TimedEnterInput(System.Int32,System.String)
   name.vb: TimedEnterInput(Integer, String)
   fullName: Projet_A2_S1.Method.TimedEnterInput(int, string)
@@ -357,13 +357,13 @@ references:
   nameWithType.vb: Method.TimedEnterInput(Integer, String)
 - uid: Projet_A2_S1.Method.TimedEnterInput*
   name: TimedEnterInput
-  href: api/Projet_A2_S1.Method.html#Projet_A2_S1_Method_TimedEnterInput_
+  href: Reference/Projet_A2_S1.Method.html#Projet_A2_S1_Method_TimedEnterInput_
   commentId: Overload:Projet_A2_S1.Method.TimedEnterInput
   fullName: Projet_A2_S1.Method.TimedEnterInput
   nameWithType: Method.TimedEnterInput
 - uid: Projet_A2_S1.Method.TimedInput(System.Int32,System.String)
   name: TimedInput(int, string)
-  href: api/Projet_A2_S1.Method.html#Projet_A2_S1_Method_TimedInput_System_Int32_System_String_
+  href: Reference/Projet_A2_S1.Method.html#Projet_A2_S1_Method_TimedInput_System_Int32_System_String_
   commentId: M:Projet_A2_S1.Method.TimedInput(System.Int32,System.String)
   name.vb: TimedInput(Integer, String)
   fullName: Projet_A2_S1.Method.TimedInput(int, string)
@@ -372,31 +372,31 @@ references:
   nameWithType.vb: Method.TimedInput(Integer, String)
 - uid: Projet_A2_S1.Method.TimedInput*
   name: TimedInput
-  href: api/Projet_A2_S1.Method.html#Projet_A2_S1_Method_TimedInput_
+  href: Reference/Projet_A2_S1.Method.html#Projet_A2_S1_Method_TimedInput_
   commentId: Overload:Projet_A2_S1.Method.TimedInput
   fullName: Projet_A2_S1.Method.TimedInput
   nameWithType: Method.TimedInput
 - uid: Projet_A2_S1.Method.main_menu
   name: main_menu()
-  href: api/Projet_A2_S1.Method.html#Projet_A2_S1_Method_main_menu
+  href: Reference/Projet_A2_S1.Method.html#Projet_A2_S1_Method_main_menu
   commentId: M:Projet_A2_S1.Method.main_menu
   fullName: Projet_A2_S1.Method.main_menu()
   nameWithType: Method.main_menu()
 - uid: Projet_A2_S1.Method.main_menu*
   name: main_menu
-  href: api/Projet_A2_S1.Method.html#Projet_A2_S1_Method_main_menu_
+  href: Reference/Projet_A2_S1.Method.html#Projet_A2_S1_Method_main_menu_
   commentId: Overload:Projet_A2_S1.Method.main_menu
   fullName: Projet_A2_S1.Method.main_menu
   nameWithType: Method.main_menu
 - uid: Projet_A2_S1.Player
   name: Player
-  href: api/Projet_A2_S1.Player.html
+  href: Reference/Projet_A2_S1.Player.html
   commentId: T:Projet_A2_S1.Player
   fullName: Projet_A2_S1.Player
   nameWithType: Player
 - uid: Projet_A2_S1.Player.#ctor
   name: Player()
-  href: api/Projet_A2_S1.Player.html#Projet_A2_S1_Player__ctor
+  href: Reference/Projet_A2_S1.Player.html#Projet_A2_S1_Player__ctor
   commentId: M:Projet_A2_S1.Player.#ctor
   name.vb: New()
   fullName: Projet_A2_S1.Player.Player()
@@ -405,7 +405,7 @@ references:
   nameWithType.vb: Player.New()
 - uid: Projet_A2_S1.Player.#ctor*
   name: Player
-  href: api/Projet_A2_S1.Player.html#Projet_A2_S1_Player__ctor_
+  href: Reference/Projet_A2_S1.Player.html#Projet_A2_S1_Player__ctor_
   commentId: Overload:Projet_A2_S1.Player.#ctor
   name.vb: New
   fullName: Projet_A2_S1.Player.Player
@@ -414,7 +414,7 @@ references:
   nameWithType.vb: Player.New
 - uid: Projet_A2_S1.Player.Add_Mot(System.String)
   name: Add_Mot(string)
-  href: api/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Add_Mot_System_String_
+  href: Reference/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Add_Mot_System_String_
   commentId: M:Projet_A2_S1.Player.Add_Mot(System.String)
   name.vb: Add_Mot(String)
   fullName: Projet_A2_S1.Player.Add_Mot(string)
@@ -423,13 +423,13 @@ references:
   nameWithType.vb: Player.Add_Mot(String)
 - uid: Projet_A2_S1.Player.Add_Mot*
   name: Add_Mot
-  href: api/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Add_Mot_
+  href: Reference/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Add_Mot_
   commentId: Overload:Projet_A2_S1.Player.Add_Mot
   fullName: Projet_A2_S1.Player.Add_Mot
   nameWithType: Player.Add_Mot
 - uid: Projet_A2_S1.Player.Add_Score(System.Int32)
   name: Add_Score(int)
-  href: api/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Add_Score_System_Int32_
+  href: Reference/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Add_Score_System_Int32_
   commentId: M:Projet_A2_S1.Player.Add_Score(System.Int32)
   name.vb: Add_Score(Integer)
   fullName: Projet_A2_S1.Player.Add_Score(int)
@@ -438,13 +438,13 @@ references:
   nameWithType.vb: Player.Add_Score(Integer)
 - uid: Projet_A2_S1.Player.Add_Score*
   name: Add_Score
-  href: api/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Add_Score_
+  href: Reference/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Add_Score_
   commentId: Overload:Projet_A2_S1.Player.Add_Score
   fullName: Projet_A2_S1.Player.Add_Score
   nameWithType: Player.Add_Score
 - uid: Projet_A2_S1.Player.Contains(System.String)
   name: Contains(string)
-  href: api/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Contains_System_String_
+  href: Reference/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Contains_System_String_
   commentId: M:Projet_A2_S1.Player.Contains(System.String)
   name.vb: Contains(String)
   fullName: Projet_A2_S1.Player.Contains(string)
@@ -453,13 +453,13 @@ references:
   nameWithType.vb: Player.Contains(String)
 - uid: Projet_A2_S1.Player.Contains*
   name: Contains
-  href: api/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Contains_
+  href: Reference/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Contains_
   commentId: Overload:Projet_A2_S1.Player.Contains
   fullName: Projet_A2_S1.Player.Contains
   nameWithType: Player.Contains
 - uid: Projet_A2_S1.Player.Letter_Value(System.Char)
   name: Letter_Value(char)
-  href: api/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Letter_Value_System_Char_
+  href: Reference/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Letter_Value_System_Char_
   commentId: M:Projet_A2_S1.Player.Letter_Value(System.Char)
   name.vb: Letter_Value(Char)
   fullName: Projet_A2_S1.Player.Letter_Value(char)
@@ -468,61 +468,61 @@ references:
   nameWithType.vb: Player.Letter_Value(Char)
 - uid: Projet_A2_S1.Player.Letter_Value*
   name: Letter_Value
-  href: api/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Letter_Value_
+  href: Reference/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Letter_Value_
   commentId: Overload:Projet_A2_S1.Player.Letter_Value
   fullName: Projet_A2_S1.Player.Letter_Value
   nameWithType: Player.Letter_Value
 - uid: Projet_A2_S1.Player.Name
   name: Name
-  href: api/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Name
+  href: Reference/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Name
   commentId: P:Projet_A2_S1.Player.Name
   fullName: Projet_A2_S1.Player.Name
   nameWithType: Player.Name
 - uid: Projet_A2_S1.Player.Name*
   name: Name
-  href: api/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Name_
+  href: Reference/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Name_
   commentId: Overload:Projet_A2_S1.Player.Name
   fullName: Projet_A2_S1.Player.Name
   nameWithType: Player.Name
 - uid: Projet_A2_S1.Player.Score
   name: Score
-  href: api/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Score
+  href: Reference/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Score
   commentId: P:Projet_A2_S1.Player.Score
   fullName: Projet_A2_S1.Player.Score
   nameWithType: Player.Score
 - uid: Projet_A2_S1.Player.Score*
   name: Score
-  href: api/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Score_
+  href: Reference/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Score_
   commentId: Overload:Projet_A2_S1.Player.Score
   fullName: Projet_A2_S1.Player.Score
   nameWithType: Player.Score
 - uid: Projet_A2_S1.Player.Timer
   name: Timer
-  href: api/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Timer
+  href: Reference/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Timer
   commentId: P:Projet_A2_S1.Player.Timer
   fullName: Projet_A2_S1.Player.Timer
   nameWithType: Player.Timer
 - uid: Projet_A2_S1.Player.Timer*
   name: Timer
-  href: api/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Timer_
+  href: Reference/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Timer_
   commentId: Overload:Projet_A2_S1.Player.Timer
   fullName: Projet_A2_S1.Player.Timer
   nameWithType: Player.Timer
 - uid: Projet_A2_S1.Player.WordList
   name: WordList
-  href: api/Projet_A2_S1.Player.html#Projet_A2_S1_Player_WordList
+  href: Reference/Projet_A2_S1.Player.html#Projet_A2_S1_Player_WordList
   commentId: P:Projet_A2_S1.Player.WordList
   fullName: Projet_A2_S1.Player.WordList
   nameWithType: Player.WordList
 - uid: Projet_A2_S1.Player.WordList*
   name: WordList
-  href: api/Projet_A2_S1.Player.html#Projet_A2_S1_Player_WordList_
+  href: Reference/Projet_A2_S1.Player.html#Projet_A2_S1_Player_WordList_
   commentId: Overload:Projet_A2_S1.Player.WordList
   fullName: Projet_A2_S1.Player.WordList
   nameWithType: Player.WordList
 - uid: Projet_A2_S1.Player.Word_Value(System.String)
   name: Word_Value(string)
-  href: api/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Word_Value_System_String_
+  href: Reference/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Word_Value_System_String_
   commentId: M:Projet_A2_S1.Player.Word_Value(System.String)
   name.vb: Word_Value(String)
   fullName: Projet_A2_S1.Player.Word_Value(string)
@@ -531,31 +531,31 @@ references:
   nameWithType.vb: Player.Word_Value(String)
 - uid: Projet_A2_S1.Player.Word_Value*
   name: Word_Value
-  href: api/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Word_Value_
+  href: Reference/Projet_A2_S1.Player.html#Projet_A2_S1_Player_Word_Value_
   commentId: Overload:Projet_A2_S1.Player.Word_Value
   fullName: Projet_A2_S1.Player.Word_Value
   nameWithType: Player.Word_Value
 - uid: Projet_A2_S1.Player.toString
   name: toString()
-  href: api/Projet_A2_S1.Player.html#Projet_A2_S1_Player_toString
+  href: Reference/Projet_A2_S1.Player.html#Projet_A2_S1_Player_toString
   commentId: M:Projet_A2_S1.Player.toString
   fullName: Projet_A2_S1.Player.toString()
   nameWithType: Player.toString()
 - uid: Projet_A2_S1.Player.toString*
   name: toString
-  href: api/Projet_A2_S1.Player.html#Projet_A2_S1_Player_toString_
+  href: Reference/Projet_A2_S1.Player.html#Projet_A2_S1_Player_toString_
   commentId: Overload:Projet_A2_S1.Player.toString
   fullName: Projet_A2_S1.Player.toString
   nameWithType: Player.toString
 - uid: Projet_A2_S1.PlayerList
   name: PlayerList
-  href: api/Projet_A2_S1.PlayerList.html
+  href: Reference/Projet_A2_S1.PlayerList.html
   commentId: T:Projet_A2_S1.PlayerList
   fullName: Projet_A2_S1.PlayerList
   nameWithType: PlayerList
 - uid: Projet_A2_S1.PlayerList.#ctor(System.Collections.Generic.List{Projet_A2_S1.Player})
   name: PlayerList(List<Player>)
-  href: api/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList__ctor_System_Collections_Generic_List_Projet_A2_S1_Player__
+  href: Reference/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList__ctor_System_Collections_Generic_List_Projet_A2_S1_Player__
   commentId: M:Projet_A2_S1.PlayerList.#ctor(System.Collections.Generic.List{Projet_A2_S1.Player})
   name.vb: New(List(Of Player))
   fullName: Projet_A2_S1.PlayerList.PlayerList(System.Collections.Generic.List<Projet_A2_S1.Player>)
@@ -564,7 +564,7 @@ references:
   nameWithType.vb: PlayerList.New(List(Of Player))
 - uid: Projet_A2_S1.PlayerList.#ctor*
   name: PlayerList
-  href: api/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList__ctor_
+  href: Reference/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList__ctor_
   commentId: Overload:Projet_A2_S1.PlayerList.#ctor
   name.vb: New
   fullName: Projet_A2_S1.PlayerList.PlayerList
@@ -573,73 +573,73 @@ references:
   nameWithType.vb: PlayerList.New
 - uid: Projet_A2_S1.PlayerList.ReadYAML
   name: ReadYAML()
-  href: api/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_ReadYAML
+  href: Reference/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_ReadYAML
   commentId: M:Projet_A2_S1.PlayerList.ReadYAML
   fullName: Projet_A2_S1.PlayerList.ReadYAML()
   nameWithType: PlayerList.ReadYAML()
 - uid: Projet_A2_S1.PlayerList.ReadYAML*
   name: ReadYAML
-  href: api/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_ReadYAML_
+  href: Reference/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_ReadYAML_
   commentId: Overload:Projet_A2_S1.PlayerList.ReadYAML
   fullName: Projet_A2_S1.PlayerList.ReadYAML
   nameWithType: PlayerList.ReadYAML
 - uid: Projet_A2_S1.PlayerList.WriteYAML
   name: WriteYAML()
-  href: api/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_WriteYAML
+  href: Reference/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_WriteYAML
   commentId: M:Projet_A2_S1.PlayerList.WriteYAML
   fullName: Projet_A2_S1.PlayerList.WriteYAML()
   nameWithType: PlayerList.WriteYAML()
 - uid: Projet_A2_S1.PlayerList.WriteYAML*
   name: WriteYAML
-  href: api/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_WriteYAML_
+  href: Reference/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_WriteYAML_
   commentId: Overload:Projet_A2_S1.PlayerList.WriteYAML
   fullName: Projet_A2_S1.PlayerList.WriteYAML
   nameWithType: PlayerList.WriteYAML
 - uid: Projet_A2_S1.PlayerList.playerlist
   name: playerlist
-  href: api/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_playerlist
+  href: Reference/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_playerlist
   commentId: P:Projet_A2_S1.PlayerList.playerlist
   fullName: Projet_A2_S1.PlayerList.playerlist
   nameWithType: PlayerList.playerlist
 - uid: Projet_A2_S1.PlayerList.playerlist*
   name: playerlist
-  href: api/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_playerlist_
+  href: Reference/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_playerlist_
   commentId: Overload:Projet_A2_S1.PlayerList.playerlist
   fullName: Projet_A2_S1.PlayerList.playerlist
   nameWithType: PlayerList.playerlist
 - uid: Projet_A2_S1.PlayerList.toString
   name: toString()
-  href: api/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_toString
+  href: Reference/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_toString
   commentId: M:Projet_A2_S1.PlayerList.toString
   fullName: Projet_A2_S1.PlayerList.toString()
   nameWithType: PlayerList.toString()
 - uid: Projet_A2_S1.PlayerList.toString*
   name: toString
-  href: api/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_toString_
+  href: Reference/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_toString_
   commentId: Overload:Projet_A2_S1.PlayerList.toString
   fullName: Projet_A2_S1.PlayerList.toString
   nameWithType: PlayerList.toString
 - uid: Projet_A2_S1.PlayerList.toStringArray
   name: toStringArray()
-  href: api/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_toStringArray
+  href: Reference/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_toStringArray
   commentId: M:Projet_A2_S1.PlayerList.toStringArray
   fullName: Projet_A2_S1.PlayerList.toStringArray()
   nameWithType: PlayerList.toStringArray()
 - uid: Projet_A2_S1.PlayerList.toStringArray*
   name: toStringArray
-  href: api/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_toStringArray_
+  href: Reference/Projet_A2_S1.PlayerList.html#Projet_A2_S1_PlayerList_toStringArray_
   commentId: Overload:Projet_A2_S1.PlayerList.toStringArray
   fullName: Projet_A2_S1.PlayerList.toStringArray
   nameWithType: PlayerList.toStringArray
 - uid: Projet_A2_S1.Program
   name: Program
-  href: api/Projet_A2_S1.Program.html
+  href: Reference/Projet_A2_S1.Program.html
   commentId: T:Projet_A2_S1.Program
   fullName: Projet_A2_S1.Program
   nameWithType: Program
 - uid: Projet_A2_S1.Program.#ctor
   name: Program()
-  href: api/Projet_A2_S1.Program.html#Projet_A2_S1_Program__ctor
+  href: Reference/Projet_A2_S1.Program.html#Projet_A2_S1_Program__ctor
   commentId: M:Projet_A2_S1.Program.#ctor
   name.vb: New()
   fullName: Projet_A2_S1.Program.Program()
@@ -648,7 +648,7 @@ references:
   nameWithType.vb: Program.New()
 - uid: Projet_A2_S1.Program.#ctor*
   name: Program
-  href: api/Projet_A2_S1.Program.html#Projet_A2_S1_Program__ctor_
+  href: Reference/Projet_A2_S1.Program.html#Projet_A2_S1_Program__ctor_
   commentId: Overload:Projet_A2_S1.Program.#ctor
   name.vb: New
   fullName: Projet_A2_S1.Program.Program

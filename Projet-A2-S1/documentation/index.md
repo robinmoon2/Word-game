@@ -6,7 +6,7 @@ _layout: landing
 
 ## By hugo Peltier and Robin l'hyver
 
-![Main](/images/main-menu.png)
+![Main](/images/main_menu.png)
 
 ## This is the officials documentation of the game , in it you will find
 

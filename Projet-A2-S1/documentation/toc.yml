@@ -1,5 +1,5 @@
 - name: Rules
   href: Rules/
-- name: Api Documentation
-  href: api/
-  homepage: api/index.md
+- name: Reference
+  href: Reference/
+  homepage: Reference/index.md
