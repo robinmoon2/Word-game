@@ -1,35 +1,40 @@
-# Projet-A2-S1
+# Mots-Glissants
+> A second year engeneering project.
 
-* [.vs/](./Projet-A2-S1/.vs)
-  * [ProjectEvaluation/](./Projet-A2-S1/.vs/ProjectEvaluation)
-  * [Projet-A2-S1/](./Projet-A2-S1/.vs/Projet-A2-S1)
-* [documentation/](./Projet-A2-S1/documentation)
-  * [api/](./Projet-A2-S1/documentation/api)
-  * [articles/](./Projet-A2-S1/documentation/articles)
-  * [images/](./Projet-A2-S1/documentation/images)
-  * [docfx.json](./Projet-A2-S1/documentation/docfx.json)
-  * [index.md](./Projet-A2-S1/documentation/index.md)
-  * [toc.yml](./Projet-A2-S1/documentation/toc.yml)
-* [Projet-A2-S1/](./Projet-A2-S1/Projet-A2-S1)
-  * [.vs/](./Projet-A2-S1/Projet-A2-S1/.vs)
-  * [bin/](./Projet-A2-S1/Projet-A2-S1/bin)
-  * [obj/](./Projet-A2-S1/Projet-A2-S1/obj)
-  * [CustomDictionary.cs](./Projet-A2-S1/Projet-A2-S1/CustomDictionary.cs)
-  * [Game.cs](./Projet-A2-S1/Projet-A2-S1/Game.cs)
-  * [GameBoard.cs](./Projet-A2-S1/Projet-A2-S1/GameBoard.cs)
-  * [Method.cs](./Projet-A2-S1/Projet-A2-S1/Method.cs)
-  * [Player.cs](./Projet-A2-S1/Projet-A2-S1/Player.cs)
-  * [PlayerList.cs](./Projet-A2-S1/Projet-A2-S1/PlayerList.cs)
-  * [Program.cs](./Projet-A2-S1/Projet-A2-S1/Program.cs)
-  * [Projet-A2-S1.csproj](./Projet-A2-S1/Projet-A2-S1/Projet-A2-S1.csproj)
-  * [Usings.cs](./Projet-A2-S1/Projet-A2-S1/Usings.cs)
-* [TestProject/](./Projet-A2-S1/TestProject)
-  * [bin/](./Projet-A2-S1/TestProject/bin)
-  * [obj/](./Projet-A2-S1/TestProject/obj)
-  * [Dictionnary.cs](./Projet-A2-S1/TestProject/Dictionnary.cs)
-  * [GameTest.cs](./Projet-A2-S1/TestProject/GameTest.cs)
-  * [GlobalUsings.cs](./Projet-A2-S1/TestProject/GlobalUsings.cs)
-  * [PlayerTest.cs](./Projet-A2-S1/TestProject/PlayerTest.cs)
-  * [TestProject.csproj](./Projet-A2-S1/TestProject/TestProject.csproj)
-* [.gitignore](./Projet-A2-S1/.gitignore)
-* [Projet-A2-S1.sln](./Projet-A2-S1/Projet-A2-S1.sln)
+![ ](/Projet-A2-S1/documentation/images/main_menu.png)
+
+## Presentation of the game
+
+### Install the game
+
+To Install the game you need to download the zip file and then run it into your terminal.
+>[!CAUTION]
+>*Visual Studio* do not run properly the code due to the used of YAML and JSON file, *Visual Studio Code* is a better choice for example
+
+### Description of the game
+
+This game is a merge between the "candy crush type" and the crossword puzzle.
+The goal is to find words in a boad but the first character of the word need to be on the bottom line of the board and then you can only go to another character next to the one that you begin with (you will see and you would play it).
+
+Each word earns points depend on his length and which letter composed it.
+
+### Play the game
+
+In the game you can find different menu made by the library [ConsoleAppVisuals](https://github.com/MorganKryze/ConsoleAppVisuals) by MorganKryze
+You can scroll them with the arrow keys up and down and press enter to choose the one you want
+
+### Language
+
+The game is playable in the langages :
+
+- [x] French
+- [ ] English
+- [ ] Spanish
+
+### Documentation
+
+The documentation of this project as been made with docfx : [Documentation](https://robinmoon2.github.io/Mots-Glissants/)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details
