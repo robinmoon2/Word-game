@@ -24,8 +24,7 @@ To play the game you press play in the main menu, then you will choose a time fo
 
 >[!NOTE]
 > All the display in this project as been made with the [ConsoleAppVisuals](https://github.com/MorganKryze/ConsoleAppVisuals) library made by *MorganKryze*.
-
->[!Tips]
+>[!TIP]
 >During the game when you want to enter a word, press ENTER before writing it ;)
 
 ### Language
