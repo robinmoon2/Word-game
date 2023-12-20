@@ -20,8 +20,12 @@ Each word earns points depend on his length and which letter composed it.
 
 ### Play the game
 
-In the game you can find different menu made by the library [ConsoleAppVisuals](https://github.com/MorganKryze/ConsoleAppVisuals) by MorganKryze
-You can scroll them with the arrow keys up and down and press enter to choose the one you want
+To play the game you press play in the main menu, then you will choose a time for each player, the numer of player, the board and it size.
+
+>[!NOTE]
+> All the display in this project as been made with the [ConsoleAppVisuals](https://github.com/MorganKryze/ConsoleAppVisuals) library made by *MorganKryze*
+>[!Tips]
+>During the game when you want to enter a word, press ENTER before writing it ;)
 
 ### Language
 
