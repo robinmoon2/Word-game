@@ -4,7 +4,7 @@
       "files": ["**/bin/Debug/net7.0/Projet-A2-S1.dll"],
       "src": "../Projet-A2-S1/"
     }],
-    "dest": "api",
+    "dest": "Reference",
     "properties": {
       "TargetFramework": "net7.0"
     }
@@ -12,15 +12,15 @@
   "build": {
     "content": [
       {
-        "files": ["api/*.yml", "api/index.md"]
+        "files": ["Reference/*.yml", "Reference/index.md"]
       },
       {
-        "files": ["articles/*.md", "articles/toc.yml", "toc.yml", "*.md"]
+        "files": ["Rules/*.md", "Rules/toc.yml", "toc.yml", "*.md"]
       }
     ],
     "resource": [
       {
-        "files": ["images/"]
+        "files": ["images/**"]
       }
     ],
     "output": "../../docs",

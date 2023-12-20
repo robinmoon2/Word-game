@@ -7,7 +7,7 @@ namespace Projet_A2_S1
     /// </summary>
     public class PlayerList
     {
-        private const string YAML_PATH = "config.yml";
+        private const string YAML_PATH = "data/config.yml";
 
         /// <summary>
         /// The playerlist is the only instance for this classe. It is only a list of player
@@ -51,7 +51,8 @@ namespace Projet_A2_S1
         /// <summary>
         /// Function that return the information of every player
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Return a string that represent every player in the game
+        /// </returns>
         public string toString(){
             string s="";
             foreach(Player player in playerlist){

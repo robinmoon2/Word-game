@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class GameBoard
+      <title>Class Game
  </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class GameBoard
+      <meta name="title" content="Class Game
  ">
       
       <link rel="icon" href="../favicon.ico">
@@ -81,12 +81,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Projet_A2_S1.GameBoard">
+        <article data-uid="Projet_A2_S1.Game">
 
 
 
-  <h1 id="Projet_A2_S1_GameBoard" data-uid="Projet_A2_S1.GameBoard" class="text-break">
-    Class GameBoard
+  <h1 id="Projet_A2_S1_Game" data-uid="Projet_A2_S1.Game" class="text-break">
+    Class Game
   
   </h1>
 
@@ -95,12 +95,12 @@
   <dl><dt>Assembly</dt><dd>Projet-A2-S1.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>This class is for the board of the game</p>
+  <div class="markdown summary"><p>This classe is the main class of the game. It's the one that will be called in the main program</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GameBoard</code></pre>
+    <pre><code class="lang-csharp hljs">public class Game</code></pre>
   </div>
 
 
@@ -110,7 +110,7 @@
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">GameBoard</span></div>
+      <div><span class="xref">Game</span></div>
     </dd>
   </dl>
 
@@ -124,6 +124,9 @@
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
@@ -148,20 +151,19 @@
 </h2>
 
 
-  <a id="Projet_A2_S1_GameBoard__ctor_" data-uid="Projet_A2_S1.GameBoard.#ctor*"></a>
+  <a id="Projet_A2_S1_Game__ctor_" data-uid="Projet_A2_S1.Game.#ctor*"></a>
 
-  <h3 id="Projet_A2_S1_GameBoard__ctor" data-uid="Projet_A2_S1.GameBoard.#ctor">
-  GameBoard()
+  <h3 id="Projet_A2_S1_Game__ctor" data-uid="Projet_A2_S1.Game.#ctor">
+  Game()
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Build a Object GameBoard. In it the user personalized his board
-It is also the <strong>ToRead</strong> function</p>
+  <div class="markdown level1 summary"><p>This is the main constructor of the game. It's the one that will be called in the main program</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GameBoard()</code></pre>
+    <pre><code class="lang-csharp hljs">public Game()</code></pre>
   </div>
 
 
@@ -176,25 +178,25 @@ It is also the <strong>ToRead</strong> function</p>
 
 
 
-  <a id="Projet_A2_S1_GameBoard__ctor_" data-uid="Projet_A2_S1.GameBoard.#ctor*"></a>
+  <a id="Projet_A2_S1_Game__ctor_" data-uid="Projet_A2_S1.Game.#ctor*"></a>
 
-  <h3 id="Projet_A2_S1_GameBoard__ctor_System_Boolean_" data-uid="Projet_A2_S1.GameBoard.#ctor(System.Boolean)">
-  GameBoard(bool)
+  <h3 id="Projet_A2_S1_Game__ctor_System_Boolean_" data-uid="Projet_A2_S1.Game.#ctor(System.Boolean)">
+  Game(bool)
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Second constructor for the Test Function.</p>
+  <div class="markdown level1 summary"><p>Second constructor for the test function</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GameBoard(bool test)</code></pre>
+    <pre><code class="lang-csharp hljs">public Game(bool test)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>test</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Boolean that indicates that is the constructor for the test project</p>
+    <dd><p>Boolean that indicate that this constructor is for the Test project</p>
 </dd>
   </dl>
 
@@ -209,30 +211,32 @@ It is also the <strong>ToRead</strong> function</p>
 
 
 
-  <h2 class="section" id="fields">Fields
+  <h2 class="section" id="properties">Properties
 </h2>
 
 
+  <a id="Projet_A2_S1_Game_Board_" data-uid="Projet_A2_S1.Game.Board*"></a>
 
-  <h3 id="Projet_A2_S1_GameBoard_Board" data-uid="Projet_A2_S1.GameBoard.Board">
+  <h3 id="Projet_A2_S1_Game_Board" data-uid="Projet_A2_S1.Game.Board">
   Board
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The board is a matrix of char that represent the board</p>
+  <div class="markdown level1 summary"><p>This instance is the board of the game</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public char[,] Board</code></pre>
+    <pre><code class="lang-csharp hljs">public GameBoard Board { get; set; }</code></pre>
   </div>
 
 
 
 
-  <h4 class="section">Field Value</h4>
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>[,]</dt>
+    <dt><a class="xref" href="Projet_A2_S1.GameBoard.html">GameBoard</a></dt>
     <dd></dd>
   </dl>
 
@@ -243,29 +247,62 @@ It is also the <strong>ToRead</strong> function</p>
 
 
 
+  <a id="Projet_A2_S1_Game_Dictionary_" data-uid="Projet_A2_S1.Game.Dictionary*"></a>
 
-
-  <h3 id="Projet_A2_S1_GameBoard_RANDOM_FILE" data-uid="Projet_A2_S1.GameBoard.RANDOM_FILE">
-  RANDOM_FILE
+  <h3 id="Projet_A2_S1_Game_Dictionary" data-uid="Projet_A2_S1.Game.Dictionary">
+  Dictionary
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This instance is the dictionnary that is using during the game</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string RANDOM_FILE = &quot;data/Lettre.txt&quot;</code></pre>
+    <pre><code class="lang-csharp hljs">public CustomDictionary Dictionary { get; set; }</code></pre>
   </div>
 
 
 
 
-  <h4 class="section">Field Value</h4>
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="Projet_A2_S1.CustomDictionary.html">CustomDictionary</a></dt>
     <dd></dd>
   </dl>
 
+
+
+
+
+
+
+
+  <a id="Projet_A2_S1_Game_Players_" data-uid="Projet_A2_S1.Game.Players*"></a>
+
+  <h3 id="Projet_A2_S1_Game_Players" data-uid="Projet_A2_S1.Game.Players">
+  Players
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>This instance is the list of the players</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlayerList Players { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Projet_A2_S1.PlayerList.html">PlayerList</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -278,150 +315,135 @@ It is also the <strong>ToRead</strong> function</p>
 </h2>
 
 
-  <a id="Projet_A2_S1_GameBoard_GetWord_" data-uid="Projet_A2_S1.GameBoard.GetWord*"></a>
+  <a id="Projet_A2_S1_Game_EndGame_" data-uid="Projet_A2_S1.Game.EndGame*"></a>
 
-  <h3 id="Projet_A2_S1_GameBoard_GetWord_System_Int32_System_Int32_System_String_System_Int32_System_Collections_Generic_Dictionary_System_ValueTuple_System_Int32_System_Int32__System_Char__" data-uid="Projet_A2_S1.GameBoard.GetWord(System.Int32,System.Int32,System.String,System.Int32,System.Collections.Generic.Dictionary{System.ValueTuple{System.Int32,System.Int32},System.Char})">
-  GetWord(int, int, string, int, Dictionary&lt;(int, int), char&gt;?)
+  <h3 id="Projet_A2_S1_Game_EndGame" data-uid="Projet_A2_S1.Game.EndGame">
+  EndGame()
   
   </h3>
 
-  <div class="markdown level1 summary"><p>This function can find the word in the board
-It returns a dictionnary with each position as key and the character of this position in value
-Is is the <strong>RechercheMot</strong> function</p>
+  <div class="markdown level1 summary"><p>This function can tel if the game is over or not</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Dictionary&lt;(int, int), char&gt;? GetWord(int x, int y, string word, int index = 0, Dictionary&lt;(int, int), char&gt;? dico = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool EndGame()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>if it's the end of the game</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Projet_A2_S1_Game_Results_" data-uid="Projet_A2_S1.Game.Results*"></a>
+
+  <h3 id="Projet_A2_S1_Game_Results" data-uid="Projet_A2_S1.Game.Results">
+  Results()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Print the results of the game
+Every player is sort by score from the higher to lower</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Results()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Projet_A2_S1_Game_Turn_" data-uid="Projet_A2_S1.Game.Turn*"></a>
+
+  <h3 id="Projet_A2_S1_Game_Turn" data-uid="Projet_A2_S1.Game.Turn">
+  Turn()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>This function can pass the turn over each players if their timer !=0.
+It's also it that structure the organisation of the game</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Turn()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Projet_A2_S1_Game_WordValidate_" data-uid="Projet_A2_S1.Game.WordValidate*"></a>
+
+  <h3 id="Projet_A2_S1_Game_WordValidate_System_String_Projet_A2_S1_Player_" data-uid="Projet_A2_S1.Game.WordValidate(System.String,Projet_A2_S1.Player)">
+  WordValidate(string, Player)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>This function look if the word is not in the list of the player, if it's in the dictionary and if the word is on the board.
+It also look if the word entered is in the player list or not and in the dictionnary</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool WordValidate(string word, Player player)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>the line of the start of the word , the first character of the word</p>
-</dd>
-    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>the column of the start of the word , the first character of the word</p>
-</dd>
     <dt><code>word</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>the word that we are looking for</p>
 </dd>
-    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>the number of position that are explored in the matrix that works like a int to indicate when we travel the distance of the word</p>
-</dd>
-    <dt><code>dico</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>), <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
-    <dd><p>the dictionnary that is return by the function</p>
+    <dt><code>player</code> <a class="xref" href="Projet_A2_S1.Player.html">Player</a></dt>
+    <dd><p>The player that is searching the word</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>), <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Projet_A2_S1_GameBoard_Maj_Plateau_" data-uid="Projet_A2_S1.GameBoard.Maj_Plateau*"></a>
-
-  <h3 id="Projet_A2_S1_GameBoard_Maj_Plateau" data-uid="Projet_A2_S1.GameBoard.Maj_Plateau">
-  Maj_Plateau()
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Function that update the board according to the character and the spaces.
-This function appear after each time the board has changed</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Maj_Plateau()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Projet_A2_S1_GameBoard_SaveAndWrite_" data-uid="Projet_A2_S1.GameBoard.SaveAndWrite*"></a>
-
-  <h3 id="Projet_A2_S1_GameBoard_SaveAndWrite" data-uid="Projet_A2_S1.GameBoard.SaveAndWrite">
-  SaveAndWrite()
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Function that save the board in a CSV file it is the <strong>ToFile</strong> function
-This can write the new board into the same CSV file</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SaveAndWrite()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Projet_A2_S1_GameBoard_ToString_" data-uid="Projet_A2_S1.GameBoard.ToString*"></a>
-
-  <h3 id="Projet_A2_S1_GameBoard_ToString" data-uid="Projet_A2_S1.GameBoard.ToString">
-  ToString()
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Return the string that represent the board
-the override allows us to do a <strong>Console.WriteLine(board)</strong></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
-  </div>
-
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filenotfoundexception">FileNotFoundException</a></dt>
-    <dd><p>The file is not found</p>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Return if the word is in the player word list or not</p>
 </dd>
   </dl>
+
+
+
+
+
+
+
+
 
 
 

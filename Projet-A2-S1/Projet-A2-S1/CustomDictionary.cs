@@ -5,8 +5,8 @@
 public class CustomDictionary
 {
     
-    private const string TXT_DICTIONARY_PATH = "Mots_Français.txt";
-    private const string JSON_DICTIONARY_PATH = "Dictionary.Json";
+    private const string TXT_DICTIONARY_PATH = "data/Mots_Français.txt";
+    private const string JSON_DICTIONARY_PATH = "data/Dictionary.Json";
     /// <summary>
     /// Dictionnary used to stock the dictionnary of a langage
     /// </summary>
@@ -77,7 +77,7 @@ public class CustomDictionary
         if(word is null || word == ""){
             return false;
         }
-        string jsonString = File.ReadAllText("Dictionary.Json");
+        string jsonString = File.ReadAllText(JSON_DICTIONARY_PATH);
         var dictionary = JsonSerializer.Deserialize<Dictionary<char,List<string>>>(jsonString) ?? throw new Exception("Error in deserialization.");
         word = word.ToUpper();
         if(word is  null){

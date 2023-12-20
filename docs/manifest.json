@@ -4,136 +4,136 @@
   "files": [
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Projet_A2_S1.CustomDictionary.yml",
+      "source_relative_path": "Reference/Projet_A2_S1.CustomDictionary.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Projet_A2_S1.CustomDictionary.html"
+          "relative_path": "Reference/Projet_A2_S1.CustomDictionary.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Projet_A2_S1.Game.yml",
+      "source_relative_path": "Reference/Projet_A2_S1.Game.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Projet_A2_S1.Game.html"
+          "relative_path": "Reference/Projet_A2_S1.Game.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Projet_A2_S1.GameBoard.yml",
+      "source_relative_path": "Reference/Projet_A2_S1.GameBoard.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Projet_A2_S1.GameBoard.html"
+          "relative_path": "Reference/Projet_A2_S1.GameBoard.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Projet_A2_S1.Method.yml",
+      "source_relative_path": "Reference/Projet_A2_S1.Method.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Projet_A2_S1.Method.html"
+          "relative_path": "Reference/Projet_A2_S1.Method.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Projet_A2_S1.Player.yml",
+      "source_relative_path": "Reference/Projet_A2_S1.Player.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Projet_A2_S1.Player.html"
+          "relative_path": "Reference/Projet_A2_S1.Player.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Projet_A2_S1.PlayerList.yml",
+      "source_relative_path": "Reference/Projet_A2_S1.PlayerList.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Projet_A2_S1.PlayerList.html"
+          "relative_path": "Reference/Projet_A2_S1.PlayerList.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Projet_A2_S1.Program.yml",
+      "source_relative_path": "Reference/Projet_A2_S1.Program.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Projet_A2_S1.Program.html"
+          "relative_path": "Reference/Projet_A2_S1.Program.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Projet_A2_S1.yml",
+      "source_relative_path": "Reference/Projet_A2_S1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Projet_A2_S1.html"
+          "relative_path": "Reference/Projet_A2_S1.html"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "api/index.md",
+      "source_relative_path": "Reference/index.md",
       "output": {
         ".html": {
-          "relative_path": "api/index.html"
+          "relative_path": "Reference/index.html"
         }
       },
       "version": ""
     },
     {
       "type": "Toc",
-      "source_relative_path": "api/toc.yml",
+      "source_relative_path": "Reference/toc.yml",
       "output": {
         ".html": {
-          "relative_path": "api/toc.html"
+          "relative_path": "Reference/toc.html"
         },
         ".json": {
-          "relative_path": "api/toc.json"
+          "relative_path": "Reference/toc.json"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/Rules of the game.md",
+      "source_relative_path": "Rules/Rules.md",
       "output": {
         ".html": {
-          "relative_path": "articles/Rules of the game.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/introduction.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/introduction.html"
+          "relative_path": "Rules/Rules.html"
         }
       },
       "version": ""
     },
     {
       "type": "Toc",
-      "source_relative_path": "articles/toc.yml",
+      "source_relative_path": "Rules/toc.yml",
       "output": {
         ".html": {
-          "relative_path": "articles/toc.html"
+          "relative_path": "Rules/toc.html"
         },
         ".json": {
-          "relative_path": "articles/toc.json"
+          "relative_path": "Rules/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/main_menu.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/main_menu.png"
         }
       },
       "version": ""

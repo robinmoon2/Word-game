@@ -31,7 +31,13 @@ public class Player
 
 
     /// <summary>
-    /// This function can create a string of the player's information with his name, timer, score and wordlist  
+    /// This function can create a string of the player's information with his 
+    /// <list type= "bullet">
+    /// <item><description>Name</description></item>
+    /// <item><description>Timer</description></item>
+    /// <item><description>Score</description></item>
+    /// <item><description>WordList</description></item>
+    /// </list>
     /// </summary>
     /// <returns></returns>
     public string toString(){
@@ -114,17 +120,13 @@ public class Player
     /// <returns></returns>
     public static int Letter_Value(char letter)
     {
-        using (StreamReader reader = new StreamReader("Lettre.txt"))
+        string[] file = File.ReadAllLines(GameBoard.RANDOM_FILE);
+        foreach (string line in file)
         {
-            string line = reader.ReadLine() ?? "" ;
-            while (line is not null)
+            string[] parts = line.Split(',');
+            if (parts[0] == letter.ToString().ToUpper())
             {
-                string[] parts = line.Split(',');
-                if (parts[0] == letter.ToString().ToUpper())
-                {
-                    return int.Parse(parts[2]);
-                }
-                line = reader.ReadLine() ?? "";
+                return int.Parse(parts[2]);
             }
         }
         return 0;

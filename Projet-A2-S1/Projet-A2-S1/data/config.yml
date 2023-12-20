@@ -1,0 +1,8 @@
+- name: Joueur 1
+  timer: 88
+  score: 0
+  wordList: []
+- name: Joueur 2
+  timer: 90
+  score: 0
+  wordList: []
