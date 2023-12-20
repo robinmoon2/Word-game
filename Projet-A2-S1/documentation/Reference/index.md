@@ -1,6 +1,4 @@
-# Documentation
-
- Cette partie devrait être disponible sous peu le temps que tous les projets aient été rendus !
+# Reference
 
 ## Tree of the project
 
@@ -23,3 +21,15 @@
 ├── Projet-A2-S1.csproj
 └── Usings.cs
 ```
+
+## Language
+
+The game is playable in the langages :
+
+- [x] French
+- [ ] English
+- [ ] Spanish
+
+## License
+
+This project is licensed under the MIT License.
