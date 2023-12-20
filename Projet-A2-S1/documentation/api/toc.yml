@@ -1,0 +1,20 @@
+### YamlMime:TableOfContent
+items:
+- uid: Projet_A2_S1
+  name: Projet_A2_S1
+  items:
+  - uid: Projet_A2_S1.CustomDictionary
+    name: CustomDictionary
+  - uid: Projet_A2_S1.Game
+    name: Game
+  - uid: Projet_A2_S1.GameBoard
+    name: GameBoard
+  - uid: Projet_A2_S1.Method
+    name: Method
+  - uid: Projet_A2_S1.Player
+    name: Player
+  - uid: Projet_A2_S1.PlayerList
+    name: PlayerList
+  - uid: Projet_A2_S1.Program
+    name: Program
+memberLayout: SamePage

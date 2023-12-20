@@ -1,0 +1,747 @@
+### YamlMime:ManagedReference
+items:
+- uid: Projet_A2_S1.CustomDictionary
+  commentId: T:Projet_A2_S1.CustomDictionary
+  id: CustomDictionary
+  parent: Projet_A2_S1
+  children:
+  - Projet_A2_S1.CustomDictionary.#ctor
+  - Projet_A2_S1.CustomDictionary.DichotomicReseach(System.String,System.Collections.Generic.List{System.String})
+  - Projet_A2_S1.CustomDictionary.Dict
+  - Projet_A2_S1.CustomDictionary.FindWord(System.String)
+  - Projet_A2_S1.CustomDictionary.Sort(System.Collections.Generic.List{System.String})
+  - Projet_A2_S1.CustomDictionary.ToString
+  langs:
+  - csharp
+  - vb
+  name: CustomDictionary
+  nameWithType: CustomDictionary
+  fullName: Projet_A2_S1.CustomDictionary
+  type: Class
+  assemblies:
+  - Projet-A2-S1
+  namespace: Projet_A2_S1
+  summary: Class used to build a dictionnary to look after the words
+  example: []
+  syntax:
+    content: public class CustomDictionary
+    content.vb: Public Class CustomDictionary
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+- uid: Projet_A2_S1.CustomDictionary.Dict
+  commentId: F:Projet_A2_S1.CustomDictionary.Dict
+  id: Dict
+  parent: Projet_A2_S1.CustomDictionary
+  langs:
+  - csharp
+  - vb
+  name: Dict
+  nameWithType: CustomDictionary.Dict
+  fullName: Projet_A2_S1.CustomDictionary.Dict
+  type: Field
+  assemblies:
+  - Projet-A2-S1
+  namespace: Projet_A2_S1
+  summary: Dictionnary used to stock the dictionnary of a langage
+  example: []
+  syntax:
+    content: public Dictionary<char, List<string>> Dict
+    return:
+      type: System.Collections.Generic.Dictionary{System.Char,System.Collections.Generic.List{System.String}}
+    content.vb: Public Dict As Dictionary(Of Char, List(Of String))
+- uid: Projet_A2_S1.CustomDictionary.#ctor
+  commentId: M:Projet_A2_S1.CustomDictionary.#ctor
+  id: '#ctor'
+  parent: Projet_A2_S1.CustomDictionary
+  langs:
+  - csharp
+  - vb
+  name: CustomDictionary()
+  nameWithType: CustomDictionary.CustomDictionary()
+  fullName: Projet_A2_S1.CustomDictionary.CustomDictionary()
+  type: Constructor
+  assemblies:
+  - Projet-A2-S1
+  namespace: Projet_A2_S1
+  summary: >-
+    Constructor of the class CustomDictionary. 
+
+    It build a new Dictionnary base on the words found in _Mots-Français.txt_ and write them in a Json  sort by character and every character has 
+
+    a string of every word beginning with this letter.
+  example: []
+  syntax:
+    content: public CustomDictionary()
+    content.vb: Public Sub New()
+  overload: Projet_A2_S1.CustomDictionary.#ctor*
+  exceptions:
+  - type: System.Exception
+    commentId: T:System.Exception
+    description: ''
+  - type: System.IO.FileNotFoundException
+    commentId: T:System.IO.FileNotFoundException
+    description: Exception if the file is not found
+  - type: System.NullReferenceException
+    commentId: T:System.NullReferenceException
+    description: ''
+  nameWithType.vb: CustomDictionary.New()
+  fullName.vb: Projet_A2_S1.CustomDictionary.New()
+  name.vb: New()
+- uid: Projet_A2_S1.CustomDictionary.FindWord(System.String)
+  commentId: M:Projet_A2_S1.CustomDictionary.FindWord(System.String)
+  id: FindWord(System.String)
+  parent: Projet_A2_S1.CustomDictionary
+  langs:
+  - csharp
+  - vb
+  name: FindWord(string)
+  nameWithType: CustomDictionary.FindWord(string)
+  fullName: Projet_A2_S1.CustomDictionary.FindWord(string)
+  type: Method
+  assemblies:
+  - Projet-A2-S1
+  namespace: Projet_A2_S1
+  summary: This function try to find a word in the dictionary
+  example: []
+  syntax:
+    content: public bool FindWord(string word)
+    parameters:
+    - id: word
+      type: System.String
+      description: The string that represent the word that we are searching in the dictionary ( wich is stock in dictionary.Json)
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Function FindWord(word As String) As Boolean
+  overload: Projet_A2_S1.CustomDictionary.FindWord*
+  exceptions:
+  - type: System.Exception
+    commentId: T:System.Exception
+    description: If the file is not found or if we can't read it we throw an exception
+  nameWithType.vb: CustomDictionary.FindWord(String)
+  fullName.vb: Projet_A2_S1.CustomDictionary.FindWord(String)
+  name.vb: FindWord(String)
+- uid: Projet_A2_S1.CustomDictionary.DichotomicReseach(System.String,System.Collections.Generic.List{System.String})
+  commentId: M:Projet_A2_S1.CustomDictionary.DichotomicReseach(System.String,System.Collections.Generic.List{System.String})
+  id: DichotomicReseach(System.String,System.Collections.Generic.List{System.String})
+  parent: Projet_A2_S1.CustomDictionary
+  langs:
+  - csharp
+  - vb
+  name: DichotomicReseach(string, List<string>)
+  nameWithType: CustomDictionary.DichotomicReseach(string, List<string>)
+  fullName: Projet_A2_S1.CustomDictionary.DichotomicReseach(string, System.Collections.Generic.List<string>)
+  type: Method
+  assemblies:
+  - Projet-A2-S1
+  namespace: Projet_A2_S1
+  summary: >-
+    This function search a word in a list of string. 
+
+    For this research we used a dichotomic algorithm to find the word in a list of string sorted
+  example: []
+  syntax:
+    content: public bool DichotomicReseach(string word, List<string> wordlist)
+    parameters:
+    - id: word
+      type: System.String
+      description: word that we are looking for
+    - id: wordlist
+      type: System.Collections.Generic.List{System.String}
+      description: the list of string where we are searching
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Function DichotomicReseach(word As String, wordlist As List(Of String)) As Boolean
+  overload: Projet_A2_S1.CustomDictionary.DichotomicReseach*
+  nameWithType.vb: CustomDictionary.DichotomicReseach(String, List(Of String))
+  fullName.vb: Projet_A2_S1.CustomDictionary.DichotomicReseach(String, System.Collections.Generic.List(Of String))
+  name.vb: DichotomicReseach(String, List(Of String))
+- uid: Projet_A2_S1.CustomDictionary.Sort(System.Collections.Generic.List{System.String})
+  commentId: M:Projet_A2_S1.CustomDictionary.Sort(System.Collections.Generic.List{System.String})
+  id: Sort(System.Collections.Generic.List{System.String})
+  parent: Projet_A2_S1.CustomDictionary
+  langs:
+  - csharp
+  - vb
+  name: Sort(List<string>)
+  nameWithType: CustomDictionary.Sort(List<string>)
+  fullName: Projet_A2_S1.CustomDictionary.Sort(System.Collections.Generic.List<string>)
+  type: Method
+  assemblies:
+  - Projet-A2-S1
+  namespace: Projet_A2_S1
+  summary: >-
+    This function sort a list of string with the quick_sort method 
+
+    It is the quickSort function
+  example: []
+  syntax:
+    content: public List<string> Sort(List<string> wordlist)
+    parameters:
+    - id: wordlist
+      type: System.Collections.Generic.List{System.String}
+      description: the list that we want to sort
+    return:
+      type: System.Collections.Generic.List{System.String}
+      description: ''
+    content.vb: Public Function Sort(wordlist As List(Of String)) As List(Of String)
+  overload: Projet_A2_S1.CustomDictionary.Sort*
+  nameWithType.vb: CustomDictionary.Sort(List(Of String))
+  fullName.vb: Projet_A2_S1.CustomDictionary.Sort(System.Collections.Generic.List(Of String))
+  name.vb: Sort(List(Of String))
+- uid: Projet_A2_S1.CustomDictionary.ToString
+  commentId: M:Projet_A2_S1.CustomDictionary.ToString
+  id: ToString
+  parent: Projet_A2_S1.CustomDictionary
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: CustomDictionary.ToString()
+  fullName: Projet_A2_S1.CustomDictionary.ToString()
+  type: Method
+  assemblies:
+  - Projet-A2-S1
+  namespace: Projet_A2_S1
+  summary: >-
+    Function that return the string that tell how many words per letter exist in the dictionary.
+
+    The override allows us to do **Console.WriteLine(CustomDictionnary)**
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: Projet_A2_S1.CustomDictionary.ToString*
+references:
+- uid: Projet_A2_S1
+  commentId: N:Projet_A2_S1
+  isExternal: true
+  href: Projet_A2_S1.html
+  name: Projet_A2_S1
+  nameWithType: Projet_A2_S1
+  fullName: Projet_A2_S1
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.Dictionary{System.Char,System.Collections.Generic.List{System.String}}
+  commentId: T:System.Collections.Generic.Dictionary{System.Char,System.Collections.Generic.List{System.String}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<char, List<string>>
+  nameWithType: Dictionary<char, List<string>>
+  fullName: System.Collections.Generic.Dictionary<char, System.Collections.Generic.List<string>>
+  nameWithType.vb: Dictionary(Of Char, List(Of String))
+  fullName.vb: System.Collections.Generic.Dictionary(Of Char, System.Collections.Generic.List(Of String))
+  name.vb: Dictionary(Of Char, List(Of String))
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Exception
+  commentId: T:System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: System.IO.FileNotFoundException
+  commentId: T:System.IO.FileNotFoundException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.filenotfoundexception
+  name: FileNotFoundException
+  nameWithType: FileNotFoundException
+  fullName: System.IO.FileNotFoundException
+- uid: System.NullReferenceException
+  commentId: T:System.NullReferenceException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullreferenceexception
+  name: NullReferenceException
+  nameWithType: NullReferenceException
+  fullName: System.NullReferenceException
+- uid: Projet_A2_S1.CustomDictionary.#ctor*
+  commentId: Overload:Projet_A2_S1.CustomDictionary.#ctor
+  isExternal: true
+  href: Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary__ctor
+  name: CustomDictionary
+  nameWithType: CustomDictionary.CustomDictionary
+  fullName: Projet_A2_S1.CustomDictionary.CustomDictionary
+  nameWithType.vb: CustomDictionary.New
+  fullName.vb: Projet_A2_S1.CustomDictionary.New
+  name.vb: New
+- uid: Projet_A2_S1.CustomDictionary.FindWord*
+  commentId: Overload:Projet_A2_S1.CustomDictionary.FindWord
+  isExternal: true
+  href: Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_FindWord_System_String_
+  name: FindWord
+  nameWithType: CustomDictionary.FindWord
+  fullName: Projet_A2_S1.CustomDictionary.FindWord
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Projet_A2_S1.CustomDictionary.DichotomicReseach*
+  commentId: Overload:Projet_A2_S1.CustomDictionary.DichotomicReseach
+  isExternal: true
+  href: Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_DichotomicReseach_System_String_System_Collections_Generic_List_System_String__
+  name: DichotomicReseach
+  nameWithType: CustomDictionary.DichotomicReseach
+  fullName: Projet_A2_S1.CustomDictionary.DichotomicReseach
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Projet_A2_S1.CustomDictionary.Sort*
+  commentId: Overload:Projet_A2_S1.CustomDictionary.Sort
+  isExternal: true
+  href: Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_Sort_System_Collections_Generic_List_System_String__
+  name: Sort
+  nameWithType: CustomDictionary.Sort
+  fullName: Projet_A2_S1.CustomDictionary.Sort
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Projet_A2_S1.CustomDictionary.ToString*
+  commentId: Overload:Projet_A2_S1.CustomDictionary.ToString
+  isExternal: true
+  href: Projet_A2_S1.CustomDictionary.html#Projet_A2_S1_CustomDictionary_ToString
+  name: ToString
+  nameWithType: CustomDictionary.ToString
+  fullName: Projet_A2_S1.CustomDictionary.ToString
