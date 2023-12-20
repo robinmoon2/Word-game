@@ -9,6 +9,12 @@ To find a word in the board you need that the first character is on the lower li
 
 Then the word is removed from the board and the upper characters are going down to feal the missing ones.
 
-if the word isn't in the dictionary or in your list or not in the board, you will not have point and it's to the next charcater to play.
+If the word isn't in the dictionary or in your list or not in the board, you will not have point and it's to the next charcater to play.
+
+>[!NOTE]
+> The word need to be in the dictionnary of the langage selected, in the board following the method to find a word and *NOT* in your list
+
+>[!CAUTION]
+>To search a word you need to start it on the bottom line of the board and go to another character only if it next to the precedent one
 
 ## Enjoy the game
