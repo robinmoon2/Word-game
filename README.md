@@ -1,35 +1,11 @@
-# Projet-A2-S1
+This project if a game that merge the "Candy crush style" and words.
 
-* [.vs/](./Projet-A2-S1/.vs)
-  * [ProjectEvaluation/](./Projet-A2-S1/.vs/ProjectEvaluation)
-  * [Projet-A2-S1/](./Projet-A2-S1/.vs/Projet-A2-S1)
-* [documentation/](./Projet-A2-S1/documentation)
-  * [api/](./Projet-A2-S1/documentation/api)
-  * [articles/](./Projet-A2-S1/documentation/articles)
-  * [images/](./Projet-A2-S1/documentation/images)
-  * [docfx.json](./Projet-A2-S1/documentation/docfx.json)
-  * [index.md](./Projet-A2-S1/documentation/index.md)
-  * [toc.yml](./Projet-A2-S1/documentation/toc.yml)
-* [Projet-A2-S1/](./Projet-A2-S1/Projet-A2-S1)
-  * [.vs/](./Projet-A2-S1/Projet-A2-S1/.vs)
-  * [bin/](./Projet-A2-S1/Projet-A2-S1/bin)
-  * [obj/](./Projet-A2-S1/Projet-A2-S1/obj)
-  * [CustomDictionary.cs](./Projet-A2-S1/Projet-A2-S1/CustomDictionary.cs)
-  * [Game.cs](./Projet-A2-S1/Projet-A2-S1/Game.cs)
-  * [GameBoard.cs](./Projet-A2-S1/Projet-A2-S1/GameBoard.cs)
-  * [Method.cs](./Projet-A2-S1/Projet-A2-S1/Method.cs)
-  * [Player.cs](./Projet-A2-S1/Projet-A2-S1/Player.cs)
-  * [PlayerList.cs](./Projet-A2-S1/Projet-A2-S1/PlayerList.cs)
-  * [Program.cs](./Projet-A2-S1/Projet-A2-S1/Program.cs)
-  * [Projet-A2-S1.csproj](./Projet-A2-S1/Projet-A2-S1/Projet-A2-S1.csproj)
-  * [Usings.cs](./Projet-A2-S1/Projet-A2-S1/Usings.cs)
-* [TestProject/](./Projet-A2-S1/TestProject)
-  * [bin/](./Projet-A2-S1/TestProject/bin)
-  * [obj/](./Projet-A2-S1/TestProject/obj)
-  * [Dictionnary.cs](./Projet-A2-S1/TestProject/Dictionnary.cs)
-  * [GameTest.cs](./Projet-A2-S1/TestProject/GameTest.cs)
-  * [GlobalUsings.cs](./Projet-A2-S1/TestProject/GlobalUsings.cs)
-  * [PlayerTest.cs](./Projet-A2-S1/TestProject/PlayerTest.cs)
-  * [TestProject.csproj](./Projet-A2-S1/TestProject/TestProject.csproj)
-* [.gitignore](./Projet-A2-S1/.gitignore)
-* [Projet-A2-S1.sln](./Projet-A2-S1/Projet-A2-S1.sln)
+This project has been made by *Hugo Peltier* and *Robin L'hyver* two students in engineering school for an akgorithm project.
+
+To play you can download the zip file and then dezip it in a folder.
+The actual state of the project is only useable in *VSCODE* not on VS due to the path of the different files
+
+The actual version is made to play only in French and would be playable also in English soon ! 
+
+The display had been made with the [ConsoleAppVisuals](https://github.com/MorganKryze/ConsoleAppVisuals) library made by MorganCryze
+![Main_Menu](Projet-A2-S1/documentation/images/main_menu.png)
