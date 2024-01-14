@@ -14,12 +14,12 @@ namespace Projet_A2_S1
         static public void main_menu()
         {
             Core.ClearWindow();
-            Core.SetTitle("Mots Glissants");
-            Core.WriteFullScreen("Mots Glissants", true, ("Jeu des mots", "", "(pas du tout comme candy crush)"), ("Hugo Peltier", "TDO", "Robin L'hyver"));
+            Core.SetTitle("The word game");
+            Core.WriteFullScreen("The word game", true, ("The word game", "", "(not all like candy crush)"), ("Hugo Peltier", "TDO", "Robin L'hyver"));
             bool EndMenu = true;
             while (EndMenu)
             {
-                var index = Core.ScrollingMenuSelector(" Menu Principal :", default, default, "Jouer", "Changer de couleur","Crédit", "Quitter le jeu");
+                var index = Core.ScrollingMenuSelector(" Main Menu :", default, default, "Play", "Change colors","Credit", "Quit the game");
                 switch (index.Item1)
                 {
 
@@ -33,22 +33,22 @@ namespace Projet_A2_S1
                                 break;
 
                             case 1:
-                                var color = Core.ScrollingMenuSelector("Choisir une couleur :", default, default, "Rouge", "Bleu", "Vert", "Jaune", "Blanc", "Noir");
+                                var color = Core.ScrollingMenuSelector("Choose a color :", default, default, "Red", "BLue", "Green", "Yellow", "White", "Black", "Gray");
                                 ConsoleColor[] colors = { ConsoleColor.Red, ConsoleColor.Blue, ConsoleColor.Green, ConsoleColor.Yellow, ConsoleColor.White, ConsoleColor.Black, ConsoleColor.Gray };
                                 var couleur = colors[color.Item2];
                                 Core.ChangeForeground(couleur);
-                                Core.WritePositionedString("Couleur choisie : ", Placement.Center, default, 10, default);
-                                Core.WriteFullScreen("Mots Glissants", true, ("Jeu des mots", "", "(pas du tout comme candy crush)"), ("Hugo Peltier", "TDO", "Robin L'hyver"));
+                                Core.WritePositionedString("Color choosen : ", Placement.Center, default, 10, default);
+                                Core.WriteFullScreen("The word game", true, ("The word game", "", "(not all like candy crush)"), ("Hugo Peltier", "TDO", "Robin L'hyver"));
 
                                 break;
 
                             case 2:
                                 string s = "MIT License\r\n\r\nCopyright (c) 2023 PELTIER/L'HYVER/PROJET1\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy\r\nof this software and associated documentation files (the \"Software\"), to deal\r\nin the Software without restriction, including without limitation the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\ncopies of the Software, and to permit persons to whom the Software is\r\nfurnished to do so, subject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in all\r\ncopies or substantial portions of the Software.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\r\nSOFTWARE.";
                                 Core.WriteContinuousString(s, 10);
-                                Core.WriteContinuousString("Pressez entree pour sortir ", 35);
+                                Core.WriteContinuousString("Press enter to quit ", 35);
                                 Console.ReadKey();
                                 Core.ClearWindow();
-                                Core.WriteFullScreen("Mots Glissants", true, ("Jeu des mots", "", "(pas du tout comme candy crush)"), ("Hugo Peltier", "TDO", "Robin L'hyver"));
+                                Core.WriteFullScreen("The word game", true, ("The word game", "", "(not all like candy crush)"), ("Hugo Peltier", "TDO", "Robin L'hyver"));
                                 break;
                             case 3:
                                 EndMenu = false;
@@ -57,12 +57,12 @@ namespace Projet_A2_S1
                         }
                         break;
                     case -1:
-                        Console.WriteLine("Vous avez pressé la touche echap, vous allez sortir du jeu, pressez entrée pour confirmer");
+                        Console.WriteLine("You press the echap key, you will quit the game, press enter to continue");
                         Console.ReadKey();
                         Core.ExitProgram();
                         break;
                     case -2:
-                        Console.WriteLine("Vous avez pressé la touche backspace, vous allez sortir du jeu, pressez entrée pour confirmer");
+                        Console.WriteLine("You press the backspace key, you will quit the game, press enter to continue");
                         Console.ReadKey();
                         Core.ExitProgram();
                         break;
